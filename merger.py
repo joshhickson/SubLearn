@@ -42,7 +42,6 @@ def create_merged_subtitle_file(
         # 4. Define custom styles as per the blueprint
         # Style for the original language track (Top, White)
         style_orig = pysubs2.SSAStyle(
-            name="Style_Orig",
             fontname="Arial", fontsize=20,
             primarycolor=pysubs2.Color(255, 255, 255),
             outlinecolor=pysubs2.Color(0, 0, 0),
@@ -53,7 +52,6 @@ def create_merged_subtitle_file(
 
         # Style for the dub language track (Middle, Yellow)
         style_dub = pysubs2.SSAStyle(
-            name="Style_Dub",
             fontname="Arial", fontsize=24,
             primarycolor=pysubs2.Color(255, 255, 0), # Yellow
             outlinecolor=pysubs2.Color(0, 0, 0),
@@ -64,7 +62,6 @@ def create_merged_subtitle_file(
 
         # Style for the translated track (Bottom, Cyan)
         style_trans = pysubs2.SSAStyle(
-            name="Style_Trans",
             fontname="Arial", fontsize=22,
             primarycolor=pysubs2.Color(0, 255, 255), # Cyan
             outlinecolor=pysubs2.Color(0, 0, 0),

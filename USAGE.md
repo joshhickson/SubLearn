@@ -48,8 +48,11 @@ You can run the script from your terminal. The main required argument is the pat
 - `--lang_dub`: (**Required**) The language of the dubbed audio track you want to learn from. Use a two-letter ISO 639-1 code (e.g., `hu` for Hungarian, `es` for Spanish, `de` for German).
 - `--lang_orig`: The original language of the video. Defaults to `en` (English).
 - `--lang_native`: The language you want the dub track to be translated into. This must be a language code supported by DeepL. Defaults to `EN-US` (American English).
+- `--dub-file`: (Optional) Path to a local `.srt` file to use for the dub track. If you provide this, the script will skip searching for the dub subtitle online and use your local file instead. This is useful for testing or if you already have a perfect, synchronized subtitle for the dubbed audio.
 
-### Example Command
+### Example Commands
+
+**Standard Usage**
 
 To generate subtitles for a movie file with a Hungarian dub, run the following command in your terminal:
 
@@ -62,6 +65,14 @@ If you wanted to process a movie with a Spanish dub and translate it into German
 ```bash
 python sublearn.py "path/to/your/movie.mkv" --lang_orig en --lang_dub es --lang_native DE
 ```
+
+**Using a Local Subtitle File**
+
+If you already have a `.srt` file for the Hungarian dub and want to use it directly, you can run:
+```bash
+python sublearn.py "path/to/your/movie.mkv" --lang_dub hu --dub-file "path/to/your/hungarian.srt"
+```
+The script will still search online for the original English subtitle but will use your local file for the dub track.
 
 ## What to Expect
 

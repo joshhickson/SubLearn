@@ -21,25 +21,59 @@ def main():
     parser.add_argument("--lang_orig", default="en", help="The original language of the video (e.g., 'en').")
     parser.add_argument("--lang_dub", required=True, help="The language of the dubbed audio track (e.g., 'hu', 'es').")
     parser.add_argument("--lang_native", default="EN-US", help="Your native language for translation (e.g., 'EN-US', 'DE').")
+    parser.add_argument("--dub-file", help="Path to a local .srt file to use for the dub track, skipping the online search.")
 
     args = parser.parse_args()
 
     print("--- Starting SubLearn Workflow ---")
 
+    temp_files_to_clean = []
     orig_sub_path = None
     dub_sub_path = None
 
     try:
-        # 1. Fetch subtitles
-        orig_sub_path, dub_sub_path = fetcher.find_and_download_subtitles(
-            video_path=args.video_path,
-            lang_orig=args.lang_orig,
-            lang_dub=args.lang_dub,
-            api_key=OPENSUBTITLES_API_KEY
-        )
+        if args.dub_file:
+            # --- Workflow Path 2: User provides the dub subtitle file ---
+            print(f"Using local file for dub track: {args.dub_file}")
+            if not os.path.exists(args.dub_file):
+                print(f"Error: The file specified via --dub-file does not exist: {args.dub_file}")
+                return
 
+            dub_sub_path = args.dub_file
+
+            # Fetch only the original language subtitle
+            print("Searching online for the original language subtitle...")
+            orig_sub_path_temp, _ = fetcher.find_and_download_subtitles(
+                video_path=args.video_path,
+                lang_orig=args.lang_orig,
+                lang_dub=args.lang_dub, # Still needed for API consistency, but won't be used for search
+                api_key=OPENSUBTITLES_API_KEY,
+                skip_dub=True
+            )
+            if orig_sub_path_temp:
+                orig_sub_path = orig_sub_path_temp
+                temp_files_to_clean.append(orig_sub_path)
+
+        else:
+            # --- Workflow Path 1: Default behavior, search for both subtitles ---
+            print("Searching online for both original and dub language subtitles...")
+            orig_sub_path_temp, dub_sub_path_temp = fetcher.find_and_download_subtitles(
+                video_path=args.video_path,
+                lang_orig=args.lang_orig,
+                lang_dub=args.lang_dub,
+                api_key=OPENSUBTITLES_API_KEY,
+                skip_dub=False
+            )
+            if orig_sub_path_temp:
+                orig_sub_path = orig_sub_path_temp
+                temp_files_to_clean.append(orig_sub_path)
+            if dub_sub_path_temp:
+                dub_sub_path = dub_sub_path_temp
+                temp_files_to_clean.append(dub_sub_path)
+
+        # --- Main processing continues here ---
         if not orig_sub_path or not dub_sub_path:
-            print("Could not retrieve subtitle files. Exiting.")
+            print("Could not retrieve all required subtitle files. Exiting.")
             return
 
         # 2. Translate the dub subtitle file
@@ -71,13 +105,13 @@ def main():
     except Exception as e:
         print(f"\nAn unexpected error occurred during the workflow: {e}")
     finally:
-        # 4. Clean up temporary files
-        print("Cleaning up temporary files...")
-        if orig_sub_path and os.path.exists(orig_sub_path):
-            os.remove(orig_sub_path)
-        if dub_sub_path and os.path.exists(dub_sub_path):
-            os.remove(dub_sub_path)
-        print("Cleanup complete.")
+        # 4. Clean up ONLY the temporary files downloaded by the script
+        if temp_files_to_clean:
+            print("Cleaning up temporary files...")
+            for f_path in temp_files_to_clean:
+                if os.path.exists(f_path):
+                    os.remove(f_path)
+            print("Cleanup complete.")
 
 
 if __name__ == "__main__":
