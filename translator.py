@@ -34,11 +34,20 @@ def translate_subtitle_file(filepath: str, target_lang: str, api_key: str) -> li
         # Translate the text
         # Sending the text as a list is more efficient (one API call)
         print(f"Sending {len(original_texts)} lines to DeepL API for translation to {target_lang}...")
-        result = translator.translate_text(
-            original_texts,
-            target_lang=target_lang,
-            formality="more" # As per the project blueprint for a more literal translation
-        )
+        # Formality is only supported for specific target languages.
+        supported_formality_langs = ["DE", "FR", "IT", "ES", "NL", "PL", "PT-PT", "PT-BR", "RU"]
+
+        if target_lang.upper() in supported_formality_langs:
+            result = translator.translate_text(
+                original_texts,
+                target_lang=target_lang,
+                formality="more"
+            )
+        else:
+            result = translator.translate_text(
+                original_texts,
+                target_lang=target_lang
+            )
 
         # Extract the translated text from the result objects
         translated_texts = [res.text for res in result]

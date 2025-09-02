@@ -2,27 +2,32 @@ import pysubs2
 import copy
 
 def create_merged_subtitle_file(
-    orig_sub_path: str,
     dub_sub_path: str,
     translated_texts: list[str],
-    output_path: str
+    output_path: str,
+    orig_sub_path: str | None = None
 ):
     """
-    Merges three subtitle tracks (original, dub, translated) into a single,
+    Merges up to three subtitle tracks (original, dub, translated) into a single,
     styled Advanced SubStation Alpha (.ass) file.
 
     Args:
-        orig_sub_path: Path to the original language .srt file.
         dub_sub_path: Path to the dub language .srt file.
         translated_texts: A list of strings containing the translated dub text.
         output_path: The path to save the final .ass file.
+        orig_sub_path: (Optional) Path to the original language .srt file.
     """
     print(f"Merging subtitles into {output_path}...")
 
     try:
         # 1. Load source subtitle files
-        subs_orig = pysubs2.load(orig_sub_path, encoding="utf-8")
         subs_dub = pysubs2.load(dub_sub_path, encoding="utf-8")
+        subs_orig = None
+        if orig_sub_path:
+            try:
+                subs_orig = pysubs2.load(orig_sub_path, encoding="utf-8")
+            except FileNotFoundError:
+                print(f"Warning: Original subtitle file not found at {orig_sub_path}. Proceeding without it.")
 
         # 2. Create the translated subtitle object
         if len(subs_dub) != len(translated_texts):
@@ -70,14 +75,16 @@ def create_merged_subtitle_file(
             marginv=10
         )
 
-        subs_final.styles["Style_Orig"] = style_orig
         subs_final.styles["Style_Dub"] = style_dub
         subs_final.styles["Style_Trans"] = style_trans
+        if subs_orig:
+            subs_final.styles["Style_Orig"] = style_orig
 
         # 5. Merge events and apply styles
-        for line in subs_orig:
-            line.style = "Style_Orig"
-            subs_final.append(line)
+        if subs_orig:
+            for line in subs_orig:
+                line.style = "Style_Orig"
+                subs_final.append(line)
 
         for line in subs_dub:
             line.style = "Style_Dub"

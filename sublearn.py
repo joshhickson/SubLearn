@@ -22,6 +22,7 @@ def main():
     parser.add_argument("--lang_dub", required=True, help="The language of the dubbed audio track (e.g., 'hu', 'es').")
     parser.add_argument("--lang_native", default="EN-US", help="Your native language for translation (e.g., 'EN-US', 'DE').")
     parser.add_argument("--dub-file", help="Path to a local .srt file to use for the dub track, skipping the online search.")
+    parser.add_argument("--no-orig-search", action="store_true", help="When using --dub-file, do not search for an original language subtitle online.")
 
     args = parser.parse_args()
 
@@ -41,18 +42,23 @@ def main():
 
             dub_sub_path = args.dub_file
 
-            # Fetch only the original language subtitle
-            print("Searching online for the original language subtitle...")
-            orig_sub_path_temp, _ = fetcher.find_and_download_subtitles(
-                video_path=args.video_path,
-                lang_orig=args.lang_orig,
-                lang_dub=args.lang_dub, # Still needed for API consistency, but won't be used for search
-                api_key=OPENSUBTITLES_API_KEY,
-                skip_dub=True
-            )
-            if orig_sub_path_temp:
-                orig_sub_path = orig_sub_path_temp
-                temp_files_to_clean.append(orig_sub_path)
+            # If --no-orig-search is specified, skip the online search for the original subtitle.
+            if args.no_orig_search:
+                print("Skipping online search for original subtitle as requested.")
+                orig_sub_path = None
+            else:
+                # Fetch only the original language subtitle
+                print("Searching online for the original language subtitle...")
+                orig_sub_path_temp, _ = fetcher.find_and_download_subtitles(
+                    video_path=args.video_path,
+                    lang_orig=args.lang_orig,
+                    lang_dub=args.lang_dub, # Still needed for API consistency, but won't be used for search
+                    api_key=OPENSUBTITLES_API_KEY,
+                    skip_dub=True
+                )
+                if orig_sub_path_temp:
+                    orig_sub_path = orig_sub_path_temp
+                    temp_files_to_clean.append(orig_sub_path)
 
         else:
             # --- Workflow Path 1: Default behavior, search for both subtitles ---
@@ -72,8 +78,8 @@ def main():
                 temp_files_to_clean.append(dub_sub_path)
 
         # --- Main processing continues here ---
-        if not orig_sub_path or not dub_sub_path:
-            print("Could not retrieve all required subtitle files. Exiting.")
+        if not dub_sub_path:
+            print("Could not retrieve the dub subtitle file. Exiting.")
             return
 
         # 2. Translate the dub subtitle file
@@ -93,10 +99,10 @@ def main():
         output_path = os.path.join(video_dir, f"{video_filename}.sublearn.ass")
 
         merger.create_merged_subtitle_file(
-            orig_sub_path=orig_sub_path,
             dub_sub_path=dub_sub_path,
             translated_texts=translated_texts,
-            output_path=output_path
+            output_path=output_path,
+            orig_sub_path=orig_sub_path
         )
 
         print("\n--- SubLearn Workflow Complete ---")
