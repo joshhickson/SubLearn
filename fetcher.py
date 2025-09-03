@@ -51,120 +51,77 @@ def _get_download_link(file_id: int, api_key: str, headers: dict) -> str | None:
         print(f"Error getting download link (status {resp.status_code}): {resp.text}")
         return None
 
-def _download_subtitle_file(url: str) -> str | None:
-    """Downloads content from a URL and saves it to a temporary SRT file."""
+def _download_subtitle_file(url: str, save_path: str | None = None) -> str | None:
+    """
+    Downloads content from a URL and saves it to a specified path or a temporary SRT file.
+    """
     try:
         resp = requests.get(url)
         resp.raise_for_status()
-        # Use a temporary file to store the subtitle
-        fd, temp_path = tempfile.mkstemp(suffix=".srt")
-        with os.fdopen(fd, 'wb') as f:
-            f.write(resp.content)
-        return temp_path
+
+        if save_path:
+            # Ensure the directory exists before writing the file
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
+            with open(save_path, "wb") as f:
+                f.write(resp.content)
+            return save_path
+        else:
+            # Fallback to temporary file if no save_path is provided
+            fd, temp_path = tempfile.mkstemp(suffix=".srt")
+            with os.fdopen(fd, "wb") as f:
+                f.write(resp.content)
+            return temp_path
     except requests.RequestException as e:
         print(f"Error downloading subtitle file: {e}")
         return None
 
-def find_and_download_subtitles(
-    video_path: str,
-    lang_orig: str,
-    lang_dub: str,
-    api_key: str,
-    skip_dub: bool = False
-):
+def search_subtitles(movie_hash: str, lang_orig: str, lang_dub: str, api_key: str) -> tuple[list, list]:
     """
-    Finds and downloads subtitles. Can skip fetching the dub subtitle if requested.
+    Searches for subtitles using the OpenSubtitles API and returns lists of available subs.
     """
-    print("Calculating movie hash...")
-    movie_hash = get_movie_hash(video_path)
-    if not movie_hash:
-        print("Error: Could not calculate movie hash. The file may be invalid, inaccessible, or too small.")
-        return None, None
-
-    print(f"Movie hash: {movie_hash}")
-
-    languages_to_search = [lang_orig]
-    if not skip_dub:
-        languages_to_search.append(lang_dub)
-
-    print(f"Searching for '{','.join(languages_to_search)}' subtitles...")
+    languages_to_search = f"{lang_orig},{lang_dub}"
+    print(f"Searching for '{languages_to_search}' subtitles online...")
 
     headers = {"Api-Key": api_key, "Content-Type": "application/json", "Accept": "application/json"}
-    params = {"moviehash": movie_hash, "languages": ",".join(languages_to_search)}
+    params = {"moviehash": movie_hash, "languages": languages_to_search}
 
     try:
         resp = requests.get(f"{API_URL}/subtitles", headers=headers, params=params)
         resp.raise_for_status()
     except requests.RequestException as e:
         print(f"Error querying OpenSubtitles API: {e}")
-        return None, None
+        return [], []
 
     data = resp.json().get("data", [])
     if not data:
         print("No subtitles found for this movie hash.")
-        return None, None
+        return [], []
 
-    # --- Process Original Language Subtitle ---
     orig_subs = [s for s in data if s.get("attributes", {}).get("language") == lang_orig]
-    if not orig_subs:
-        print(f"No subtitles found for the original language ({lang_orig}).")
-        return None, None
-    orig_sub_data = max(orig_subs, key=lambda s: s.get("attributes", {}).get("download_count", 0))
-    print(f"Selected original sub: {orig_sub_data['attributes']['release']} (Downloads: {orig_sub_data['attributes']['download_count']})")
-    orig_file_id = orig_sub_data["attributes"]["files"][0]["file_id"]
-    orig_link = _get_download_link(orig_file_id, api_key, headers)
-    if not orig_link:
-        print("Failed to get original subtitle download link.")
-        return None, None
-    orig_filepath = _download_subtitle_file(orig_link)
-    if not orig_filepath:
-        print("Failed to download original subtitle file.")
-        return None, None
-    print(f"Original language subtitle saved to: {orig_filepath}")
+    dub_subs = [s for s in data if s.get("attributes", {}).get("language") == lang_dub]
 
-    # --- Process Dub Language Subtitle (if not skipped) ---
-    dub_filepath = None
-    if not skip_dub:
-        dub_subs = [s for s in data if s.get("attributes", {}).get("language") == lang_dub]
-        if not dub_subs:
-            print(f"No subtitles found for the dub language ({lang_dub}).")
-            os.remove(orig_filepath) # Clean up already downloaded file
-            return None, None
+    print(f"Found {len(orig_subs)} original language subs and {len(dub_subs)} dub language subs.")
+    return orig_subs, dub_subs
 
-        print(f"Found {len(dub_subs)} subtitle(s) for the dub language. Analyzing...")
-        dub_keywords = ["dub", "dubbed", "szinkron"]
-        best_dub_sub = None
-        max_score = -1
+def download_subtitle(subtitle_data: dict, api_key: str, save_path: str) -> str | None:
+    """
+    Downloads a subtitle file given its metadata and a destination path.
+    """
+    headers = {"Api-Key": api_key, "Content-Type": "application/json", "Accept": "application/json"}
+    try:
+        file_id = subtitle_data["attributes"]["files"][0]["file_id"]
+        link = _get_download_link(file_id, api_key, headers)
+        if not link:
+            print("Failed to get subtitle download link.")
+            return None
 
-        for sub in dub_subs:
-            attrs = sub.get("attributes", {})
-            score = 0
-            release_name = attrs.get("release", "").lower()
-            comments = attrs.get("comments", "").lower()
-            if any(keyword in release_name for keyword in dub_keywords):
-                score += 10
-            if any(keyword in comments for keyword in dub_keywords):
-                score += 5
-            score += attrs.get("download_count", 0) / 10000
-            if score > max_score:
-                max_score = score
-                best_dub_sub = sub
+        downloaded_path = _download_subtitle_file(link, save_path=save_path)
+        if not downloaded_path:
+            print("Failed to download subtitle file.")
+            return None
 
-        if not best_dub_sub:
-            best_dub_sub = max(dub_subs, key=lambda s: s.get("attributes", {}).get("download_count", 0))
-
-        print(f"Selected dub sub: {best_dub_sub['attributes']['release']} (Score: {max_score:.2f}, Downloads: {best_dub_sub['attributes']['download_count']})")
-        dub_file_id = best_dub_sub["attributes"]["files"][0]["file_id"]
-        dub_link = _get_download_link(dub_file_id, api_key, headers)
-        if not dub_link:
-            print("Failed to get dub subtitle download link.")
-            os.remove(orig_filepath) # Clean up
-            return None, None
-        dub_filepath = _download_subtitle_file(dub_link)
-        if not dub_filepath:
-            print("Failed to download dub subtitle file.")
-            os.remove(orig_filepath) # Clean up
-            return None, None
-        print(f"Dub language subtitle saved to: {dub_filepath}")
-
-    return orig_filepath, dub_filepath
+        print(f"Subtitle '{os.path.basename(save_path)}' saved successfully.")
+        return downloaded_path
+    except (KeyError, IndexError) as e:
+        print(f"Error parsing subtitle data: {e}")
+        return None
