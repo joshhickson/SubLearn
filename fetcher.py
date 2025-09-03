@@ -144,6 +144,47 @@ def find_and_download_subtitles(
                 else:
                     print(f"Original language subtitle saved to: {orig_filepath}")
 
+def _select_best_dub_subtitle(dub_subs: list, dub_keywords: list) -> dict | None:
+    """
+    Selects the best dub subtitle from a list based on keywords and download count.
+    """
+    if not dub_subs:
+        return None
+
+    best_dub_sub = None
+    max_score = -1
+
+    for sub in dub_subs:
+        attrs = sub.get("attributes", {})
+        score = 0
+        release_name = attrs.get("release", "").lower()
+        comments = attrs.get("comments", "").lower()
+
+        # Score based on keywords
+        if any(keyword in release_name for keyword in dub_keywords):
+            score += 10
+        if any(keyword in comments for keyword in dub_keywords):
+            score += 5
+
+        # Add a small fraction of the download count to the score as a tie-breaker
+        score += attrs.get("download_count", 0) / 10000.0
+
+        if score > max_score:
+            max_score = score
+            best_dub_sub = sub
+
+    # If no subtitle scored above the initial -1, it means no keywords matched.
+    # In this case, fall back to the one with the highest download count.
+    if max_score <= 0:
+        best_dub_sub = max(dub_subs, key=lambda s: s.get("attributes", {}).get("download_count", 0))
+        # Recalculate score for logging if needed, or just use downloads
+        final_score_str = f"Downloads: {best_dub_sub.get('attributes', {}).get('download_count', 0)}"
+    else:
+        final_score_str = f"Score: {max_score:.2f}"
+
+    print(f"Selected dub sub: {best_dub_sub.get('attributes', {}).get('release', 'N/A')} ({final_score_str})")
+    return best_dub_sub
+
     # --- Process Dub Language Subtitle ---
     if not skip_dub:
         dub_subs = [s for s in data if s.get("attributes", {}).get("language") == lang_dub]
@@ -152,23 +193,8 @@ def find_and_download_subtitles(
         else:
             print(f"Found {len(dub_subs)} subtitle(s) for the dub language. Analyzing...")
             dub_keywords = ["dub", "dubbed", "szinkron"]
-            best_dub_sub = None
-            max_score = -1
-            for sub in dub_subs:
-                attrs = sub.get("attributes", {})
-                score = 0
-                release_name = attrs.get("release", "").lower()
-                comments = attrs.get("comments", "").lower()
-                if any(keyword in release_name for keyword in dub_keywords): score += 10
-                if any(keyword in comments for keyword in dub_keywords): score += 5
-                score += attrs.get("download_count", 0) / 10000
-                if score > max_score:
-                    max_score = score
-                    best_dub_sub = sub
-            if not best_dub_sub:
-                best_dub_sub = max(dub_subs, key=lambda s: s.get("attributes", {}).get("download_count", 0))
+            best_dub_sub = _select_best_dub_subtitle(dub_subs, dub_keywords)
 
-            print(f"Selected dub sub: {best_dub_sub['attributes']['release']} (Score: {max_score:.2f}, Downloads: {best_dub_sub['attributes']['download_count']})")
             dub_file_id = best_dub_sub["attributes"]["files"][0]["file_id"]
             dub_link = _get_download_link(dub_file_id, api_key, headers)
             if not dub_link:

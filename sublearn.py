@@ -3,17 +3,34 @@ import os
 import fetcher
 import translator
 import merger
-
-# --- Configuration ---
-# In Phase 1, API keys are hardcoded.
-# In Phase 2, these will be moved to a configuration file.
-OPENSUBTITLES_API_KEY = "CBTYAdSw5p7cE2kyRta9QMJruZ0DcAnV"
-DEEPL_API_KEY = "f6f6ae27-a52d-45e3-b7e6-91717c251c04:fx"
+import configparser
+import sys
 
 def main():
     """
     Main function to run the SubLearn command-line interface.
     """
+    # --- Configuration Loading ---
+    config = configparser.ConfigParser()
+    config_path = 'config.ini'
+
+    if not os.path.exists(config_path):
+        print(f"Error: Configuration file '{config_path}' not found.")
+        print("Please create it by copying 'config.ini.example' and filling in your API keys.")
+        sys.exit(1)
+
+    config.read(config_path)
+
+    try:
+        OPENSUBTITLES_API_KEY = config.get('API_KEYS', 'OPENSUBTITLES_API_KEY')
+        DEEPL_API_KEY = config.get('API_KEYS', 'DEEPL_API_KEY')
+        if 'YOUR_API_KEY_HERE' in [OPENSUBTITLES_API_KEY, DEEPL_API_KEY]:
+            print("Warning: API key in 'config.ini' still has the default placeholder value.")
+    except (configparser.NoSectionError, configparser.NoOptionError) as e:
+        print(f"Error reading API keys from '{config_path}': {e}")
+        print("Please ensure 'config.ini' has the [API_KEYS] section with OPENSUBTITLES_API_KEY and DEEPL_API_KEY.")
+        sys.exit(1)
+
     parser = argparse.ArgumentParser(
         description="SubLearn: A tool for creating multi-track subtitles for language learning."
     )
