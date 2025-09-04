@@ -2,6 +2,7 @@ import os
 import struct
 import requests
 import tempfile
+import logging
 
 API_URL = "https://api.opensubtitles.com/api/v1"
 
@@ -48,7 +49,7 @@ def _get_download_link(file_id: int, api_key: str, headers: dict) -> str | None:
     if resp.status_code == 200:
         return resp.json().get("link")
     else:
-        print(f"Error getting download link (status {resp.status_code}): {resp.text}")
+        logging.error(f"Error getting download link (status {resp.status_code}): {resp.text}")
         return None
 
 def _download_subtitle_file(url: str, save_path: str | None = None) -> str | None:
@@ -60,19 +61,17 @@ def _download_subtitle_file(url: str, save_path: str | None = None) -> str | Non
         resp.raise_for_status()
 
         if save_path:
-            # Ensure the directory exists before writing the file
             os.makedirs(os.path.dirname(save_path), exist_ok=True)
             with open(save_path, "wb") as f:
                 f.write(resp.content)
             return save_path
         else:
-            # Fallback to temporary file if no save_path is provided
             fd, temp_path = tempfile.mkstemp(suffix=".srt")
             with os.fdopen(fd, "wb") as f:
                 f.write(resp.content)
             return temp_path
     except requests.RequestException as e:
-        print(f"Error downloading subtitle file: {e}")
+        logging.error(f"Error downloading subtitle file: {e}", exc_info=True)
         return None
 
 def search_subtitles(movie_hash: str, lang_orig: str, lang_dub: str, api_key: str) -> tuple[list, list]:
@@ -80,7 +79,7 @@ def search_subtitles(movie_hash: str, lang_orig: str, lang_dub: str, api_key: st
     Searches for subtitles using the OpenSubtitles API and returns lists of available subs.
     """
     languages_to_search = f"{lang_orig},{lang_dub}"
-    print(f"Searching for '{languages_to_search}' subtitles online...")
+    logging.info(f"Searching for '{languages_to_search}' subtitles online...")
 
     headers = {"Api-Key": api_key, "Content-Type": "application/json", "Accept": "application/json"}
     params = {"moviehash": movie_hash, "languages": languages_to_search}
@@ -89,18 +88,18 @@ def search_subtitles(movie_hash: str, lang_orig: str, lang_dub: str, api_key: st
         resp = requests.get(f"{API_URL}/subtitles", headers=headers, params=params)
         resp.raise_for_status()
     except requests.RequestException as e:
-        print(f"Error querying OpenSubtitles API: {e}")
+        logging.error(f"Error querying OpenSubtitles API: {e}", exc_info=True)
         return [], []
 
     data = resp.json().get("data", [])
     if not data:
-        print("No subtitles found for this movie hash.")
+        logging.warning("No subtitles found for this movie hash.")
         return [], []
 
     orig_subs = [s for s in data if s.get("attributes", {}).get("language") == lang_orig]
     dub_subs = [s for s in data if s.get("attributes", {}).get("language") == lang_dub]
 
-    print(f"Found {len(orig_subs)} original language subs and {len(dub_subs)} dub language subs.")
+    logging.info(f"Found {len(orig_subs)} original language subs and {len(dub_subs)} dub language subs.")
     return orig_subs, dub_subs
 
 def download_subtitle(subtitle_data: dict, api_key: str, save_path: str) -> str | None:
@@ -112,16 +111,16 @@ def download_subtitle(subtitle_data: dict, api_key: str, save_path: str) -> str 
         file_id = subtitle_data["attributes"]["files"][0]["file_id"]
         link = _get_download_link(file_id, api_key, headers)
         if not link:
-            print("Failed to get subtitle download link.")
+            logging.error("Failed to get subtitle download link.")
             return None
 
         downloaded_path = _download_subtitle_file(link, save_path=save_path)
         if not downloaded_path:
-            print("Failed to download subtitle file.")
+            logging.error("Failed to download subtitle file.")
             return None
 
-        print(f"Subtitle '{os.path.basename(save_path)}' saved successfully.")
+        logging.info(f"Subtitle '{os.path.basename(save_path)}' saved successfully.")
         return downloaded_path
     except (KeyError, IndexError) as e:
-        print(f"Error parsing subtitle data: {e}")
+        logging.error(f"Error parsing subtitle data: {e}", exc_info=True)
         return None

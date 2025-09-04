@@ -1,5 +1,6 @@
 import deepl
 import pysubs2
+import logging
 
 def translate_subtitle_file(filepath: str, target_lang: str, api_key: str) -> list[str] | None:
     """
@@ -13,51 +14,34 @@ def translate_subtitle_file(filepath: str, target_lang: str, api_key: str) -> li
     Returns:
         A list of translated text strings, or None if translation fails.
     """
-    print(f"Translating subtitle file: {filepath}")
-
     try:
-        # Load the subtitle file using pysubs2 to easily extract text
         subs = pysubs2.load(filepath)
         original_texts = [line.text for line in subs]
     except Exception as e:
-        print(f"Error reading or parsing subtitle file: {e}")
+        logging.error(f"Error reading or parsing subtitle file: {filepath}", exc_info=True)
         return None
 
     if not original_texts:
-        print("Subtitle file contains no text to translate.")
+        logging.warning("Subtitle file contains no text to translate.")
         return []
 
     try:
-        # Initialize the DeepL translator
         translator = deepl.Translator(api_key)
+        logging.info(f"Sending {len(original_texts)} lines to DeepL API for translation to {target_lang}...")
 
-        # Translate the text
-        # Sending the text as a list is more efficient (one API call)
-        print(f"Sending {len(original_texts)} lines to DeepL API for translation to {target_lang}...")
-        # Formality is only supported for specific target languages.
         supported_formality_langs = ["DE", "FR", "IT", "ES", "NL", "PL", "PT-PT", "PT-BR", "RU"]
-
         if target_lang.upper() in supported_formality_langs:
-            result = translator.translate_text(
-                original_texts,
-                target_lang=target_lang,
-                formality="more"
-            )
+            result = translator.translate_text(original_texts, target_lang=target_lang, formality="more")
         else:
-            result = translator.translate_text(
-                original_texts,
-                target_lang=target_lang
-            )
+            result = translator.translate_text(original_texts, target_lang=target_lang)
 
-        # Extract the translated text from the result objects
         translated_texts = [res.text for res in result]
-        print("Translation successful.")
-
+        logging.info("Translation successful.")
         return translated_texts
 
     except deepl.DeepLException as e:
-        print(f"An error occurred with the DeepL API: {e}")
+        logging.error(f"An error occurred with the DeepL API: {e}")
         return None
     except Exception as e:
-        print(f"An unexpected error occurred during translation: {e}")
+        logging.error(f"An unexpected error occurred during translation: {e}", exc_info=True)
         return None

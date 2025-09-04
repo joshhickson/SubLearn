@@ -5,6 +5,7 @@ import translator
 import merger
 import configparser
 import sys
+import logging
 
 def _select_best_dub_subtitle(dub_subs: list, dub_keywords: list) -> dict | None:
     """
@@ -22,29 +23,21 @@ def _select_best_dub_subtitle(dub_subs: list, dub_keywords: list) -> dict | None
         release_name = attrs.get("release", "").lower()
         comments = attrs.get("comments", "").lower()
 
-        # Score based on keywords
-        if any(keyword in release_name for keyword in dub_keywords):
-            score += 10
-        if any(keyword in comments for keyword in dub_keywords):
-            score += 5
-
-        # Add a small fraction of the download count to the score as a tie-breaker
+        if any(keyword in release_name for keyword in dub_keywords): score += 10
+        if any(keyword in comments for keyword in dub_keywords): score += 5
         score += attrs.get("download_count", 0) / 10000.0
 
         if score > max_score:
             max_score = score
             best_dub_sub = sub
 
-    # If no subtitle scored above the initial -1, it means no keywords matched.
-    # In this case, fall back to the one with the highest download count.
     if max_score <= 0:
         best_dub_sub = max(dub_subs, key=lambda s: s.get("attributes", {}).get("download_count", 0))
-        # Recalculate score for logging if needed, or just use downloads
         final_score_str = f"Downloads: {best_dub_sub.get('attributes', {}).get('download_count', 0)}"
     else:
         final_score_str = f"Score: {max_score:.2f}"
 
-    print(f"Selected dub sub: {best_dub_sub.get('attributes', {}).get('release', 'N/A')} ({final_score_str})")
+    logging.info(f"Auto-selected dub sub: {best_dub_sub.get('attributes', {}).get('release', 'N/A')} ({final_score_str})")
     return best_dub_sub
 
 def _prompt_for_selection(sub_list: list, sub_type: str) -> dict | None:
@@ -52,59 +45,55 @@ def _prompt_for_selection(sub_list: list, sub_type: str) -> dict | None:
     if not sub_list:
         return None
 
-    print(f"\n--- Please select a {sub_type} subtitle ---")
+    logging.info(f"\n--- Please select a {sub_type} subtitle ---")
     for i, sub_data in enumerate(sub_list):
         attrs = sub_data.get("attributes", {})
         release = attrs.get("release", "N/A")
         downloads = attrs.get("download_count", 0)
         comments = attrs.get("comments", "No comments").strip().replace("\n", " ")
-        print(f"[{i+1}] {release} (Downloads: {downloads})")
+        logging.info(f"[{i+1}] {release} (Downloads: {downloads})")
         if comments:
-            print(f"    Comment: {comments}")
+            logging.info(f"    Comment: {comments}")
 
     while True:
         try:
             choice = input(f"Enter number (1-{len(sub_list)}), or 0 to skip: ")
             choice_idx = int(choice) - 1
-            if choice_idx == -1:
-                return None
-            if 0 <= choice_idx < len(sub_list):
-                return sub_list[choice_idx]
-            else:
-                print("Invalid selection. Please try again.")
+            if choice_idx == -1: return None
+            if 0 <= choice_idx < len(sub_list): return sub_list[choice_idx]
+            else: logging.warning("Invalid selection. Please try again.")
         except (ValueError, IndexError):
-            print("Invalid input. Please enter a number.")
+            logging.warning("Invalid input. Please enter a number.")
 
 def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict):
     """
     Runs the full SubLearn workflow for a single video file.
     """
-    print(f"\n--- Starting processing for: {os.path.basename(video_path)} ---")
+    logging.info(f"\n--- Starting processing for: {os.path.basename(video_path)} ---")
     video_filename_no_ext = os.path.splitext(os.path.basename(video_path))[0]
     output_dir = os.path.join(os.path.dirname(video_path), video_filename_no_ext)
     os.makedirs(output_dir, exist_ok=True)
-    print(f"Output will be saved to: {output_dir}")
+    logging.info(f"Output will be saved to: {output_dir}")
 
     try:
-        # --- Subtitle Sourcing ---
         orig_sub_path, dub_sub_path = None, None
-        print("--- Locating Subtitle Files ---")
+        logging.info("--- Locating Subtitle Files ---")
 
-        # 1. Check for local files (more complex logic for batch mode needed here, simplified for now)
         local_orig_path = os.path.join(output_dir, f"{video_filename_no_ext}.{args.lang_orig}.srt")
-        if os.path.exists(local_orig_path): orig_sub_path = local_orig_path
+        if os.path.exists(local_orig_path):
+            logging.info(f"Found local original subtitle: {os.path.basename(local_orig_path)}")
+            orig_sub_path = local_orig_path
         local_dub_path = os.path.join(output_dir, f"{video_filename_no_ext}.{args.lang_dub}.srt")
-        if os.path.exists(local_dub_path): dub_sub_path = local_dub_path
+        if os.path.exists(local_dub_path):
+            logging.info(f"Found local dub subtitle: {os.path.basename(local_dub_path)}")
+            dub_sub_path = local_dub_path
 
-        # 2. Fetch missing subtitles from online
         if not orig_sub_path or not dub_sub_path:
             movie_hash = fetcher.get_movie_hash(video_path)
             if not movie_hash:
-                print(f"Error: Could not calculate movie hash for {video_filename_no_ext}.")
+                logging.error(f"Could not calculate movie hash for {video_filename_no_ext}.")
             else:
-                online_orig_subs, online_dub_subs = fetcher.search_subtitles(
-                    movie_hash, args.lang_orig, args.lang_dub, api_keys['opensubtitles']
-                )
+                online_orig_subs, online_dub_subs = fetcher.search_subtitles(movie_hash, args.lang_orig, args.lang_dub, api_keys['opensubtitles'])
                 if not orig_sub_path and not args.no_orig_search and online_orig_subs:
                     selected_meta = _prompt_for_selection(online_orig_subs, "original") if args.interactive else max(online_orig_subs, key=lambda s: s.get("attributes", {}).get("download_count", 0))
                     if selected_meta:
@@ -116,38 +105,39 @@ def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict
                         save_path = os.path.join(output_dir, f"{video_filename_no_ext}.{args.lang_dub}.srt")
                         dub_sub_path = fetcher.download_subtitle(selected_meta, api_keys['opensubtitles'], save_path)
 
-        # --- Main Processing ---
         if not dub_sub_path:
-            print(f"Error: Could not retrieve dub subtitle for {video_filename_no_ext}. Skipping.")
+            logging.error(f"Could not retrieve dub subtitle for {video_filename_no_ext}. Skipping.")
             return
 
-        print(f"Translating dub file: {os.path.basename(dub_sub_path)}")
-        translated_texts = translator.translate_subtitle_file(
-            filepath=dub_sub_path, target_lang=args.lang_native, api_key=api_keys['deepl']
-        )
+        logging.info(f"Translating dub file: {os.path.basename(dub_sub_path)}")
+        translated_texts = translator.translate_subtitle_file(filepath=dub_sub_path, target_lang=args.lang_native, api_key=api_keys['deepl'])
         if not translated_texts:
-            print(f"Error: Could not translate subtitle file for {video_filename_no_ext}. Skipping.")
+            logging.error(f"Could not translate subtitle file for {video_filename_no_ext}. Skipping.")
             return
 
         output_path = os.path.join(output_dir, f"{video_filename_no_ext}.sublearn.ass")
-        merger.create_merged_subtitle_file(
-            dub_sub_path=dub_sub_path, translated_texts=translated_texts,
-            output_path=output_path, orig_sub_path=orig_sub_path
-        )
-        print(f"--- Successfully completed processing for: {os.path.basename(video_path)} ---")
+        merger.create_merged_subtitle_file(dub_sub_path=dub_sub_path, translated_texts=translated_texts, output_path=output_path, orig_sub_path=orig_sub_path)
+        logging.info(f"--- Successfully completed processing for: {os.path.basename(video_path)} ---")
 
-    except Exception as e:
-        print(f"\nAn unexpected error occurred while processing {os.path.basename(video_path)}: {e}")
+    except Exception:
+        logging.error(f"An unexpected error occurred while processing {os.path.basename(video_path)}.", exc_info=True)
 
 def main():
     """
     Main function to run the SubLearn command-line interface.
     """
+    # --- Logging Setup ---
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename='sublearn.log', filemode='w')
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(logging.Formatter('%(message)s'))
+    logging.getLogger().addHandler(console_handler)
+
     # --- Configuration Loading ---
     config = configparser.ConfigParser()
     config_path = 'config.ini'
     if not os.path.exists(config_path):
-        print(f"Error: Configuration file '{config_path}' not found. Please create it from the example.")
+        logging.error(f"Configuration file '{config_path}' not found. Please create it from the example.")
         sys.exit(1)
     config.read(config_path)
     try:
@@ -156,24 +146,18 @@ def main():
             'deepl': config.get('API_KEYS', 'DEEPL_API_KEY')
         }
         if 'YOUR_API_KEY_HERE' in api_keys.values():
-            print("Warning: API key in 'config.ini' still has the default placeholder value.")
+            logging.warning("API key in 'config.ini' still has the default placeholder value.")
     except (configparser.NoSectionError, configparser.NoOptionError) as e:
-        print(f"Error reading API keys from '{config_path}': {e}")
+        logging.error(f"Error reading API keys from '{config_path}': {e}", exc_info=True)
         sys.exit(1)
 
-    parser = argparse.ArgumentParser(
-        description="SubLearn: A tool for creating multi-track subtitles for language learning."
-    )
+    parser = argparse.ArgumentParser(description="SubLearn: A tool for creating multi-track subtitles for language learning.")
     parser.add_argument("path", help="The full path to the local video file or directory of video files.")
     parser.add_argument("--lang_orig", default="en", help="The original language of the video (e.g., 'en').")
     parser.add_argument("--lang_dub", required=True, help="The language of the dubbed audio track (e.g., 'hu', 'es').")
     parser.add_argument("--lang_native", default="EN-US", help="Your native language for translation (e.g., 'EN-US', 'DE').")
     parser.add_argument("--interactive", action="store_true", help="Enable interactive mode to manually select subtitles.")
-    # The --orig-file and --dub-file arguments are disabled for batch mode simplicity
-    # parser.add_argument("--orig-file", help="Path to a local .srt file for the original language track.")
-    # parser.add_argument("--dub-file", help="Path to a local .srt file for the dub track.")
     parser.add_argument("--no-orig-search", action="store_true", help="Do not search for an original language subtitle online.")
-
     args = parser.parse_args()
 
     # --- Path processing ---
@@ -181,15 +165,15 @@ def main():
     if os.path.isfile(input_path):
         videos_to_process = [input_path]
     elif os.path.isdir(input_path):
-        print(f"Scanning directory for video files: {input_path}")
+        logging.info(f"Scanning directory for video files: {input_path}")
         supported_extensions = ['.mkv', '.mp4', '.avi', '.mov']
         videos_to_process = [
             os.path.join(input_path, f) for f in os.listdir(input_path)
             if os.path.isfile(os.path.join(input_path, f)) and os.path.splitext(f)[1].lower() in supported_extensions
         ]
-        print(f"Found {len(videos_to_process)} video file(s) to process.")
+        logging.info(f"Found {len(videos_to_process)} video file(s) to process.")
     else:
-        print(f"Error: The provided path is not a valid file or directory: {input_path}")
+        logging.error(f"The provided path is not a valid file or directory: {input_path}")
         sys.exit(1)
 
     for video_path in videos_to_process:
