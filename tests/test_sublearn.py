@@ -20,18 +20,18 @@ def mock_dependencies(mocker):
     mocker.patch('sublearn.fetcher.download_subtitle', side_effect=lambda data, api_key, save_path: save_path)
 
 @pytest.fixture
-def setup_test_environment(tmp_path):
+def setup_test_environment(tmp_path, mocker):
     """Creates a temporary environment for testing file operations."""
+    # Mock the base path to point to our temporary directory
+    mocker.patch('sublearn.get_base_path', return_value=str(tmp_path))
+
     # Create a dummy video file
     video_path = tmp_path / "test_movie.mkv"
     video_path.touch()
 
-    # Create a dummy config file
+    # Create a dummy config file in the mocked base path
     config_path = tmp_path / "config.ini"
-    with open(config_path, "w") as f:
-        f.write("[API_KEYS]\n")
-        f.write("OPENSUBTITLES_API_KEY = fake_key\n")
-        f.write("DEEPL_API_KEY = fake_key\n")
+    config_path.write_text("[API_KEYS]\nOPENSUBTITLES_API_KEY = fake_key\nDEEPL_API_KEY = fake_key\n")
 
     # Create dummy local subtitle files for auto-detection
     movie_dir = tmp_path / "test_movie"
@@ -39,17 +39,11 @@ def setup_test_environment(tmp_path):
     (movie_dir / "test_movie.en.srt").touch()
     (movie_dir / "test_movie.hu.srt").touch()
 
-    # Change the current working directory to the temporary directory
-    # This makes it easier to test file path logic
-    original_cwd = os.getcwd()
-    os.chdir(tmp_path)
     yield {
         "video_path": str(video_path),
         "config_path": str(config_path),
         "movie_dir": str(movie_dir)
     }
-    # Teardown: change back to the original directory
-    os.chdir(original_cwd)
 
 
 def test_process_video_file_local_found(setup_test_environment, mock_dependencies):
@@ -147,25 +141,19 @@ def test_main_batch_processing(mock_process_video, tmp_path, mocker):
     (video_dir / "video2.mp4").touch()
     (video_dir / "notes.txt").touch() # A non-video file that should be ignored
 
-    # Mock config loading to prevent needing real keys, but create a dummy file
-    # to satisfy the os.path.exists check.
+    # Mock get_base_path to point to our temporary directory
+    mocker.patch('sublearn.get_base_path', return_value=str(tmp_path))
+
+    # Create a dummy config file in the mocked base path
     (tmp_path / "config.ini").write_text("[API_KEYS]\nOPENSUBTITLES_API_KEY=fake\nDEEPL_API_KEY=fake")
 
     # --- Run the main function with the directory path ---
-    # We need to run from tmp_path so that config.ini is found.
-    original_cwd = os.getcwd()
-    os.chdir(tmp_path)
-
     test_args = ["sublearn.py", str(video_dir), "--lang_dub", "hu"]
-    try:
-        with patch.object(sys, 'argv', test_args):
-            try:
-                sublearn.main()
-            except SystemExit:
-                pytest.fail("sublearn.main() exited unexpectedly in batch mode test.")
-    finally:
-        # Teardown: restore original working directory
-        os.chdir(original_cwd)
+    with patch.object(sys, 'argv', test_args):
+        try:
+            sublearn.main()
+        except SystemExit:
+            pytest.fail("sublearn.main() exited unexpectedly in batch mode test.")
 
     # --- Assertions ---
     # Assert that process_video_file was called exactly twice

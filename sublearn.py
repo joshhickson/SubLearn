@@ -7,6 +7,15 @@ import configparser
 import sys
 import logging
 
+def get_base_path():
+    """Get the base path for the application, handling both script and frozen executable."""
+    if getattr(sys, 'frozen', False):
+        # The application is frozen
+        return os.path.dirname(sys.executable)
+    else:
+        # The application is not frozen
+        return os.path.dirname(os.path.abspath(__file__))
+
 def _select_best_dub_subtitle(dub_subs: list, dub_keywords: list) -> dict | None:
     """
     Selects the best dub subtitle from a list based on keywords and download count.
@@ -126,8 +135,11 @@ def main():
     """
     Main function to run the SubLearn command-line interface.
     """
+    base_path = get_base_path()
+
     # --- Logging Setup ---
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename='sublearn.log', filemode='w')
+    log_file_path = os.path.join(base_path, 'sublearn.log')
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename=log_file_path, filemode='w')
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(logging.INFO)
     console_handler.setFormatter(logging.Formatter('%(message)s'))
@@ -135,7 +147,7 @@ def main():
 
     # --- Configuration Loading ---
     config = configparser.ConfigParser()
-    config_path = 'config.ini'
+    config_path = os.path.join(base_path, 'config.ini')
     if not os.path.exists(config_path):
         logging.error(f"Configuration file '{config_path}' not found. Please create it from the example.")
         sys.exit(1)

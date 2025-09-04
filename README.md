@@ -94,3 +94,35 @@ This will find and process all video files (`.mkv`, `.mp4`, etc.) in the specifi
 ```bash
 python sublearn.py "/path/to/movies/" --lang_dub hu --interactive
 ```
+
+## Creating a Standalone Application
+
+For users who do not have Python installed, or for easier distribution, you can package SubLearn into a single standalone executable.
+
+### 1. Build the Executable
+
+First, ensure you have followed the Installation steps to install all dependencies, including `pyinstaller`. Then, run the following command from the root of the project directory:
+
+```bash
+pyinstaller --onefile --name sublearn sublearn.py
+```
+
+This command will create a `dist/` directory containing the `sublearn` executable (or `sublearn.exe` on Windows).
+
+### 2. Run the Executable
+
+1.  Move the `sublearn` executable from the `dist/` directory to any folder you like.
+2.  **Important:** Create a `config.ini` file in the **same folder** as the `sublearn` executable. You can do this by copying the `config.ini.example` from the project and filling in your API keys.
+3.  You can now run the application directly from your terminal or command prompt. The usage is the same as the Python script, but you call the executable directly:
+
+    ```bash
+    # On macOS or Linux
+    ./sublearn "/path/to/movies/" --lang_dub hu --interactive
+
+    # On Windows
+    sublearn.exe "C:\path\to\movies\" --lang_dub hu --interactive
+    ```
+
+### 3. Debugging
+
+If you encounter any issues, a detailed log file named `sublearn.log` will be created in the same folder as the executable. Please check this file for error messages and tracebacks.

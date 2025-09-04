@@ -4,3 +4,8 @@ __pycache__/
 # Local configuration file with credentials
 # Create this file from config.ini.example
 config.ini
+
+# PyInstaller build artifacts
+/build/
+/dist/
+*.spec
