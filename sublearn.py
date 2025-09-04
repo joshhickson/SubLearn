@@ -162,9 +162,9 @@ def load_styles_from_config(config: configparser.ConfigParser) -> dict:
     }
 
     styles = {
-        'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'orig_alignment': pysubs2.Alignment.TOP_CENTER, 'orig_marginv': 10,
-        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': pysubs2.Alignment.MIDDLE_CENTER, 'dub_marginv': 10,
-        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': pysubs2.Alignment.BOTTOM_CENTER, 'trans_marginv': 10,
+        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': pysubs2.Alignment.TOP_CENTER, 'dub_marginv': 10,
+        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': pysubs2.Alignment.TOP_CENTER, 'trans_marginv': 40,
+        'orig_fontsize': 14, 'orig_color': (255, 255, 255), 'orig_alignment': pysubs2.Alignment.BOTTOM_CENTER, 'orig_marginv': 10,
     }
     if not config.has_section('STYLES'):
         return styles
@@ -245,7 +245,7 @@ def main():
     args = parser.parse_args()
 
     # --- Path processing ---
-    input_path = args.path
+    input_path = os.path.abspath(args.path)
     videos_to_process = []
     is_batch_mode = os.path.isdir(input_path)
 

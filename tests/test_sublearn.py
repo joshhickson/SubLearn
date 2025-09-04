@@ -62,9 +62,9 @@ def test_process_video_file_local_found(setup_test_environment, mock_dependencie
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
     styles = {
-        'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'orig_alignment': 8, 'orig_marginv': 10,
-        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': 5, 'dub_marginv': 10,
-        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 2, 'trans_marginv': 10,
+        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': 8, 'dub_marginv': 10,
+        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 8, 'trans_marginv': 40,
+        'orig_fontsize': 14, 'orig_color': (255, 255, 255), 'orig_alignment': 2, 'orig_marginv': 10,
     }
 
     # --- Run the function to be tested ---
@@ -111,9 +111,9 @@ def test_process_video_file_interactive_online_found(setup_test_environment, moc
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
     styles = {
-        'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'orig_alignment': 8, 'orig_marginv': 10,
-        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': 5, 'dub_marginv': 10,
-        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 2, 'trans_marginv': 10,
+        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': 8, 'dub_marginv': 10,
+        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 8, 'trans_marginv': 40,
+        'orig_fontsize': 14, 'orig_color': (255, 255, 255), 'orig_alignment': 2, 'orig_marginv': 10,
     }
 
     # --- Setup Mocks for this specific test ---
@@ -166,9 +166,9 @@ def test_process_video_file_with_arg(setup_test_environment, mock_dependencies):
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
     styles = {
-        'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'orig_alignment': 8, 'orig_marginv': 10,
-        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': 5, 'dub_marginv': 10,
-        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 2, 'trans_marginv': 10,
+        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': 8, 'dub_marginv': 10,
+        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 8, 'trans_marginv': 40,
+        'orig_fontsize': 14, 'orig_color': (255, 255, 255), 'orig_alignment': 2, 'orig_marginv': 10,
     }
 
     # --- Run the function ---
