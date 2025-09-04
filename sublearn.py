@@ -6,6 +6,7 @@ import merger
 import configparser
 import sys
 import logging
+import pysubs2
 
 def get_base_path():
     """Get the base path for the application, handling both script and frozen executable."""
@@ -153,21 +154,48 @@ def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict
 
 def load_styles_from_config(config: configparser.ConfigParser) -> dict:
     """Loads subtitle styles from the config parser, with defaults."""
-    styles = {
-        'orig_fontsize': 20, 'orig_color': (255, 255, 255),
-        'dub_fontsize': 24, 'dub_color': (255, 255, 0),
-        'trans_fontsize': 22, 'trans_color': (0, 255, 255),
+    # Map user-friendly strings to pysubs2 Alignment enums
+    alignment_map = {
+        "BOTTOM_LEFT": pysubs2.Alignment.BOTTOM_LEFT, "BOTTOM_CENTER": pysubs2.Alignment.BOTTOM_CENTER, "BOTTOM_RIGHT": pysubs2.Alignment.BOTTOM_RIGHT,
+        "MIDDLE_LEFT": pysubs2.Alignment.MIDDLE_LEFT, "MIDDLE_CENTER": pysubs2.Alignment.MIDDLE_CENTER, "MIDDLE_RIGHT": pysubs2.Alignment.MIDDLE_RIGHT,
+        "TOP_LEFT": pysubs2.Alignment.TOP_LEFT, "TOP_CENTER": pysubs2.Alignment.TOP_CENTER, "TOP_RIGHT": pysubs2.Alignment.TOP_RIGHT,
     }
-    if config.has_section('STYLES'):
+
+    styles = {
+        'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'orig_alignment': pysubs2.Alignment.TOP_CENTER, 'orig_marginv': 10,
+        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': pysubs2.Alignment.MIDDLE_CENTER, 'dub_marginv': 10,
+        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': pysubs2.Alignment.BOTTOM_CENTER, 'trans_marginv': 10,
+    }
+    if not config.has_section('STYLES'):
+        return styles
+
+    def get_style(key, getter, default):
         try:
-            styles['orig_fontsize'] = config.getint('STYLES', 'orig_fontsize')
-            styles['dub_fontsize'] = config.getint('STYLES', 'dub_fontsize')
-            styles['trans_fontsize'] = config.getint('STYLES', 'trans_fontsize')
-            styles['orig_color'] = (config.getint('STYLES', 'orig_color_r'), config.getint('STYLES', 'orig_color_g'), config.getint('STYLES', 'orig_color_b'))
-            styles['dub_color'] = (config.getint('STYLES', 'dub_color_r'), config.getint('STYLES', 'dub_color_g'), config.getint('STYLES', 'dub_color_b'))
-            styles['trans_color'] = (config.getint('STYLES', 'trans_color_r'), config.getint('STYLES', 'trans_color_g'), config.getint('STYLES', 'trans_color_b'))
-        except (configparser.NoOptionError, ValueError) as e:
-            logging.warning(f"Could not parse all style options from config.ini, using defaults. Error: {e}")
+            return getter('STYLES', key)
+        except (configparser.NoOptionError, ValueError):
+            logging.warning(f"Could not parse '{key}' from config, using default: {default}")
+            return default
+
+    styles['orig_fontsize'] = get_style('orig_fontsize', config.getint, styles['orig_fontsize'])
+    styles['dub_fontsize'] = get_style('dub_fontsize', config.getint, styles['dub_fontsize'])
+    styles['trans_fontsize'] = get_style('trans_fontsize', config.getint, styles['trans_fontsize'])
+
+    styles['orig_marginv'] = get_style('orig_marginv', config.getint, styles['orig_marginv'])
+    styles['dub_marginv'] = get_style('dub_marginv', config.getint, styles['dub_marginv'])
+    styles['trans_marginv'] = get_style('trans_marginv', config.getint, styles['trans_marginv'])
+
+    styles['orig_color'] = (get_style('orig_color_r', config.getint, 255), get_style('orig_color_g', config.getint, 255), get_style('orig_color_b', config.getint, 255))
+    styles['dub_color'] = (get_style('dub_color_r', config.getint, 255), get_style('dub_color_g', config.getint, 255), get_style('dub_color_b', config.getint, 0))
+    styles['trans_color'] = (get_style('trans_color_r', config.getint, 0), get_style('trans_color_g', config.getint, 255), get_style('trans_color_b', config.getint, 255))
+
+    orig_align_str = get_style('orig_alignment', config.get, 'TOP_CENTER').upper()
+    dub_align_str = get_style('dub_alignment', config.get, 'MIDDLE_CENTER').upper()
+    trans_align_str = get_style('trans_alignment', config.get, 'BOTTOM_CENTER').upper()
+
+    styles['orig_alignment'] = alignment_map.get(orig_align_str, styles['orig_alignment'])
+    styles['dub_alignment'] = alignment_map.get(dub_align_str, styles['dub_alignment'])
+    styles['trans_alignment'] = alignment_map.get(trans_align_str, styles['trans_alignment'])
+
     return styles
 
 def main():

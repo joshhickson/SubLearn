@@ -11,15 +11,26 @@ orig_fontsize = 20
 orig_color_r = 255
 orig_color_g = 255
 orig_color_b = 255
+orig_alignment = TOP_CENTER
+orig_marginv = 10
 
 # Dub language track (Middle)
 dub_fontsize = 24
 dub_color_r = 255
 dub_color_g = 255
 dub_color_b = 0
+dub_alignment = MIDDLE_CENTER
+dub_marginv = 10
 
 # Translated language track (Bottom)
 trans_fontsize = 22
 trans_color_r = 0
 trans_color_g = 255
 trans_color_b = 255
+trans_alignment = BOTTOM_CENTER
+trans_marginv = 10
+
+# Alignment options correspond to the Numpad layout:
+# TOP_LEFT (7), TOP_CENTER (8), TOP_RIGHT (9)
+# MIDDLE_LEFT (4), MIDDLE_CENTER (5), MIDDLE_RIGHT (6)
+# BOTTOM_LEFT (1), BOTTOM_CENTER (2), BOTTOM_RIGHT (3)

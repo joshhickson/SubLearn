@@ -61,7 +61,11 @@ def test_process_video_file_local_found(setup_test_environment, mock_dependencie
     args.dub_file = None
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
-    styles = {'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'trans_fontsize': 22, 'trans_color': (0, 255, 255)}
+    styles = {
+        'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'orig_alignment': 8, 'orig_marginv': 10,
+        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': 5, 'dub_marginv': 10,
+        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 2, 'trans_marginv': 10,
+    }
 
     # --- Run the function to be tested ---
     sublearn.process_video_file(video_path, args, api_keys, styles)
@@ -106,7 +110,11 @@ def test_process_video_file_interactive_online_found(setup_test_environment, moc
     args.dub_file = None
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
-    styles = {'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'trans_fontsize': 22, 'trans_color': (0, 255, 255)}
+    styles = {
+        'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'orig_alignment': 8, 'orig_marginv': 10,
+        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': 5, 'dub_marginv': 10,
+        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 2, 'trans_marginv': 10,
+    }
 
     # --- Setup Mocks for this specific test ---
     sample_orig_subs = [{"attributes": {"release": "Orig A", "files": [{"file_id": 101}], "download_count": 1}}]
@@ -157,7 +165,11 @@ def test_process_video_file_with_arg(setup_test_environment, mock_dependencies):
     args.dub_file = str(user_srt_path) # Use the user-provided file
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
-    styles = {'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'trans_fontsize': 22, 'trans_color': (0, 255, 255)}
+    styles = {
+        'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'orig_alignment': 8, 'orig_marginv': 10,
+        'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'dub_alignment': 5, 'dub_marginv': 10,
+        'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 2, 'trans_marginv': 10,
+    }
 
     # --- Run the function ---
     sublearn.process_video_file(video_path, args, api_keys, styles)
@@ -211,5 +223,7 @@ def test_main_batch_processing(mock_process_video, tmp_path, mocker):
     # Check that the styles dict was passed in each call
     for call in mock_process_video.call_args_list:
         # styles is the 4th positional argument (index 3)
-        assert isinstance(call.args[3], dict)
-        assert 'orig_fontsize' in call.args[3]
+        styles_arg = call.args[3]
+        assert isinstance(styles_arg, dict)
+        assert 'orig_alignment' in styles_arg
+        assert 'dub_marginv' in styles_arg

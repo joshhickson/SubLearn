@@ -40,19 +40,19 @@ def create_merged_subtitle_file(
             fontname="Arial", fontsize=styles['orig_fontsize'],
             primarycolor=pysubs2.Color(*styles['orig_color']),
             outlinecolor=pysubs2.Color(0, 0, 0), borderstyle=1, outline=1, shadow=0.5,
-            alignment=pysubs2.Alignment.TOP_CENTER, marginv=10
+            alignment=styles['orig_alignment'], marginv=styles['orig_marginv']
         )
         style_dub = pysubs2.SSAStyle(
             fontname="Arial", fontsize=styles['dub_fontsize'],
             primarycolor=pysubs2.Color(*styles['dub_color']),
             outlinecolor=pysubs2.Color(0, 0, 0), borderstyle=1, outline=1, shadow=0.5,
-            alignment=pysubs2.Alignment.MIDDLE_CENTER, marginv=10
+            alignment=styles['dub_alignment'], marginv=styles['dub_marginv']
         )
         style_trans = pysubs2.SSAStyle(
             fontname="Arial", fontsize=styles['trans_fontsize'],
             primarycolor=pysubs2.Color(*styles['trans_color']),
             outlinecolor=pysubs2.Color(0, 0, 0), borderstyle=1, outline=1, shadow=0.5,
-            alignment=pysubs2.Alignment.BOTTOM_CENTER, marginv=10
+            alignment=styles['trans_alignment'], marginv=styles['trans_marginv']
         )
 
         subs_final.styles["Style_Dub"] = style_dub
