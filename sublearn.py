@@ -74,7 +74,7 @@ def _prompt_for_selection(sub_list: list, sub_type: str) -> dict | None:
         except (ValueError, IndexError):
             logging.warning("Invalid input. Please enter a number.")
 
-def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict):
+def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict, styles: dict):
     """
     Runs the full SubLearn workflow for a single video file.
     """
@@ -88,14 +88,31 @@ def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict
         orig_sub_path, dub_sub_path = None, None
         logging.info("--- Locating Subtitle Files ---")
 
-        local_orig_path = os.path.join(output_dir, f"{video_filename_no_ext}.{args.lang_orig}.srt")
-        if os.path.exists(local_orig_path):
-            logging.info(f"Found local original subtitle: {os.path.basename(local_orig_path)}")
-            orig_sub_path = local_orig_path
-        local_dub_path = os.path.join(output_dir, f"{video_filename_no_ext}.{args.lang_dub}.srt")
-        if os.path.exists(local_dub_path):
-            logging.info(f"Found local dub subtitle: {os.path.basename(local_dub_path)}")
-            dub_sub_path = local_dub_path
+        # Priority 1: Use files specified in arguments
+        if args.orig_file:
+            if os.path.exists(args.orig_file):
+                logging.info(f"Using user-provided original subtitle: {args.orig_file}")
+                orig_sub_path = args.orig_file
+            else:
+                logging.warning(f"File specified by --orig-file not found: {args.orig_file}")
+        if args.dub_file:
+            if os.path.exists(args.dub_file):
+                logging.info(f"Using user-provided dub subtitle: {args.dub_file}")
+                dub_sub_path = args.dub_file
+            else:
+                logging.warning(f"File specified by --dub-file not found: {args.dub_file}")
+
+        # Priority 2: Auto-detect files in output directory
+        if not orig_sub_path:
+            local_orig_path = os.path.join(output_dir, f"{video_filename_no_ext}.{args.lang_orig}.srt")
+            if os.path.exists(local_orig_path):
+                logging.info(f"Found local original subtitle: {os.path.basename(local_orig_path)}")
+                orig_sub_path = local_orig_path
+        if not dub_sub_path:
+            local_dub_path = os.path.join(output_dir, f"{video_filename_no_ext}.{args.lang_dub}.srt")
+            if os.path.exists(local_dub_path):
+                logging.info(f"Found local dub subtitle: {os.path.basename(local_dub_path)}")
+                dub_sub_path = local_dub_path
 
         if not orig_sub_path or not dub_sub_path:
             movie_hash = fetcher.get_movie_hash(video_path)
@@ -125,11 +142,33 @@ def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict
             return
 
         output_path = os.path.join(output_dir, f"{video_filename_no_ext}.sublearn.ass")
-        merger.create_merged_subtitle_file(dub_sub_path=dub_sub_path, translated_texts=translated_texts, output_path=output_path, orig_sub_path=orig_sub_path)
+        merger.create_merged_subtitle_file(
+            dub_sub_path=dub_sub_path, translated_texts=translated_texts,
+            output_path=output_path, orig_sub_path=orig_sub_path, styles=styles
+        )
         logging.info(f"--- Successfully completed processing for: {os.path.basename(video_path)} ---")
 
     except Exception:
         logging.error(f"An unexpected error occurred while processing {os.path.basename(video_path)}.", exc_info=True)
+
+def load_styles_from_config(config: configparser.ConfigParser) -> dict:
+    """Loads subtitle styles from the config parser, with defaults."""
+    styles = {
+        'orig_fontsize': 20, 'orig_color': (255, 255, 255),
+        'dub_fontsize': 24, 'dub_color': (255, 255, 0),
+        'trans_fontsize': 22, 'trans_color': (0, 255, 255),
+    }
+    if config.has_section('STYLES'):
+        try:
+            styles['orig_fontsize'] = config.getint('STYLES', 'orig_fontsize')
+            styles['dub_fontsize'] = config.getint('STYLES', 'dub_fontsize')
+            styles['trans_fontsize'] = config.getint('STYLES', 'trans_fontsize')
+            styles['orig_color'] = (config.getint('STYLES', 'orig_color_r'), config.getint('STYLES', 'orig_color_g'), config.getint('STYLES', 'orig_color_b'))
+            styles['dub_color'] = (config.getint('STYLES', 'dub_color_r'), config.getint('STYLES', 'dub_color_g'), config.getint('STYLES', 'dub_color_b'))
+            styles['trans_color'] = (config.getint('STYLES', 'trans_color_r'), config.getint('STYLES', 'trans_color_g'), config.getint('STYLES', 'trans_color_b'))
+        except (configparser.NoOptionError, ValueError) as e:
+            logging.warning(f"Could not parse all style options from config.ini, using defaults. Error: {e}")
+    return styles
 
 def main():
     """
@@ -163,6 +202,9 @@ def main():
         logging.error(f"Error reading API keys from '{config_path}': {e}", exc_info=True)
         sys.exit(1)
 
+    # Load styles from config
+    styles = load_styles_from_config(config)
+
     parser = argparse.ArgumentParser(description="SubLearn: A tool for creating multi-track subtitles for language learning.")
     parser.add_argument("path", help="The full path to the local video file or directory of video files.")
     parser.add_argument("--lang_orig", default="en", help="The original language of the video (e.g., 'en').")
@@ -170,13 +212,20 @@ def main():
     parser.add_argument("--lang_native", default="EN-US", help="Your native language for translation (e.g., 'EN-US', 'DE').")
     parser.add_argument("--interactive", action="store_true", help="Enable interactive mode to manually select subtitles.")
     parser.add_argument("--no-orig-search", action="store_true", help="Do not search for an original language subtitle online.")
+    parser.add_argument("--orig-file", help="Path to a local .srt file for the original language track (single file mode only).")
+    parser.add_argument("--dub-file", help="Path to a local .srt file for the dub track (single file mode only).")
     args = parser.parse_args()
 
     # --- Path processing ---
     input_path = args.path
-    if os.path.isfile(input_path):
-        videos_to_process = [input_path]
-    elif os.path.isdir(input_path):
+    videos_to_process = []
+    is_batch_mode = os.path.isdir(input_path)
+
+    if is_batch_mode:
+        if args.orig_file or args.dub_file:
+            logging.error("--orig-file and --dub-file cannot be used with a directory path. Please specify a single video file.")
+            sys.exit(1)
+
         logging.info(f"Scanning directory for video files: {input_path}")
         supported_extensions = ['.mkv', '.mp4', '.avi', '.mov']
         videos_to_process = [
@@ -184,12 +233,14 @@ def main():
             if os.path.isfile(os.path.join(input_path, f)) and os.path.splitext(f)[1].lower() in supported_extensions
         ]
         logging.info(f"Found {len(videos_to_process)} video file(s) to process.")
+    elif os.path.isfile(input_path):
+        videos_to_process = [input_path]
     else:
         logging.error(f"The provided path is not a valid file or directory: {input_path}")
         sys.exit(1)
 
     for video_path in videos_to_process:
-        process_video_file(video_path, args, api_keys)
+        process_video_file(video_path, args, api_keys, styles)
 
 
 

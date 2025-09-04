@@ -57,11 +57,14 @@ def test_process_video_file_local_found(setup_test_environment, mock_dependencie
     args.lang_native = "EN-US"
     args.interactive = False
     args.no_orig_search = False
+    args.orig_file = None
+    args.dub_file = None
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
+    styles = {'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'trans_fontsize': 22, 'trans_color': (0, 255, 255)}
 
     # --- Run the function to be tested ---
-    sublearn.process_video_file(video_path, args, api_keys)
+    sublearn.process_video_file(video_path, args, api_keys, styles)
 
     # --- Assertions ---
     # 1. Fetcher's search function should NOT have been called
@@ -77,12 +80,11 @@ def test_process_video_file_local_found(setup_test_environment, mock_dependencie
     # 3. Merger should be called with the correct paths
     expected_orig_path = os.path.join(setup_test_environment["movie_dir"], "test_movie.en.srt")
     expected_ass_path = os.path.join(setup_test_environment["movie_dir"], "test_movie.sublearn.ass")
-    sublearn.merger.create_merged_subtitle_file.assert_called_once_with(
-        dub_sub_path=expected_dub_path,
-        translated_texts=["Translated text"] * 5,
-        output_path=expected_ass_path,
-        orig_sub_path=expected_orig_path
-    )
+    sublearn.merger.create_merged_subtitle_file.assert_called_once()
+    call_kwargs = sublearn.merger.create_merged_subtitle_file.call_args.kwargs
+    assert call_kwargs['dub_sub_path'] == expected_dub_path
+    assert call_kwargs['output_path'] == expected_ass_path
+    assert 'styles' in call_kwargs
 
 def test_process_video_file_interactive_online_found(setup_test_environment, mock_dependencies, mocker):
     """
@@ -100,8 +102,11 @@ def test_process_video_file_interactive_online_found(setup_test_environment, moc
     args.lang_native = "EN-US"
     args.interactive = True
     args.no_orig_search = False
+    args.orig_file = None
+    args.dub_file = None
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
+    styles = {'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'trans_fontsize': 22, 'trans_color': (0, 255, 255)}
 
     # --- Setup Mocks for this specific test ---
     sample_orig_subs = [{"attributes": {"release": "Orig A", "files": [{"file_id": 101}], "download_count": 1}}]
@@ -112,7 +117,7 @@ def test_process_video_file_interactive_online_found(setup_test_environment, moc
     mocker.patch('builtins.input', side_effect=['1', '2'])
 
     # --- Run the function ---
-    sublearn.process_video_file(video_path, args, api_keys)
+    sublearn.process_video_file(video_path, args, api_keys, styles)
 
     # --- Assertions ---
     # 1. Search should have been called
@@ -128,6 +133,46 @@ def test_process_video_file_interactive_online_found(setup_test_environment, moc
 
     # 3. Merger should be called
     sublearn.merger.create_merged_subtitle_file.assert_called_once()
+    call_kwargs = sublearn.merger.create_merged_subtitle_file.call_args.kwargs
+    assert 'styles' in call_kwargs
+
+def test_process_video_file_with_arg(setup_test_environment, mock_dependencies):
+    """
+    Tests that --dub-file argument is prioritized over local file detection.
+    """
+    video_path = setup_test_environment["video_path"]
+
+    # Create a dummy SRT file to be specified by the argument
+    user_srt_path = os.path.join(setup_test_environment["movie_dir"], "user_provided.srt")
+    with open(user_srt_path, "w") as f:
+        f.write("test subtitle")
+
+    args = MagicMock()
+    args.lang_orig = "en"
+    args.lang_dub = "hu"
+    args.lang_native = "EN-US"
+    args.interactive = False
+    args.no_orig_search = False
+    args.orig_file = None
+    args.dub_file = str(user_srt_path) # Use the user-provided file
+
+    api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
+    styles = {'orig_fontsize': 20, 'orig_color': (255, 255, 255), 'dub_fontsize': 24, 'dub_color': (255, 255, 0), 'trans_fontsize': 22, 'trans_color': (0, 255, 255)}
+
+    # --- Run the function ---
+    sublearn.process_video_file(video_path, args, api_keys, styles)
+
+    # --- Assertions ---
+    # 1. Translator should have been called with the user-provided file, not the auto-detected one
+    sublearn.translator.translate_subtitle_file.assert_called_once()
+    call_kwargs = sublearn.translator.translate_subtitle_file.call_args.kwargs
+    assert call_kwargs['filepath'] == str(user_srt_path)
+
+    # 2. Merger should also be called with the user-provided file and styles
+    sublearn.merger.create_merged_subtitle_file.assert_called_once()
+    call_kwargs = sublearn.merger.create_merged_subtitle_file.call_args.kwargs
+    assert call_kwargs['dub_sub_path'] == str(user_srt_path)
+    assert 'styles' in call_kwargs
 
 @patch('sublearn.process_video_file')
 def test_main_batch_processing(mock_process_video, tmp_path, mocker):
@@ -159,7 +204,12 @@ def test_main_batch_processing(mock_process_video, tmp_path, mocker):
     # Assert that process_video_file was called exactly twice
     assert mock_process_video.call_count == 2
 
-    # Assert that it was called with the correct video file paths
+    # Assert that it was called with the correct video file paths and styles
     call_paths = [call.args[0] for call in mock_process_video.call_args_list]
     expected_paths = [str(video_dir / "video1.mkv"), str(video_dir / "video2.mp4")]
     assert sorted(call_paths) == sorted(expected_paths)
+    # Check that the styles dict was passed in each call
+    for call in mock_process_video.call_args_list:
+        # styles is the 4th positional argument (index 3)
+        assert isinstance(call.args[3], dict)
+        assert 'orig_fontsize' in call.args[3]

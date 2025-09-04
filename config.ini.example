@@ -1,3 +1,25 @@
 [API_KEYS]
 OPENSUBTITLES_API_KEY = YOUR_API_KEY_HERE
 DEEPL_API_KEY = YOUR_API_KEY_HERE
+
+[STYLES]
+# Customize the appearance of the subtitle tracks.
+# Colors are in R,G,B format (0-255).
+
+# Original language track (Top)
+orig_fontsize = 20
+orig_color_r = 255
+orig_color_g = 255
+orig_color_b = 255
+
+# Dub language track (Middle)
+dub_fontsize = 24
+dub_color_r = 255
+dub_color_g = 255
+dub_color_b = 0
+
+# Translated language track (Bottom)
+trans_fontsize = 22
+trans_color_r = 0
+trans_color_g = 255
+trans_color_b = 255

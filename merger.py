@@ -6,22 +6,15 @@ def create_merged_subtitle_file(
     dub_sub_path: str,
     translated_texts: list[str],
     output_path: str,
+    styles: dict,
     orig_sub_path: str | None = None
 ):
     """
-    Merges up to three subtitle tracks (original, dub, translated) into a single,
-    styled Advanced SubStation Alpha (.ass) file.
-
-    Args:
-        dub_sub_path: Path to the dub language .srt file.
-        translated_texts: A list of strings containing the translated dub text.
-        output_path: The path to save the final .ass file.
-        orig_sub_path: (Optional) Path to the original language .srt file.
+    Merges up to three subtitle tracks into a single, styled .ass file.
     """
     logging.info(f"Merging subtitles into {output_path}...")
 
     try:
-        # 1. Load source subtitle files
         subs_dub = pysubs2.load(dub_sub_path, encoding="utf-8")
         subs_orig = None
         if orig_sub_path:
@@ -30,9 +23,8 @@ def create_merged_subtitle_file(
             except FileNotFoundError:
                 logging.warning(f"Original subtitle file not found at {orig_sub_path}. Proceeding without it.")
 
-        # 2. Create the translated subtitle object
         if len(subs_dub) != len(translated_texts):
-            logging.warning("Mismatch between number of dub lines and translated lines. Truncating to shorter length.")
+            logging.warning("Mismatch between number of dub lines and translated lines. Truncating.")
             min_len = min(len(subs_dub), len(translated_texts))
             subs_dub.events = subs_dub.events[:min_len]
             translated_texts = translated_texts[:min_len]
@@ -41,13 +33,27 @@ def create_merged_subtitle_file(
         for i, line in enumerate(subs_trans):
             line.text = translated_texts[i]
 
-        # 3. Initialize final output object
         subs_final = pysubs2.SSAFile()
 
-        # 4. Define custom styles
-        style_orig = pysubs2.SSAStyle(fontname="Arial", fontsize=20, primarycolor=pysubs2.Color(255, 255, 255), outlinecolor=pysubs2.Color(0, 0, 0), borderstyle=1, outline=1, shadow=0.5, alignment=pysubs2.Alignment.TOP_CENTER, marginv=10)
-        style_dub = pysubs2.SSAStyle(fontname="Arial", fontsize=24, primarycolor=pysubs2.Color(255, 255, 0), outlinecolor=pysubs2.Color(0, 0, 0), borderstyle=1, outline=1, shadow=0.5, alignment=pysubs2.Alignment.MIDDLE_CENTER, marginv=10)
-        style_trans = pysubs2.SSAStyle(fontname="Arial", fontsize=22, primarycolor=pysubs2.Color(0, 255, 255), outlinecolor=pysubs2.Color(0, 0, 0), borderstyle=1, outline=1, shadow=0.5, alignment=pysubs2.Alignment.BOTTOM_CENTER, marginv=10)
+        # Define styles from the provided dictionary
+        style_orig = pysubs2.SSAStyle(
+            fontname="Arial", fontsize=styles['orig_fontsize'],
+            primarycolor=pysubs2.Color(*styles['orig_color']),
+            outlinecolor=pysubs2.Color(0, 0, 0), borderstyle=1, outline=1, shadow=0.5,
+            alignment=pysubs2.Alignment.TOP_CENTER, marginv=10
+        )
+        style_dub = pysubs2.SSAStyle(
+            fontname="Arial", fontsize=styles['dub_fontsize'],
+            primarycolor=pysubs2.Color(*styles['dub_color']),
+            outlinecolor=pysubs2.Color(0, 0, 0), borderstyle=1, outline=1, shadow=0.5,
+            alignment=pysubs2.Alignment.MIDDLE_CENTER, marginv=10
+        )
+        style_trans = pysubs2.SSAStyle(
+            fontname="Arial", fontsize=styles['trans_fontsize'],
+            primarycolor=pysubs2.Color(*styles['trans_color']),
+            outlinecolor=pysubs2.Color(0, 0, 0), borderstyle=1, outline=1, shadow=0.5,
+            alignment=pysubs2.Alignment.BOTTOM_CENTER, marginv=10
+        )
 
         subs_final.styles["Style_Dub"] = style_dub
         subs_final.styles["Style_Trans"] = style_trans
