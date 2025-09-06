@@ -3,6 +3,7 @@ import os
 import fetcher
 import translator
 import merger
+import transcriber # Import new module
 import configparser
 import sys
 import logging
@@ -11,10 +12,8 @@ import pysubs2
 def get_base_path():
     """Get the base path for the application, handling both script and frozen executable."""
     if getattr(sys, 'frozen', False):
-        # The application is frozen
         return os.path.dirname(sys.executable)
     else:
-        # The application is not frozen
         return os.path.dirname(os.path.abspath(__file__))
 
 def _select_best_dub_subtitle(dub_subs: list, dub_keywords: list) -> dict | None:
@@ -75,7 +74,7 @@ def _prompt_for_selection(sub_list: list, sub_type: str) -> dict | None:
         except (ValueError, IndexError):
             logging.warning("Invalid input. Please enter a number.")
 
-def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict, styles: dict):
+def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict, styles: dict, transcriber_settings: dict):
     """
     Runs the full SubLearn workflow for a single video file.
     """
@@ -115,7 +114,9 @@ def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict
                 logging.info(f"Found local dub subtitle: {os.path.basename(local_dub_path)}")
                 dub_sub_path = local_dub_path
 
-        if not orig_sub_path or not dub_sub_path:
+        # Priority 3: Search online unless transcription is forced
+        use_online_search = not args.force_transcriber
+        if use_online_search and (not orig_sub_path or not dub_sub_path):
             movie_hash = fetcher.get_movie_hash(video_path)
             if not movie_hash:
                 logging.error(f"Could not calculate movie hash for {video_filename_no_ext}.")
@@ -132,8 +133,19 @@ def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict
                         save_path = os.path.join(output_dir, f"{video_filename_no_ext}.{args.lang_dub}.srt")
                         dub_sub_path = fetcher.download_subtitle(selected_meta, api_keys['opensubtitles'], save_path)
 
+        # Priority 4: Fallback or forced transcription
+        if not dub_sub_path and args.fallback_to_transcriber or args.force_transcriber:
+            logging.info("--- No suitable dub subtitle found online. Falling back to AI transcription. ---")
+            dub_sub_path = transcriber.transcribe_audio_track(
+                video_path=video_path,
+                language_code=args.lang_dub,
+                output_dir=output_dir,
+                model_size=args.whisper_model,
+                audio_track_index=args.audio_track
+            )
+
         if not dub_sub_path:
-            logging.error(f"Could not retrieve dub subtitle for {video_filename_no_ext}. Skipping.")
+            logging.error(f"Could not retrieve or generate a dub subtitle for {video_filename_no_ext}. Skipping.")
             return
 
         logging.info(f"Translating dub file: {os.path.basename(dub_sub_path)}")
@@ -198,6 +210,14 @@ def load_styles_from_config(config: configparser.ConfigParser) -> dict:
 
     return styles
 
+def load_transcriber_settings(config: configparser.ConfigParser) -> dict:
+    """Loads transcriber settings from the config parser, with defaults."""
+    settings = {'model_size': 'base'}
+    if not config.has_section('TRANSCRIBER'):
+        return settings
+    settings['model_size'] = config.get('TRANSCRIBER', 'model_size', fallback='base')
+    return settings
+
 def main():
     """
     Main function to run the SubLearn command-line interface.
@@ -230,18 +250,27 @@ def main():
         logging.error(f"Error reading API keys from '{config_path}': {e}", exc_info=True)
         sys.exit(1)
 
-    # Load styles from config
+    # Load settings from config
     styles = load_styles_from_config(config)
+    transcriber_settings = load_transcriber_settings(config)
 
     parser = argparse.ArgumentParser(description="SubLearn: A tool for creating multi-track subtitles for language learning.")
+    # --- General Arguments ---
     parser.add_argument("path", help="The full path to the local video file or directory of video files.")
     parser.add_argument("--lang_orig", default="en", help="The original language of the video (e.g., 'en').")
     parser.add_argument("--lang_dub", required=True, help="The language of the dubbed audio track (e.g., 'hu', 'es').")
     parser.add_argument("--lang_native", default="EN-US", help="Your native language for translation (e.g., 'EN-US', 'DE').")
+    # --- Online Search Arguments ---
     parser.add_argument("--interactive", action="store_true", help="Enable interactive mode to manually select subtitles.")
     parser.add_argument("--no-orig-search", action="store_true", help="Do not search for an original language subtitle online.")
     parser.add_argument("--orig-file", help="Path to a local .srt file for the original language track (single file mode only).")
     parser.add_argument("--dub-file", help="Path to a local .srt file for the dub track (single file mode only).")
+    # --- Transcriber Arguments ---
+    parser.add_argument("--force-transcriber", action="store_true", help="Skip online search and transcribe the audio directly.")
+    parser.add_argument("--fallback-to-transcriber", action="store_true", help="Transcribe if a dub subtitle is not found online.")
+    parser.add_argument("--audio-track", type=int, default=0, help="The index of the audio track to transcribe (default: 0).")
+    parser.add_argument("--whisper-model", default=transcriber_settings['model_size'], help=f"The Whisper model to use for transcription (default: {transcriber_settings['model_size']}).")
+
     args = parser.parse_args()
 
     # --- Path processing ---
@@ -255,7 +284,7 @@ def main():
             sys.exit(1)
 
         logging.info(f"Scanning directory for video files: {input_path}")
-        supported_extensions = ['.mkv', '.mp4', '.avi', '.mov']
+        supported_extensions = ['.mkv', '.mp4', '.avi', 'mov']
         videos_to_process = [
             os.path.join(input_path, f) for f in os.listdir(input_path)
             if os.path.isfile(os.path.join(input_path, f)) and os.path.splitext(f)[1].lower() in supported_extensions
@@ -268,9 +297,7 @@ def main():
         sys.exit(1)
 
     for video_path in videos_to_process:
-        process_video_file(video_path, args, api_keys, styles)
-
-
+        process_video_file(video_path, args, api_keys, styles, transcriber_settings)
 
 if __name__ == "__main__":
     main()

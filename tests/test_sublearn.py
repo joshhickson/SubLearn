@@ -59,6 +59,9 @@ def test_process_video_file_local_found(setup_test_environment, mock_dependencie
     args.no_orig_search = False
     args.orig_file = None
     args.dub_file = None
+    # Add transcriber args
+    args.force_transcriber = False
+    args.fallback_to_transcriber = False
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
     styles = {
@@ -66,9 +69,10 @@ def test_process_video_file_local_found(setup_test_environment, mock_dependencie
         'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 8, 'trans_marginv': 40,
         'orig_fontsize': 14, 'orig_color': (255, 255, 255), 'orig_alignment': 2, 'orig_marginv': 10,
     }
+    transcriber_settings = {'model_size': 'tiny'}
 
     # --- Run the function to be tested ---
-    sublearn.process_video_file(video_path, args, api_keys, styles)
+    sublearn.process_video_file(video_path, args, api_keys, styles, transcriber_settings)
 
     # --- Assertions ---
     # 1. Fetcher's search function should NOT have been called
@@ -108,6 +112,9 @@ def test_process_video_file_interactive_online_found(setup_test_environment, moc
     args.no_orig_search = False
     args.orig_file = None
     args.dub_file = None
+    # Add transcriber args
+    args.force_transcriber = False
+    args.fallback_to_transcriber = False
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
     styles = {
@@ -115,6 +122,7 @@ def test_process_video_file_interactive_online_found(setup_test_environment, moc
         'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 8, 'trans_marginv': 40,
         'orig_fontsize': 14, 'orig_color': (255, 255, 255), 'orig_alignment': 2, 'orig_marginv': 10,
     }
+    transcriber_settings = {'model_size': 'tiny'}
 
     # --- Setup Mocks for this specific test ---
     sample_orig_subs = [{"attributes": {"release": "Orig A", "files": [{"file_id": 101}], "download_count": 1}}]
@@ -125,7 +133,7 @@ def test_process_video_file_interactive_online_found(setup_test_environment, moc
     mocker.patch('builtins.input', side_effect=['1', '2'])
 
     # --- Run the function ---
-    sublearn.process_video_file(video_path, args, api_keys, styles)
+    sublearn.process_video_file(video_path, args, api_keys, styles, transcriber_settings)
 
     # --- Assertions ---
     # 1. Search should have been called
@@ -163,6 +171,9 @@ def test_process_video_file_with_arg(setup_test_environment, mock_dependencies):
     args.no_orig_search = False
     args.orig_file = None
     args.dub_file = str(user_srt_path) # Use the user-provided file
+    # Add transcriber args
+    args.force_transcriber = False
+    args.fallback_to_transcriber = False
 
     api_keys = {'opensubtitles': 'fake_key', 'deepl': 'fake_key'}
     styles = {
@@ -170,9 +181,10 @@ def test_process_video_file_with_arg(setup_test_environment, mock_dependencies):
         'trans_fontsize': 22, 'trans_color': (0, 255, 255), 'trans_alignment': 8, 'trans_marginv': 40,
         'orig_fontsize': 14, 'orig_color': (255, 255, 255), 'orig_alignment': 2, 'orig_marginv': 10,
     }
+    transcriber_settings = {'model_size': 'tiny'}
 
     # --- Run the function ---
-    sublearn.process_video_file(video_path, args, api_keys, styles)
+    sublearn.process_video_file(video_path, args, api_keys, styles, transcriber_settings)
 
     # --- Assertions ---
     # 1. Translator should have been called with the user-provided file, not the auto-detected one
@@ -202,7 +214,7 @@ def test_main_batch_processing(mock_process_video, tmp_path, mocker):
     mocker.patch('sublearn.get_base_path', return_value=str(tmp_path))
 
     # Create a dummy config file in the mocked base path
-    (tmp_path / "config.ini").write_text("[API_KEYS]\nOPENSUBTITLES_API_KEY=fake\nDEEPL_API_KEY=fake")
+    (tmp_path / "config.ini").write_text("[API_KEYS]\nOPENSUBTITLES_API_KEY=fake\nDEEPL_API_KEY=fake\n[TRANSCRIBER]\nmodel_size=tiny")
 
     # --- Run the main function with the directory path ---
     test_args = ["sublearn.py", str(video_dir), "--lang_dub", "hu"]
@@ -216,14 +228,15 @@ def test_main_batch_processing(mock_process_video, tmp_path, mocker):
     # Assert that process_video_file was called exactly twice
     assert mock_process_video.call_count == 2
 
-    # Assert that it was called with the correct video file paths and styles
+    # Assert that it was called with the correct video file paths and settings
     call_paths = [call.args[0] for call in mock_process_video.call_args_list]
     expected_paths = [str(video_dir / "video1.mkv"), str(video_dir / "video2.mp4")]
     assert sorted(call_paths) == sorted(expected_paths)
-    # Check that the styles dict was passed in each call
+    # Check that the settings dicts were passed in each call
     for call in mock_process_video.call_args_list:
-        # styles is the 4th positional argument (index 3)
-        styles_arg = call.args[3]
+        styles_arg = call.args[3] # styles is the 4th positional argument
+        transcriber_arg = call.args[4] # transcriber_settings is the 5th
         assert isinstance(styles_arg, dict)
         assert 'orig_alignment' in styles_arg
-        assert 'dub_marginv' in styles_arg
+        assert isinstance(transcriber_arg, dict)
+        assert 'model_size' in transcriber_arg

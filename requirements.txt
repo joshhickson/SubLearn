@@ -4,3 +4,7 @@ pysubs2==1.8.0
 pytest==8.3.2
 pytest-mock==3.14.0
 pyinstaller==6.9.0
+# For AI Transcription Fallback
+faster-whisper==1.0.3
+ffmpeg-python==0.2.0
+torch==2.4.0

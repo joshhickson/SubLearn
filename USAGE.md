@@ -1,85 +1,95 @@
 # How to Use SubLearn
 
-This guide provides instructions on how to run the SubLearn command-line tool to generate multi-track subtitles.
+This guide provides instructions on how to run the SubLearn command-line tool to generate multi-track subtitles for language immersion.
 
 ## Prerequisites
 
 - Python 3.x installed on your system.
 - `pip` for installing Python packages.
+- **FFmpeg**: The AI transcription feature requires FFmpeg to be installed on your system and accessible in your PATH. You can download it from [ffmpeg.org](https://ffmpeg.org/download.html).
 
 ## Setup
 
 ### 1. Install Dependencies
 
-From the root directory of the project, install the required Python libraries using the provided `requirements.txt` file:
+From the root directory of the project, install the required Python libraries:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Configure API Keys
+### 2. Create and Configure Your `config.ini`
 
-The tool requires API keys for two services: **OpenSubtitles.org** and **DeepL**.
+The tool uses a `config.ini` file to manage API keys, subtitle styles, and transcriber settings.
 
-For this prototype, you must edit the `sublearn.py` script and insert your API keys directly into the file.
-
-Open `sublearn.py` and modify these lines:
-
-```python
-# sublearn.py
-
-# --- Configuration ---
-# In Phase 1, API keys are hardcoded.
-# In Phase 2, these will be moved to a configuration file.
-OPENSUBTITLES_API_KEY = "YOUR_OPENSUBTITLES_API_KEY_HERE"
-DEEPL_API_KEY = "YOUR_DEEPL_API_KEY_HERE"
-```
-
-- **OpenSubtitles API Key**: You can get a key by registering for a free account on [OpenSubtitles.org](https://www.opensubtitles.org/) and creating a new API Consumer in your user profile settings.
-- **DeepL API Key**: You can get a key by signing up for the DeepL API Free plan on the [DeepL website](https://www.deepl.com/pro-api). The free plan allows up to 500,000 characters per month, which is sufficient for personal use.
+1.  Make a copy of the example file: `cp config.ini.example config.ini`
+2.  Open `config.ini` in a text editor.
+3.  **Fill in your API keys** under the `[API_KEYS]` section.
+    -   **OpenSubtitles API Key**: Get a key by registering for a free account on [OpenSubtitles.org](https://www.opensubtitles.org/) and creating a new API Consumer.
+    -   **DeepL API Key**: Get a key from the [DeepL API Free plan](https://www.deepl.com/pro-api) (up to 500,000 characters/month).
+4.  (Optional) Customize subtitle appearance under `[STYLES]`.
+5.  (Optional) Configure the AI transcription model under `[TRANSCRIBER]`. The `base` model is a good starting point.
 
 ## Running the Script
 
-You can run the script from your terminal. The main required argument is the path to your video file.
+You can run the script from your terminal. The main required argument is the path to your video file or a directory containing video files.
 
 ### Command-Line Arguments
 
-- `video_path`: (**Required**) The full path to your local video file. If the path contains spaces, enclose it in quotes (e.g., `"C:\My Movies\My Movie.mkv"`).
-- `--lang_dub`: (**Required**) The language of the dubbed audio track you want to learn from. Use a two-letter ISO 639-1 code (e.g., `hu` for Hungarian, `es` for Spanish, `de` for German).
-- `--lang_orig`: The original language of the video. Defaults to `en` (English).
-- `--lang_native`: The language you want the dub track to be translated into. This must be a language code supported by DeepL. Defaults to `EN-US` (American English).
-- `--dub-file`: (Optional) Path to a local `.srt` file to use for the dub track. If you provide this, the script will skip searching for the dub subtitle online and use your local file instead. This is useful for testing or if you already have a perfect, synchronized subtitle for the dubbed audio.
+-   `path`: (**Required**) The full path to your local video file (e.g., `"C:\Movies\My Movie.mkv"`) or a directory containing video files for batch processing.
+
+**Language Arguments:**
+-   `--lang_dub`: (**Required**) The language of the dubbed audio track you want to learn from. Use a two-letter ISO 639-1 code (e.g., `hu` for Hungarian, `es` for Spanish).
+-   `--lang_orig`: The original language of the video. Defaults to `en`.
+-   `--lang_native`: The language you want the dub track translated into. Defaults to `EN-US` (American English).
+
+**Subtitle Source Arguments:**
+-   `--orig-file`: Path to a local `.srt` file to use for the original language track.
+-   `--dub-file`: Path to a local `.srt` file to use for the dub language track.
+-   `--interactive`: Enable interactive mode to manually select subtitles from a list of online results.
+-   `--no-orig-search`: Do not search online for an original language subtitle.
+
+**AI Transcription Arguments:**
+-   `--force-transcriber`: Skip the online subtitle search and use the AI transcriber directly.
+-   `--fallback-to-transcriber`: If no suitable dub subtitle is found online, automatically run the AI transcriber as a fallback.
+-   `--audio-track <index>`: The index of the audio track to transcribe (default: `0`).
+-   `--whisper-model <size>`: The Whisper model to use (e.g., `tiny`, `base`, `small`, `medium`). Overrides the `config.ini` setting.
 
 ### Example Commands
 
-**Standard Usage**
+**Standard Usage (Online Search)**
 
-To generate subtitles for a movie file with a Hungarian dub, run the following command in your terminal:
-
+Generate subtitles for a movie with a Hungarian dub, searching online:
 ```bash
 python sublearn.py "path/to/your/movie.mkv" --lang_dub hu
 ```
 
-If you wanted to process a movie with a Spanish dub and translate it into German, the command would be:
+**Batch Processing a Directory**
 
+Process all videos in a directory for Spanish:
 ```bash
-python sublearn.py "path/to/your/movie.mkv" --lang_orig en --lang_dub es --lang_native DE
+python sublearn.py "path/to/your/movies_folder/" --lang_dub es
 ```
 
-**Using a Local Subtitle File**
+**Using the AI Transcriber**
 
-If you already have a `.srt` file for the Hungarian dub and want to use it directly, you can run:
+If you know the online search will fail, or want the most accurate possible transcript of the audio, you can force the transcriber to run on the second audio track (index 1):
 ```bash
-python sublearn.py "path/to/your/movie.mkv" --lang_dub hu --dub-file "path/to/your/hungarian.srt"
+python sublearn.py "path/to/movie.mkv" --lang_dub de --force-transcriber --audio-track 1
 ```
-The script will still search online for the original English subtitle but will use your local file for the dub track.
+
+Use the transcriber as an automatic fallback if the online search finds nothing:
+```bash
+python sublearn.py "path/to/movie.mkv" --lang_dub it --fallback-to-transcriber
+```
 
 ## What to Expect
 
-The script will provide status updates in the terminal as it performs the following steps:
-1. Calculates a unique hash of your video file.
-2. Queries OpenSubtitles to find and download the best-matching original and dub language subtitles.
-3. Sends the text from the dub subtitle to DeepL for translation.
-4. Merges all three subtitle tracks into a single file with custom styling and positioning.
+The script will provide status updates in the terminal. For each video, it will:
+1.  Create a dedicated output folder (e.g., `path/to/your/movie/`).
+2.  Attempt to find subtitle files based on your arguments (local files, online search).
+3.  If configured, run the AI transcriber to generate a dub subtitle from the audio.
+4.  Send the text from the dub subtitle to the DeepL API for translation.
+5.  Merge the original, dub, and translated subtitle tracks into a single, styled `.ass` file.
 
-A new file named `[your_movie_name].sublearn.ass` will be created in the same directory as your video file. You can load this `.ass` file in a compatible media player (like VLC or Plex Media Player) to view the multi-track subtitles.
+The final output file (e.g., `movie.sublearn.ass`) will be saved in the newly created subdirectory, ready to be loaded in a compatible media player like VLC.

@@ -34,3 +34,10 @@ orig_marginv = 10
 # TOP_LEFT (7), TOP_CENTER (8), TOP_RIGHT (9)
 # MIDDLE_LEFT (4), MIDDLE_CENTER (5), MIDDLE_RIGHT (6)
 # BOTTOM_LEFT (1), BOTTOM_CENTER (2), BOTTOM_RIGHT (3)
+
+[TRANSCRIBER]
+# Settings for the AI-based audio transcription fallback.
+# model_size: The Whisper model to use. Larger models are more accurate but slower
+# and require more memory.
+# Options: tiny, base, small, medium, large-v2
+model_size = base
