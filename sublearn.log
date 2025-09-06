@@ -1,20 +1,12 @@
-2025-09-06 00:42:42,139 - INFO - 
---- Starting processing for: Matrix Magyar.mp4 ---
-2025-09-06 00:42:42,140 - INFO - Output will be saved to: C:\Users\Josh\Documents\SubLearn\Matrix Magyar
-2025-09-06 00:42:42,140 - INFO - --- Locating Subtitle Files ---
-2025-09-06 00:42:42,156 - INFO - Searching for 'en,hu' subtitles online by hash...
-2025-09-06 00:42:42,631 - ERROR - Error querying OpenSubtitles API: 403 Client Error: Forbidden for url: https://api.opensubtitles.com/api/v1/subtitles?languages=en%2Chu&moviehash=a45e375bb444bbb9
-Traceback (most recent call last):
-  File "C:\Users\Josh\Documents\SubLearn\fetcher.py", line 89, in search_subtitles
-    resp.raise_for_status()
-  File "C:\Users\Josh\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.opensubtitles.com/api/v1/subtitles?languages=en%2Chu&moviehash=a45e375bb444bbb9
-2025-09-06 00:42:42,633 - INFO - Translating dub file: The. Matrix. 1999. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt
-2025-09-06 00:42:42,696 - INFO - Sending 1383 lines to DeepL API for translation to EN-US...
-2025-09-06 00:42:42,697 - INFO - Request to DeepL API method=POST url=https://api-free.deepl.com/v2/translate
-2025-09-06 00:42:49,797 - INFO - DeepL API response status_code=200 url=https://api-free.deepl.com/v2/translate
-2025-09-06 00:42:49,800 - INFO - Translation successful.
-2025-09-06 00:42:49,802 - INFO - Merging subtitles into C:\Users\Josh\Documents\SubLearn\Matrix Magyar\Matrix Magyar.sublearn.ass...
-2025-09-06 00:42:49,929 - INFO - Successfully created merged subtitle file.
-2025-09-06 00:42:49,930 - INFO - --- Successfully completed processing for: Matrix Magyar.mp4 ---
+2025-09-06 17:20:28,991 - WARNING - API key in 'config.ini' still has the default placeholder value.
+2025-09-06 17:20:28,994 - INFO -
+--- Starting processing for: test_movie.mkv ---
+2025-09-06 17:20:28,995 - INFO - Output will be saved to: /app/test_movie
+2025-09-06 17:20:28,995 - INFO - --- Locating Subtitle Files ---
+2025-09-06 17:20:28,995 - INFO - --- Running local-only alignment workflow. Master: orig ---
+2025-09-06 17:20:28,996 - INFO - Translating dub file: matrix_shifted.srt
+2025-09-06 17:20:29,064 - INFO - Sending 1383 lines to DeepL API for translation to EN-US...
+2025-09-06 17:20:29,064 - INFO - Request to DeepL API method=POST url=https://api.deepl.com/v2/translate
+2025-09-06 17:20:29,852 - INFO - DeepL API response status_code=403 url=https://api.deepl.com/v2/translate
+2025-09-06 17:20:29,852 - ERROR - An error occurred with the DeepL API: Authorization failure, check auth_key, message: Forbidden. You can find more info in our docs: https://developers.deepl.com/docs/getting-started/auth
+2025-09-06 17:20:29,854 - ERROR - Could not translate subtitle file for test_movie. Skipping.

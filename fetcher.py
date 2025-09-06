@@ -134,3 +134,32 @@ def download_subtitle(subtitle_data: dict, api_key: str, save_path: str) -> str 
     except (KeyError, IndexError) as e:
         logging.error(f"Error parsing subtitle data: {e}", exc_info=True)
         return None
+
+def search_subtitles_by_query(query: str, language: str, api_key: str) -> list:
+    """
+    Searches for subtitles using a query string (e.g., movie title).
+    """
+    logging.info(f"Searching for '{language}' subtitles online with query: '{query}'")
+
+    headers = {
+        "Api-Key": api_key,
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": "SubLearn v1.0"
+    }
+    params = {"query": query, "languages": language}
+
+    try:
+        resp = requests.get(f"{API_URL}/subtitles", headers=headers, params=params)
+        resp.raise_for_status()
+    except requests.RequestException as e:
+        logging.error(f"Error querying OpenSubtitles API by query: {e}", exc_info=True)
+        return []
+
+    data = resp.json().get("data", [])
+    if not data:
+        logging.warning(f"No subtitles found for query '{query}' in language '{language}'.")
+    else:
+        logging.info(f"Found {len(data)} results for query.")
+
+    return data

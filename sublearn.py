@@ -7,6 +7,7 @@ import transcriber
 import aligner  # Import new module
 import configparser
 import sys
+import re
 import logging
 import pysubs2
 import tempfile
@@ -73,6 +74,62 @@ def _get_sub_from_query(lang: str, sub_type: str, args: argparse.Namespace, api_
         save_path = tmp.name
 
     return fetcher.download_subtitle(selected_meta, api_keys['opensubtitles'], save_path)
+
+def _fetch_and_align_orig_sub(video_path: str, dub_sub_path: str, args: argparse.Namespace, api_keys: dict) -> str | None:
+    """
+    Implements the Sept 6th strategy: fetches an original language sub by title,
+    then aligns it to the provided dub subtitle.
+    """
+    logging.info("--- Searching for original subtitle by title to align with local dub file. ---")
+
+    # 1. Get query from filename
+    query = re.sub(r'[.\[\]()]', ' ', os.path.splitext(os.path.basename(video_path))[0])
+    query = ' '.join(query.split())
+    logging.info(f"Generated search query: '{query}'")
+
+    # 2. Search for the subtitle
+    search_results = fetcher.search_subtitles_by_query(query, args.lang_orig, api_keys['opensubtitles'])
+    if not search_results:
+        logging.warning("No results found from title search.")
+        return None
+
+    # 3. Select the subtitle
+    if args.interactive:
+        selected_meta = _prompt_for_selection(search_results, f"original ({args.lang_orig})")
+    else:
+        selected_meta = max(search_results, key=lambda s: s.get("attributes", {}).get("download_count", 0))
+        logging.info(f"Auto-selected original sub: {selected_meta.get('attributes', {}).get('release', 'N/A')} (Downloads: {selected_meta.get('attributes', {}).get('download_count', 0)})")
+
+    if not selected_meta:
+        logging.warning("No original subtitle selected from title search.")
+        return None
+
+    # 4. Download to a temporary file
+    with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix=".srt") as tmp:
+        unaligned_orig_path = tmp.name
+
+    unaligned_orig_path = fetcher.download_subtitle(selected_meta, api_keys['opensubtitles'], unaligned_orig_path)
+    if not unaligned_orig_path:
+        logging.error("Failed to download selected subtitle.")
+        return None
+
+    # 5. Align it
+    logging.info(f"Aligning '{os.path.basename(unaligned_orig_path)}' to '{os.path.basename(dub_sub_path)}'")
+    master_subs = pysubs2.load(dub_sub_path)
+    target_subs = pysubs2.load(unaligned_orig_path)
+    aligned_subs = aligner.align_by_index(master_subs, target_subs)
+
+    # 6. Save aligned version to another temp file
+    with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix=".srt", encoding='utf-8') as tmp_aligned:
+        aligned_subs.save(tmp_aligned.name)
+        aligned_orig_path = tmp_aligned.name
+
+    # 7. Clean up unaligned file
+    os.remove(unaligned_orig_path)
+
+    logging.info("Alignment successful.")
+    return aligned_orig_path
+
 
 def run_analysis_workflow(args: argparse.Namespace, api_keys: dict, styles: dict):
     """Runs the film analysis workflow based on title search and timing alignment."""
@@ -176,6 +233,58 @@ def process_video_file(video_path: str, args: argparse.Namespace, api_keys: dict
         if not orig_sub_path and os.path.exists(local_orig_path): orig_sub_path = local_orig_path
         local_dub_path = os.path.join(output_dir, f"{video_filename_no_ext}.{args.lang_dub}.srt")
         if not dub_sub_path and os.path.exists(local_dub_path): dub_sub_path = local_dub_path
+
+        # New local-only alignment workflow
+        if orig_sub_path and dub_sub_path and args.timing_master:
+            logging.info(f"--- Running local-only alignment workflow. Master: {args.timing_master} ---")
+
+            # 1. Translate the original dub file before any alignment happens to it.
+            logging.info(f"Translating dub file: {os.path.basename(dub_sub_path)}")
+            translated_texts = translator.translate_subtitle_file(filepath=dub_sub_path, target_lang=args.lang_native, api_key=api_keys['deepl'])
+            if not translated_texts:
+                logging.error(f"Could not translate subtitle file for {video_filename_no_ext}. Skipping.")
+                return
+
+            # 2. Perform the alignment
+            if args.timing_master == 'orig':
+                master_path, target_path = orig_sub_path, dub_sub_path
+                log_msg = f"Aligning dub subtitle '{os.path.basename(target_path)}' to original '{os.path.basename(master_path)}'"
+            else:  # 'dub'
+                master_path, target_path = dub_sub_path, orig_sub_path
+                log_msg = f"Aligning original subtitle '{os.path.basename(target_path)}' to dub '{os.path.basename(master_path)}'"
+
+            logging.info(log_msg)
+            master_subs = pysubs2.load(master_path)
+            target_subs = pysubs2.load(target_path)
+            aligned_target_subs = aligner.align_by_index(master_subs, target_subs)
+
+            with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix=".srt", encoding='utf-8') as tmp_aligned:
+                aligned_target_subs.save(tmp_aligned.name)
+                aligned_path = tmp_aligned.name
+
+            # 3. Set final paths for the merger
+            if args.timing_master == 'orig':
+                final_orig_path, final_dub_path = master_path, aligned_path
+            else:  # 'dub'
+                final_orig_path, final_dub_path = aligned_path, master_path
+
+            # 4. Merge and exit this function for the current video file
+            output_path = os.path.join(output_dir, f"{video_filename_no_ext}.sublearn.ass")
+            merger.create_merged_subtitle_file(
+                dub_sub_path=final_dub_path,
+                translated_texts=translated_texts,
+                output_path=output_path,
+                orig_sub_path=final_orig_path,
+                styles=styles
+            )
+            logging.info(f"--- Successfully completed processing for: {os.path.basename(video_path)} ---")
+            return
+
+        # Original workflow: if dub is provided, find and align original sub by title
+        if dub_sub_path and not orig_sub_path and not args.no_orig_search:
+            aligned_path = _fetch_and_align_orig_sub(video_path, dub_sub_path, args, api_keys)
+            if aligned_path:
+                orig_sub_path = aligned_path
 
         use_online_search = not args.force_transcriber and (not orig_sub_path or not dub_sub_path)
         if use_online_search:
@@ -281,6 +390,7 @@ def main():
     learn_group.add_argument("--no-orig-search", action="store_true", help="Do not search for an original language subtitle online.")
     learn_group.add_argument("--orig-file", help="Path to a local .srt file for the original language track.")
     learn_group.add_argument("--dub-file", help="Path to a local .srt file for the dub track.")
+    learn_group.add_argument("--timing-master", choices=['orig', 'dub'], help="When using two local SRT files, specify which one is the timing master ('orig' or 'dub').")
     learn_group.add_argument("--force-transcriber", action="store_true", help="Skip online search and transcribe the audio directly.")
     learn_group.add_argument("--fallback-to-transcriber", action="store_true", help="Transcribe if a dub subtitle is not found online.")
     learn_group.add_argument("--audio-track", type=int, default=0, help="The index of the audio track to transcribe (default: 0).")
