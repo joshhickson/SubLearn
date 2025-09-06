@@ -76,12 +76,17 @@ def _download_subtitle_file(url: str, save_path: str | None = None) -> str | Non
 
 def search_subtitles(movie_hash: str, lang_orig: str, lang_dub: str, api_key: str) -> tuple[list, list]:
     """
-    Searches for subtitles using a movie file hash.
+    Searches for subtitles using the OpenSubtitles API and returns lists of available subs.
     """
     languages_to_search = f"{lang_orig},{lang_dub}"
-    logging.info(f"Searching for '{languages_to_search}' subtitles online by hash...")
+    logging.info(f"Searching for '{languages_to_search}' subtitles online...")
 
-    headers = {"Api-Key": api_key, "Content-Type": "application/json", "Accept": "application/json"}
+    headers = {
+        "Api-Key": api_key,
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": "SubLearn v1.0"
+    }
     params = {"moviehash": movie_hash, "languages": languages_to_search}
 
     try:
@@ -102,35 +107,16 @@ def search_subtitles(movie_hash: str, lang_orig: str, lang_dub: str, api_key: st
     logging.info(f"Found {len(orig_subs)} original language subs and {len(dub_subs)} dub language subs.")
     return orig_subs, dub_subs
 
-def search_subtitles_by_query(query: str, language: str, api_key: str) -> list:
-    """
-    Searches for subtitles using a text query (e.g., movie title).
-    """
-    logging.info(f"Searching for '{language}' subtitles online by query: '{query}'...")
-
-    headers = {"Api-Key": api_key, "Content-Type": "application/json", "Accept": "application/json"}
-    params = {"query": query, "languages": language}
-
-    try:
-        resp = requests.get(f"{API_URL}/subtitles", headers=headers, params=params)
-        resp.raise_for_status()
-    except requests.RequestException as e:
-        logging.error(f"Error querying OpenSubtitles API: {e}", exc_info=True)
-        return []
-
-    data = resp.json().get("data", [])
-    if not data:
-        logging.warning(f"No '{language}' subtitles found for query: '{query}'.")
-        return []
-
-    logging.info(f"Found {len(data)} results for query.")
-    return data
-
 def download_subtitle(subtitle_data: dict, api_key: str, save_path: str) -> str | None:
     """
     Downloads a subtitle file given its metadata and a destination path.
     """
-    headers = {"Api-Key": api_key, "Content-Type": "application/json", "Accept": "application/json"}
+    headers = {
+        "Api-Key": api_key,
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": "SubLearn v1.0"
+    }
     try:
         file_id = subtitle_data["attributes"]["files"][0]["file_id"]
         link = _get_download_link(file_id, api_key, headers)
