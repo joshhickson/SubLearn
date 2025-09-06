@@ -1,8 +1,12 @@
 import pytest
 import sys
 import os
+from unittest.mock import patch, MagicMock
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from sublearn import _select_best_dub_subtitle
+import fetcher
+
 
 @pytest.fixture
 def sample_subtitles():
@@ -80,3 +84,39 @@ def test_select_best_dub_subtitle_no_match():
     best_sub = _select_best_dub_subtitle(no_keyword_subs, dub_keywords)
     assert best_sub is not None
     assert best_sub['attributes']['download_count'] == 500
+
+@patch('fetcher.requests.get')
+def test_search_subtitles_by_query(mock_get):
+    """Tests the query-based subtitle search function."""
+    # --- Setup Mock ---
+    mock_response = MagicMock()
+    mock_api_data = {
+        "total_pages": 1,
+        "total_count": 1,
+        "data": [{"id": "12345", "attributes": {"language": "en", "release": "Test Release"}}]
+    }
+    mock_response.json.return_value = mock_api_data
+    mock_response.raise_for_status.return_value = None
+    mock_get.return_value = mock_response
+
+    # --- Function Call ---
+    results = fetcher.search_subtitles_by_query(
+        query="The Matrix",
+        language="en",
+        api_key="fake_api_key"
+    )
+
+    # --- Assertions ---
+    # 1. Assert that requests.get was called correctly
+    expected_url = "https://api.opensubtitles.com/api/v1/subtitles"
+    expected_params = {"query": "The Matrix", "languages": "en"}
+    mock_get.assert_called_once()
+    call_args = mock_get.call_args
+    assert call_args.args[0] == expected_url
+    assert call_args.kwargs['params'] == expected_params
+    assert call_args.kwargs['headers']['Api-Key'] == "fake_api_key"
+
+    # 2. Assert that the function returned the correct data
+    assert len(results) == 1
+    assert results[0]['id'] == "12345"
+    assert results[0]['attributes']['release'] == "Test Release"

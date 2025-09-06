@@ -240,3 +240,52 @@ def test_main_batch_processing(mock_process_video, tmp_path, mocker):
         assert 'orig_alignment' in styles_arg
         assert isinstance(transcriber_arg, dict)
         assert 'model_size' in transcriber_arg
+
+@patch('sublearn.merger')
+@patch('sublearn.translator')
+@patch('sublearn.aligner')
+@patch('sublearn.fetcher')
+@patch('builtins.input', side_effect=['1', '1']) # Select first option for both prompts
+def test_main_analysis_mode(mock_input, mock_fetcher, mock_aligner, mock_translator, mock_merger, tmp_path, mocker):
+    """
+    Tests the main function's dispatch to the analysis workflow.
+    """
+    # --- Setup Mocks ---
+    mock_fetcher.search_subtitles_by_query.return_value = [{"attributes": {"release": "Release", "files": [{"file_id": 123}]}}]
+    mock_fetcher.download_subtitle.side_effect = ["/tmp/orig.srt", "/tmp/dub.srt"]
+    mocker.patch('sublearn.pysubs2.load')
+    mocker.patch('sublearn.os.remove')
+
+    # Mock get_base_path and config file
+    mocker.patch('sublearn.get_base_path', return_value=str(tmp_path))
+    (tmp_path / "config.ini").write_text("[API_KEYS]\nOPENSUBTITLES_API_KEY=fake\nDEEPL_API_KEY=fake")
+
+    # --- Run the main function with analysis mode args ---
+    output_dir = tmp_path / "analysis_output"
+    test_args = [
+        "sublearn.py", str(output_dir),
+        "--mode", "analyze",
+        "--query", "The Matrix",
+        "--lang_orig", "en",
+        "--lang_dub", "hu"
+    ]
+    with patch.object(sys, 'argv', test_args):
+        try:
+            sublearn.main()
+        except SystemExit:
+            pytest.fail("sublearn.main() exited unexpectedly in analysis mode test.")
+
+    # --- Assertions ---
+    # 1. Fetcher was called twice to search by query
+    assert mock_fetcher.search_subtitles_by_query.call_count == 2
+    mock_fetcher.search_subtitles_by_query.assert_any_call("The Matrix", "en", "fake")
+    mock_fetcher.search_subtitles_by_query.assert_any_call("The Matrix", "hu", "fake")
+
+    # 2. Aligner was called
+    mock_aligner.align_by_index.assert_called_once()
+
+    # 3. Translator was called
+    mock_translator.translate_subtitle_file.assert_called_once()
+
+    # 4. Merger was called
+    mock_merger.create_merged_subtitle_file.assert_called_once()

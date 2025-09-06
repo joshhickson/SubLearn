@@ -1,13 +1,10 @@
 # SubLearn
 
-*Inventing a new way to learn from and truly understand foreign language audio tracks in films and TV shows.*
+*A tool for language learning and film analysis through multi-track subtitles.*
 
-SubLearn is a command-line tool that generates a multi-language subtitle file designed to help with language acquisition. For a given video file with a dubbed audio track, it creates a single `.ass` subtitle file containing up to three tracks:
-1.  The original language dialogue (e.g., English).
-2.  The dubbed language dialogue (e.g., Hungarian).
-3.  A direct, word-for-word translation of the dubbed dialogue into your native language.
+SubLearn is a command-line tool that generates a multi-language subtitle file for two primary use cases: language acquisition and film analysis. It creates a single `.ass` subtitle file containing up to three tracks for direct comparison.
 
-This allows you to see the original script, the dubbed version you are hearing, and a literal translation all at once, providing a powerful tool for understanding vocabulary and sentence structure.
+This allows you to see the original script, the dubbed version you are hearing, and a literal translation all at once, providing a powerful tool for understanding vocabulary, sentence structure, and the creative choices made during the film localization process.
 
 ## Features
 
@@ -50,28 +47,62 @@ Before running the script, you need to provide your API keys for OpenSubtitles a
     ```
     *Your `config.ini` file is ignored by git, so your keys will not be committed.*
 
+## Modes of Operation
+
+SubLearn has two distinct modes, set with the `--mode` flag.
+
+### 1. Learn Mode (Default)
+
+This mode is designed for **language learning**. It requires a local video file and finds perfectly synchronized subtitles by calculating the file's hash. It can also use its built-in AI transcriber to generate a verbatim transcript from the audio if no matching subtitle is found online. The goal is to ensure the text you read is exactly what you hear.
+
+**Output Tracks:**
+1.  **Original Language** (from a hash-synced subtitle file)
+2.  **Dub Language** (from a hash-synced or AI-transcribed subtitle file)
+3.  **Native Language** (a literal translation of the dub)
+
+### 2. Analysis Mode (`--mode analyze`)
+
+This mode is designed for **film analysis**. It allows you to compare the original script to the dubbed script to see what creative choices were made in the translation and localization process. It works by searching for subtitles by title, which may not be perfectly synchronized. It then **re-times** the original language subtitle to match the cadence of the dub language subtitle on a line-by-line basis.
+
+**Output Tracks:**
+1.  **Original Language** (from a title search, re-timed to match the dub)
+2.  **Dub Language** (from a title search, acts as the timing master)
+3.  **Native Language** (a literal translation of the dub)
+
 ## Usage
 
-The script is run from the command line, providing the path to a video file or a directory.
+The script is run from the command line. The required arguments change based on the selected mode.
 
 ### Basic Syntax
 
 ```bash
-python sublearn.py <path_to_video_or_directory> --lang_dub <dub_language_code> [options]
+# Learn Mode (default)
+python sublearn.py <path_to_video_or_directory> --lang_dub <dub_lang> [options]
+
+# Analysis Mode
+python sublearn.py <path_to_output_directory> --mode analyze --query "Movie Title" --lang_dub <dub_lang> [options]
 ```
 
 ### Arguments
 
--   `path`: (Required) The full path to your video file or a directory containing video files.
--   `--lang_dub`: (Required) The language code for the dubbed audio track you want to study (e.g., `hu` for Hungarian, `es` for Spanish).
+-   `path`: (Required) In `learn` mode, the path to your video file or directory. In `analyze` mode, the path to the directory where output files will be saved.
+-   `--mode`: `learn` or `analyze`. Sets the operating mode. Defaults to `learn`.
+-   `--lang_dub`: (Required) The language code for the dubbed audio track (e.g., `hu` for Hungarian, `es` for Spanish).
 -   `--lang_orig`: The original language of the film. Defaults to `en`.
 -   `--lang_native`: The language to translate the dubbed track into. Defaults to `EN-US`.
--   `--interactive`: Use this flag to manually select subtitles from a list of online search results. Recommended for accuracy.
--   `--no-orig-search`: Use this flag to prevent the script from searching for the original language subtitle track.
+
+#### Learn Mode Arguments
+-   `--interactive`: Manually select subtitles from a list of online search results.
+-   `--no-orig-search`: Do not search for the original language subtitle track.
+-   `--force-transcriber`: Force the use of the AI audio transcriber instead of searching online.
+-   `--fallback-to-transcriber`: Use the AI transcriber if no suitable dub subtitle is found online.
+
+#### Analysis Mode Arguments
+-   `--query`: (Required for Analysis Mode) The movie title to search for.
 
 ### Examples
 
-**1. Processing a Single File (Automatic Mode)**
+**1. Learn Mode: Processing a Single File (Interactive)**
 
 This will find subtitles for a file, automatically selecting the best match.
 
@@ -79,20 +110,20 @@ This will find subtitles for a file, automatically selecting the best match.
 python sublearn.py "/path/to/movies/The.Matrix.1999.mkv" --lang_dub hu
 ```
 
-**2. Processing a Single File (Interactive Mode)**
+**2. Learn Mode: Using the AI Transcriber**
 
-This will present you with a list of found subtitles to choose from, which is the recommended mode for best results.
+This will generate the dub subtitle directly from your video file's audio track.
 
 ```bash
-python sublearn.py "/path/to/movies/The.Matrix.1999.mkv" --lang_dub hu --interactive
+python sublearn.py "/path/to/movies/The.Matrix.1999.mkv" --lang_dub hu --force-transcriber
 ```
 
-**3. Batch Processing a Directory**
+**3. Analysis Mode: Comparing Scripts**
 
-This will find and process all video files (`.mkv`, `.mp4`, etc.) in the specified directory.
+This will search for "The Matrix" subtitles online, let you pick the ones you want, and then align the original English timings to the Hungarian dub timings.
 
 ```bash
-python sublearn.py "/path/to/movies/" --lang_dub hu --interactive
+python sublearn.py ./output --mode analyze --query "The Matrix" --lang_orig en --lang_dub hu
 ```
 
 ## Creating a Standalone Application
