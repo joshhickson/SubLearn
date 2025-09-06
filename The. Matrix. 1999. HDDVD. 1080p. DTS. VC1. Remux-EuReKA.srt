@@ -1,0 +1,6010 @@
+1
+00:00:37,989 --> 00:00:39,574
+MÁTRlX
+
+2
+00:00:47,665 --> 00:00:48,791
+TRANSZFER:
+AKTÍV
+
+3
+00:00:49,083 --> 00:00:52,462
+<i>- Minden rendben?</i>
+<i>- Nem neked kéne leváltanod.</i>
+
+4
+00:00:52,754 --> 00:00:55,339
+<i>Igen, de gondoltam, beugrom.</i>
+
+5
+00:00:55,923 --> 00:00:58,259
+<i>Tetszik, ugye?</i>
+<i>Szereted nézni.</i>
+
+6
+00:00:58,509 --> 00:01:01,512
+<i>- Ne légy nevetséges!</i>
+<i>- Meg fogjuk ölni. Tudod?</i>
+
+7
+00:01:01,763 --> 00:01:04,265
+<i>Morpheus úgy véli, ő az.</i>
+
+8
+00:01:04,515 --> 00:01:05,391
+<i>És szerinted?</i>
+
+9
+00:01:05,683 --> 00:01:07,435
+<i>Nem számít,</i>
+<i>mit gondolok.</i>
+
+10
+00:01:07,685 --> 00:01:09,312
+<i>Szerinted nem ő az,</i>
+<i>ugye?</i>
+
+11
+00:01:09,604 --> 00:01:11,647
+<i>- Hallottad?</i>
+<i>- Mit?</i>
+
+12
+00:01:11,939 --> 00:01:13,483
+<i>Biztos, hogy</i>
+<i>nem hallgatnak le?</i>
+
+13
+00:01:13,775 --> 00:01:15,735
+<i>Persze, hogy biztos.</i>
+
+14
+00:01:16,110 --> 00:01:17,528
+<i>Jobb, ha megyek.</i>
+
+15
+00:01:55,483 --> 00:01:57,276
+Ne mozdulj! Rendőrség!
+Kezeket tarkóra!
+
+16
+00:01:57,819 --> 00:01:58,903
+Mozgás!
+
+17
+00:02:07,912 --> 00:02:10,415
+VÁROS SZÍVE SZÁLLODA
+
+18
+00:02:20,341 --> 00:02:21,634
+Hadnagy!
+
+19
+00:02:21,926 --> 00:02:22,927
+A fenébe!
+
+20
+00:02:23,761 --> 00:02:26,973
+Nem volt világos a parancs?
+
+21
+00:02:27,265 --> 00:02:28,933
+Csak a munkámat végzem.
+
+22
+00:02:29,600 --> 00:02:33,980
+Megint túlléptem a hatásköröm?
+Menjen a fenébe!
+
+23
+00:02:34,439 --> 00:02:36,941
+A saját érdekében utasítottuk.
+
+24
+00:02:38,484 --> 00:02:40,653
+Csak elbírunk egy kislánnyal!
+
+25
+00:02:45,783 --> 00:02:47,535
+Két egységet
+küldtem fel!
+
+26
+00:02:47,785 --> 00:02:49,370
+Épp most hozzák
+a lányt!
+
+27
+00:02:49,662 --> 00:02:51,789
+Téved, hadnagy.
+Az emberei már halottak.
+
+28
+00:03:22,154 --> 00:03:22,988
+Rohadtak!
+
+29
+00:03:25,616 --> 00:03:27,910
+Morpheus!
+Bemérték a vonalat!
+
+30
+00:03:28,160 --> 00:03:29,745
+<i>Elvágták</i>
+<i>a vezetéket!</i>
+
+31
+00:03:29,995 --> 00:03:32,164
+<i>Nincs időnk!</i>
+<i>Másik vonalon kell jönnöd.</i>
+
+32
+00:03:32,414 --> 00:03:33,791
+Vannak ügynökök?
+
+33
+00:03:33,999 --> 00:03:34,833
+<i>Igen.</i>
+
+34
+00:03:35,042 --> 00:03:36,210
+A fenébe!
+
+35
+00:03:36,460 --> 00:03:38,003
+<i>Koncentrálj,</i>
+<i>Trinity!</i>
+
+36
+00:03:38,253 --> 00:03:40,631
+<i>Van egy telefon</i>
+<i>a Wells és Lake sarkán.</i>
+
+37
+00:03:41,006 --> 00:03:42,674
+<i>Sikerülni fog!</i>
+
+38
+00:03:42,925 --> 00:03:44,593
+- Rendben.
+<i>- Indulj!</i>
+
+39
+00:04:46,739 --> 00:04:47,781
+Ez nem
+lehet igaz!
+
+40
+00:05:22,775 --> 00:05:24,818
+Kelj fel, Trinity!
+Kelj fel!
+
+41
+00:05:25,444 --> 00:05:26,653
+Kelj fel!
+
+42
+00:06:12,533 --> 00:06:14,034
+Átjutott!
+
+43
+00:06:14,326 --> 00:06:15,619
+Nem számít.
+
+44
+00:06:15,869 --> 00:06:17,955
+A besúgónk bevált.
+
+45
+00:06:19,289 --> 00:06:20,958
+Tudjuk, ki a következő
+célpontjuk.
+
+46
+00:06:21,208 --> 00:06:22,876
+Neónak hívják.
+
+47
+00:06:26,171 --> 00:06:27,673
+Végigfuttatjuk
+a keresőn.
+
+48
+00:06:27,965 --> 00:06:29,883
+Már el is kezdtük.
+
+49
+00:06:39,727 --> 00:06:41,437
+KERESÉS
+
+50
+00:06:41,687 --> 00:06:44,481
+MORPHEUS KlJÁTSZOTTA
+A RENDŐRSÉGET
+
+51
+00:06:52,448 --> 00:06:54,408
+EMBERVADÁSZAT
+
+52
+00:07:13,469 --> 00:07:15,304
+Ébredj, Neo!
+
+53
+00:07:24,646 --> 00:07:25,856
+Mi ez?
+
+54
+00:07:26,398 --> 00:07:29,943
+A Mátrix rabja vagy.
+
+55
+00:07:31,612 --> 00:07:33,113
+Mi a fene?
+
+56
+00:07:37,576 --> 00:07:40,329
+Kövesd a fehér nyulat!
+
+57
+00:07:40,746 --> 00:07:42,706
+''Kövesd a fehér nyulat!''
+
+58
+00:07:48,796 --> 00:07:49,797
+Kip-kop, Neo.
+
+59
+00:07:54,551 --> 00:07:55,719
+Ki az?
+
+60
+00:07:55,969 --> 00:07:57,262
+Choi.
+
+61
+00:08:10,776 --> 00:08:11,944
+Két órát késtél.
+
+62
+00:08:12,528 --> 00:08:14,279
+Tudom. Őmiatta.
+
+63
+00:08:14,571 --> 00:08:15,531
+Megvan
+a pénz?
+
+64
+00:08:17,658 --> 00:08:18,826
+Két rongy.
+
+65
+00:08:19,702 --> 00:08:20,828
+Várjatok!
+
+66
+00:08:26,417 --> 00:08:27,793
+SZlMULAKRUM ÉS
+SZlMULÁClÓ
+
+67
+00:08:38,512 --> 00:08:39,888
+Halleluja!
+
+68
+00:08:40,139 --> 00:08:43,016
+Te vagy a megváltóm!
+A személyes Jézus Krisztusom!
+
+69
+00:08:43,267 --> 00:08:45,144
+Lebukhatsz,
+ha használod!
+
+70
+00:08:45,394 --> 00:08:47,521
+Tudom, meg se történt.
+Nem létezel.
+
+71
+00:08:48,647 --> 00:08:50,733
+- Helyes!
+- Valami baj van?
+
+72
+00:08:50,983 --> 00:08:53,026
+Sápadt vagy.
+
+73
+00:08:54,153 --> 00:08:56,321
+A számítógépem...
+
+74
+00:08:59,324 --> 00:09:03,871
+Volt már úgy, hogy nem tudtad,
+ébren vagy-e, vagy álmodsz?
+
+75
+00:09:04,663 --> 00:09:07,416
+Egyfolytában. Úgy hívják,
+meszkalin.
+
+76
+00:09:07,916 --> 00:09:10,044
+Csak az ad szárnyakat.
+
+77
+00:09:10,919 --> 00:09:13,422
+Húzd ki a dugót a falból!
+
+78
+00:09:14,173 --> 00:09:16,216
+Nem árt egy kis pihenés!
+
+79
+00:09:16,592 --> 00:09:20,345
+Mit szólsz, Dujour?
+Ne vigyük magunkkal?
+
+80
+00:09:22,347 --> 00:09:23,557
+Dehogynem!
+
+81
+00:09:23,807 --> 00:09:26,977
+Nem lehet. Holnap dolgoznom kell.
+
+82
+00:09:27,519 --> 00:09:28,645
+Ugyan!
+
+83
+00:09:28,896 --> 00:09:31,523
+Élvezni fogod. Megígérem!
+
+84
+00:09:38,030 --> 00:09:39,531
+lgen.
+
+85
+00:09:40,366 --> 00:09:42,159
+Jó. Megyek!
+
+86
+00:10:09,937 --> 00:10:10,896
+Helló, Neo!
+
+87
+00:10:12,439 --> 00:10:13,399
+Honnan tudod
+a nevem?
+
+88
+00:10:14,233 --> 00:10:15,943
+Sokat tudok rólad.
+
+89
+00:10:16,819 --> 00:10:17,653
+Ki vagy?
+
+90
+00:10:17,903 --> 00:10:18,904
+A nevem
+Trinity.
+
+91
+00:10:19,863 --> 00:10:21,073
+Trinity?
+
+92
+00:10:22,866 --> 00:10:23,867
+Trinity?
+
+93
+00:10:24,326 --> 00:10:26,036
+Az, aki feltörte az adóhivatal
+rendszerét?
+
+94
+00:10:26,286 --> 00:10:27,746
+Régen volt.
+
+95
+00:10:27,996 --> 00:10:28,831
+Jézusom!
+
+96
+00:10:29,081 --> 00:10:29,915
+Mi van?
+
+97
+00:10:30,374 --> 00:10:32,167
+Azt hittem...
+
+98
+00:10:33,919 --> 00:10:35,087
+...fiú vagy.
+
+99
+00:10:35,337 --> 00:10:36,797
+Mint a legtöbb fiú.
+
+100
+00:10:38,006 --> 00:10:40,217
+Te voltál az a gépemen?
+
+101
+00:10:40,843 --> 00:10:41,969
+Hogy csináltad?
+
+102
+00:10:42,594 --> 00:10:45,305
+Csak annyit mondhatok...
+
+103
+00:10:45,931 --> 00:10:47,474
+...veszélyben vagy.
+
+104
+00:10:47,933 --> 00:10:50,352
+- Figyelmeztetni akartalak.
+- Mire?
+
+105
+00:10:50,936 --> 00:10:52,604
+Figyelnek.
+
+106
+00:10:53,188 --> 00:10:54,022
+Kik?
+
+107
+00:10:54,231 --> 00:10:55,607
+Hallgass végig!
+
+108
+00:10:59,111 --> 00:11:00,946
+Tudom, miért vagy itt.
+
+109
+00:11:01,739 --> 00:11:03,699
+Tudom, mit csinálsz.
+
+110
+00:11:03,949 --> 00:11:05,826
+Tudom, miért
+nem tudsz aludni...
+
+111
+00:11:06,118 --> 00:11:09,246
+...miért élsz egyedül,
+és miért ülsz minden éjjel...
+
+112
+00:11:09,496 --> 00:11:11,832
+...a számítógéped előtt!
+
+113
+00:11:13,000 --> 00:11:14,543
+Mert őt keresed.
+
+114
+00:11:15,335 --> 00:11:18,338
+Tudom, mert én is őt kerestem.
+
+115
+00:11:18,839 --> 00:11:20,966
+És amikor megtalált...
+
+116
+00:11:21,592 --> 00:11:24,678
+...azt mondta, nem is őt kerestem.
+
+117
+00:11:25,596 --> 00:11:27,347
+lnkább egy választ.
+
+118
+00:11:27,973 --> 00:11:31,101
+Egy kérdés nem hagy nyugodni minket.
+
+119
+00:11:31,769 --> 00:11:34,438
+Ez hozott ide téged is.
+
+120
+00:11:36,523 --> 00:11:37,900
+Tudod,
+mi a kérdés.
+
+121
+00:11:38,150 --> 00:11:39,651
+Én is tudtam.
+
+122
+00:11:41,195 --> 00:11:42,821
+Mi az a Mátrix?
+
+123
+00:11:43,072 --> 00:11:45,532
+A válasz meglelhető.
+
+124
+00:11:46,200 --> 00:11:48,202
+Ő is keres téged.
+
+125
+00:11:48,994 --> 00:11:50,704
+És meg fog találni...
+
+126
+00:11:50,954 --> 00:11:52,956
+...ha te is akarod.
+
+127
+00:11:59,755 --> 00:12:00,589
+A francba!
+
+128
+00:12:00,839 --> 00:12:02,091
+A francba!
+
+129
+00:12:12,351 --> 00:12:15,187
+Baj van a hozzáállásával,
+Mr. Anderson.
+
+130
+00:12:15,437 --> 00:12:19,483
+Különlegesnek hiszi magát, akire
+nem vonatkoznak a szabályok.
+
+131
+00:12:20,192 --> 00:12:22,194
+Sajnálattal közlöm: téved.
+
+132
+00:12:25,155 --> 00:12:28,033
+Ez azért a világ egyik vezető
+Szoftvercége...
+
+133
+00:12:28,283 --> 00:12:31,662
+...mert minden alkalmazott tudja:
+része az egésznek.
+
+134
+00:12:31,912 --> 00:12:36,542
+Ha egy alkalmazottnak gondja van,
+a cégnek van gondja.
+
+135
+00:12:38,794 --> 00:12:42,005
+Betelt a pohár, Mr. Anderson:
+
+136
+00:12:42,881 --> 00:12:46,760
+Mostantól vagy időben
+megjelenik a munkahelyén...
+
+137
+00:12:47,386 --> 00:12:49,972
+...vagy kereshet másik állást.
+
+138
+00:12:50,848 --> 00:12:52,182
+Világosan fejeztem
+ki magam?
+
+139
+00:12:52,433 --> 00:12:53,934
+lgen, Mr. Rhinehart.
+
+140
+00:13:03,318 --> 00:13:04,153
+Thomas
+Anderson?
+
+141
+00:13:06,447 --> 00:13:07,865
+Én vagyok.
+
+142
+00:13:15,873 --> 00:13:17,041
+Kösz!
+
+143
+00:13:18,459 --> 00:13:19,626
+Jó munkát!
+
+144
+00:13:36,435 --> 00:13:39,772
+<i>Hello, Neo! Tudod, ki vagyok?</i>
+
+145
+00:13:42,024 --> 00:13:43,776
+- Morpheus!
+<i>- Igen.</i>
+
+146
+00:13:44,026 --> 00:13:46,028
+<i>Régóta kereslek.</i>
+
+147
+00:13:46,278 --> 00:13:49,448
+<i>Nem tudom, készen állsz-e arra,</i>
+<i>amit mutatni akarok...</i>
+
+148
+00:13:49,698 --> 00:13:52,868
+<i>...de sajnos, kifutottunk az időből.</i>
+
+149
+00:13:53,118 --> 00:13:56,830
+<i>Jönnek érted, és nem tudom,</i>
+<i>mire készülnek.</i>
+
+150
+00:13:57,081 --> 00:13:58,415
+Kik jönnek
+értem?
+
+151
+00:13:58,665 --> 00:14:00,751
+<i>Állj föl, és</i>
+<i>nézd meg magad.</i>
+
+152
+00:14:01,001 --> 00:14:02,503
+Most rögtön?
+
+153
+00:14:02,795 --> 00:14:03,796
+<i>Igen.</i>
+
+154
+00:14:04,046 --> 00:14:05,297
+<i>Most!</i>
+
+155
+00:14:06,173 --> 00:14:08,050
+<i>Lassan!</i>
+
+156
+00:14:08,467 --> 00:14:09,676
+<i>A liftnél!</i>
+
+157
+00:14:14,556 --> 00:14:16,350
+- A fenébe!
+<i>- Igen!</i>
+
+158
+00:14:21,021 --> 00:14:22,022
+Mit akarnak
+tőlem?
+
+159
+00:14:22,272 --> 00:14:25,943
+<i>Nem tudom, de ne várd meg,</i>
+<i>amíg kiderül. Menekülj!</i>
+
+160
+00:14:26,193 --> 00:14:26,819
+Hogyan?
+
+161
+00:14:27,027 --> 00:14:30,197
+<i>Segítek.</i>
+<i>Tedd, amit mondok!</i>
+
+162
+00:14:31,073 --> 00:14:33,075
+<i>A szemközti fülke üres.</i>
+
+163
+00:14:36,203 --> 00:14:38,330
+- De mi lesz, ha...
+<i>- Indulj!</i>
+
+164
+00:14:45,087 --> 00:14:47,464
+<i>Maradj ott egy kicsit!</i>
+
+165
+00:14:54,680 --> 00:14:57,433
+<i>Ha szólok menj a folyosó végére...</i>
+
+166
+00:14:57,683 --> 00:14:59,643
+<i>...a terem végében lévő</i>
+<i>irodába.</i>
+
+167
+00:14:59,893 --> 00:15:02,271
+<i>Lapulj le!</i>
+
+168
+00:15:04,690 --> 00:15:05,691
+<i>Indulj!</i>
+
+169
+00:15:20,080 --> 00:15:23,625
+<i>Az épület fel van állványozva.</i>
+
+170
+00:15:26,336 --> 00:15:28,672
+- Honnan tudod?
+<i>- Erre most nincs idő.</i>
+
+171
+00:15:28,922 --> 00:15:31,759
+<i>Balra van egy ablak. Menj oda!</i>
+
+172
+00:15:34,011 --> 00:15:35,554
+<i>Nyisd ki!</i>
+
+173
+00:15:36,388 --> 00:15:38,182
+<i>Az állványon feljuthatsz</i>
+<i>a tetőre.</i>
+
+174
+00:15:38,432 --> 00:15:41,018
+Azt nem! Őrültség!
+
+175
+00:15:41,268 --> 00:15:43,645
+<i>Két módon juthatsz ki.</i>
+
+176
+00:15:43,896 --> 00:15:47,691
+<i>Az egyik az állványzat.</i>
+<i>A másik, hogy ők kísérnek.</i>
+
+177
+00:15:47,941 --> 00:15:51,153
+<i>Mindkettő kockázatos. Te döntesz.</i>
+
+178
+00:15:54,740 --> 00:15:56,492
+Őrültség!
+
+179
+00:15:57,659 --> 00:15:59,536
+Miért történik ez velem?
+
+180
+00:15:59,828 --> 00:16:01,455
+Mit követtem el?
+
+181
+00:16:01,830 --> 00:16:04,583
+Egy senki vagyok!
+Nem tettem semmit!
+
+182
+00:16:05,167 --> 00:16:06,627
+Megdöglöm!
+
+183
+00:16:16,428 --> 00:16:17,471
+Az istenit!
+
+184
+00:16:37,741 --> 00:16:38,867
+Az istenit!
+
+185
+00:16:43,831 --> 00:16:45,624
+Képtelenség!
+
+186
+00:16:58,470 --> 00:16:59,304
+A fenébe!
+
+187
+00:17:48,562 --> 00:17:53,400
+Láthatja, jó ideje szemmel tartjuk,
+Mr. Anderson.
+
+188
+00:17:54,693 --> 00:17:57,363
+Úgy tűnik...
+
+189
+00:17:57,613 --> 00:17:59,740
+...kettős életet él.
+
+190
+00:18:01,158 --> 00:18:03,660
+Az egyikben
+Thomas A. Anderson...
+
+191
+00:18:03,911 --> 00:18:07,247
+...egy neves szoftvercég programozója.
+
+192
+00:18:08,290 --> 00:18:11,585
+Van biztosítási száma,
+fizeti az adót...
+
+193
+00:18:12,044 --> 00:18:13,295
+...és...
+
+194
+00:18:14,880 --> 00:18:18,509
+...segít a házinéninek
+kivinni a szemetet.
+
+195
+00:18:21,011 --> 00:18:24,139
+A másikban közismert hacker...
+
+196
+00:18:24,431 --> 00:18:27,393
+...aki Neo álnéven tevékenykedik...
+
+197
+00:18:27,643 --> 00:18:32,439
+...és szinte minden elképzelhető
+számítógépes bűntényt elkövette már.
+
+198
+00:18:33,732 --> 00:18:35,693
+Egyik életének...
+
+199
+00:18:35,943 --> 00:18:37,778
+...van jövője.
+
+200
+00:18:38,112 --> 00:18:40,114
+A másiknak nincs.
+
+201
+00:18:43,826 --> 00:18:47,663
+Őszinte leszek, amennyire lehetséges,
+Mr. Anderson.
+
+202
+00:18:48,664 --> 00:18:49,998
+Azért van itt...
+
+203
+00:18:50,332 --> 00:18:52,584
+...mert szükségünk van
+a segítségére.
+
+204
+00:18:56,213 --> 00:18:59,216
+Tudjuk, hogy kapcsolatba lépett
+önnel egy bizonyos...
+
+205
+00:18:59,466 --> 00:19:01,260
+...illető.
+
+206
+00:19:02,177 --> 00:19:06,223
+Úgy nevezi magát: ''Morpheus''.
+
+207
+00:19:07,224 --> 00:19:11,228
+Lényegtelen, amit tudni vél róla.
+
+208
+00:19:11,478 --> 00:19:13,897
+A hatóságok szerint...
+
+209
+00:19:14,148 --> 00:19:17,192
+...a legveszélyesebb ember a világon.
+
+210
+00:19:19,945 --> 00:19:21,155
+A kollégáim...
+
+211
+00:19:21,572 --> 00:19:24,491
+...úgy vélik, csak az időmet
+fecsérlem önnel.
+
+212
+00:19:24,783 --> 00:19:28,203
+De szerintem maga
+helyesen akar cselekedni.
+
+213
+00:19:28,495 --> 00:19:31,999
+Szemet hunyunk a múltja felett.
+
+214
+00:19:32,374 --> 00:19:34,501
+Tiszta lappal indulhat.
+
+215
+00:19:35,002 --> 00:19:37,921
+Csupán az együttműködését kérjük...
+
+216
+00:19:38,172 --> 00:19:41,675
+...hogy törvény elé állíthassunk
+egy ismert terroristát.
+
+217
+00:19:43,052 --> 00:19:44,303
+Értem.
+
+218
+00:19:45,596 --> 00:19:47,681
+Egész jó üzlet.
+
+219
+00:19:49,308 --> 00:19:51,060
+De jobb ötletem van.
+
+220
+00:19:51,310 --> 00:19:52,811
+Mit szólnak...
+
+221
+00:19:53,228 --> 00:19:55,230
+...ha ez a válaszom?
+
+222
+00:19:57,816 --> 00:19:59,860
+Most pedig telefonálnék.
+
+223
+00:20:02,029 --> 00:20:03,864
+Mr. Anderson...
+
+224
+00:20:08,243 --> 00:20:09,320
+Csalódtam
+magában.
+
+225
+00:20:09,328 --> 00:20:11,955
+A gestapós dumával
+nem ijeszt meg!
+
+226
+00:20:12,206 --> 00:20:13,582
+lsmerem
+a jogaimat!
+
+227
+00:20:13,832 --> 00:20:15,334
+Jogom van
+telefonálni!
+
+228
+00:20:15,918 --> 00:20:18,087
+Mondja, Mr. Anderson...
+
+229
+00:20:18,962 --> 00:20:20,381
+...mi értelme...
+
+230
+00:20:20,631 --> 00:20:24,218
+...telefonálni, ha egyszer
+képtelen beszélni?
+
+231
+00:20:58,001 --> 00:21:00,212
+Segíteni fog nekünk...
+
+232
+00:21:00,921 --> 00:21:01,880
+...akár akarja...
+
+233
+00:21:02,131 --> 00:21:03,006
+...akár nem.
+
+234
+00:22:01,315 --> 00:22:04,568
+<i>A telefont lehallgatják.</i>
+<i>Rövid leszek.</i>
+
+235
+00:22:04,818 --> 00:22:09,114
+<i>Ők értek el előbb,</i>
+<i>de alábecsülték a fontosságodat.</i>
+
+236
+00:22:09,365 --> 00:22:11,200
+<i>Ha tudnák, amit én...</i>
+
+237
+00:22:11,450 --> 00:22:13,452
+<i>...már halott lennél.</i>
+
+238
+00:22:14,453 --> 00:22:18,165
+Nem értem!
+Mi történik velem?
+
+239
+00:22:18,415 --> 00:22:23,253
+<i>Te vagy a kiválasztott! Te csupán</i>
+<i>néhány éve keresel engem...</i>
+
+240
+00:22:23,504 --> 00:22:26,465
+<i>...én viszont egész életemben...</i>
+
+241
+00:22:26,715 --> 00:22:28,217
+<i>...téged kerestelek.</i>
+
+242
+00:22:29,760 --> 00:22:31,929
+<i>Akarsz még</i>
+<i>találkozni velem?</i>
+
+243
+00:22:32,888 --> 00:22:35,766
+- lgen.
+<i>- Menj az Adams Street-i hídhoz!</i>
+
+244
+00:22:45,984 --> 00:22:47,194
+Szállj be!
+
+245
+00:22:59,456 --> 00:23:00,290
+Ez meg mi?
+
+246
+00:23:00,541 --> 00:23:03,085
+Erre szükség van.
+Védenünk kell magunkat.
+
+247
+00:23:03,335 --> 00:23:04,336
+Mitől?
+
+248
+00:23:04,586 --> 00:23:05,504
+Tőled.
+
+249
+00:23:07,047 --> 00:23:08,507
+Vedd le az inged!
+
+250
+00:23:09,007 --> 00:23:09,842
+Álljunk meg!
+
+251
+00:23:14,430 --> 00:23:15,597
+lde figyelj,
+Duracell!
+
+252
+00:23:15,848 --> 00:23:17,850
+Nincs idő kérdezősködésre!
+
+253
+00:23:18,350 --> 00:23:20,728
+ltt csak egy szabály van:
+
+254
+00:23:21,019 --> 00:23:22,354
+Megszoksz...
+
+255
+00:23:22,688 --> 00:23:23,772
+...vagy
+megszöksz!
+
+256
+00:23:30,529 --> 00:23:31,405
+Jó.
+
+257
+00:23:33,282 --> 00:23:35,743
+Kérlek, Neo! Bízz bennem!
+
+258
+00:23:36,326 --> 00:23:38,954
+- Miért?
+- Mert ott már jártál.
+
+259
+00:23:39,705 --> 00:23:40,914
+Azt az utat
+már ismered.
+
+260
+00:23:41,915 --> 00:23:43,584
+Tudod, hová vezet.
+
+261
+00:23:45,753 --> 00:23:48,005
+Nem oda akarsz eljutni.
+
+262
+00:24:02,186 --> 00:24:03,729
+Apoc, fényt!
+
+263
+00:24:06,231 --> 00:24:08,400
+Feküdj oda!
+Húzd föl az inged!
+
+264
+00:24:10,319 --> 00:24:11,153
+Mi ez?
+
+265
+00:24:11,487 --> 00:24:12,571
+Bepoloskáztak!
+
+266
+00:24:20,329 --> 00:24:21,789
+Lazíts!
+
+267
+00:24:28,087 --> 00:24:29,254
+Gyerünk!
+
+268
+00:24:30,464 --> 00:24:31,340
+Gyerünk!
+
+269
+00:24:33,133 --> 00:24:34,051
+Menekül!
+
+270
+00:24:35,886 --> 00:24:37,096
+A fenébe!
+
+271
+00:24:38,931 --> 00:24:41,225
+- Nem tudod elcsípni!
+- Dehogynem!
+
+272
+00:24:41,475 --> 00:24:42,434
+Vigyázat!
+
+273
+00:24:51,026 --> 00:24:53,153
+Jézusom!
+Nemcsak álom volt?
+
+274
+00:25:26,895 --> 00:25:28,230
+Megjöttünk.
+
+275
+00:25:31,567 --> 00:25:34,028
+Hadd adjak egy tanácsot!
+
+276
+00:25:34,987 --> 00:25:36,655
+Légy őszinte!
+
+277
+00:25:38,240 --> 00:25:40,451
+Többet tud, mint képzelnéd!
+
+278
+00:25:49,168 --> 00:25:50,502
+Végre!
+
+279
+00:25:52,046 --> 00:25:53,130
+lsten hozott!
+
+280
+00:25:54,339 --> 00:25:56,258
+Mint nyilván
+kitaláltad...
+
+281
+00:25:56,508 --> 00:25:57,760
+...én vagyok
+Morpheus.
+
+282
+00:25:58,802 --> 00:26:00,387
+Megtisztelsz.
+
+283
+00:26:00,846 --> 00:26:01,889
+Nem.
+
+284
+00:26:02,473 --> 00:26:03,766
+Te tisztelsz meg
+engem:
+
+285
+00:26:04,683 --> 00:26:07,186
+Gyere! Ülj le!
+
+286
+00:26:22,284 --> 00:26:23,911
+Gondolom...
+
+287
+00:26:24,328 --> 00:26:27,081
+...úgy érzed magad, mint Alice...
+
+288
+00:26:28,791 --> 00:26:31,210
+...amikor a nyúl üregébe esett.
+
+289
+00:26:32,127 --> 00:26:33,128
+Körülbelül.
+
+290
+00:26:34,046 --> 00:26:36,673
+Látom a szemeden.
+
+291
+00:26:37,257 --> 00:26:40,552
+Mint aki elfogadja, amit lát...
+
+292
+00:26:40,803 --> 00:26:43,055
+...mivel azt várja,
+hogy felébred.
+
+293
+00:26:44,473 --> 00:26:47,101
+Furcsa mód majdnem
+ez az igazság.
+
+294
+00:26:47,768 --> 00:26:50,270
+Hiszel a sorsban, Neo?
+
+295
+00:26:50,562 --> 00:26:51,438
+Nem.
+
+296
+00:26:51,897 --> 00:26:52,856
+Miért?
+
+297
+00:26:53,107 --> 00:26:55,901
+Jobb az a tudat, hogy én
+irányítom az életemet.
+
+298
+00:26:56,985 --> 00:27:00,322
+Pontosan tudom, mire gondolsz.
+
+299
+00:27:04,618 --> 00:27:06,995
+Elmondom, miért vagy itt.
+
+300
+00:27:08,038 --> 00:27:09,581
+Azért, mert tudsz
+valamit.
+
+301
+00:27:10,124 --> 00:27:11,750
+Nem tudod
+megmagyarázni...
+
+302
+00:27:12,251 --> 00:27:13,836
+...de érzed.
+
+303
+00:27:14,420 --> 00:27:16,338
+Érezted egész életedben.
+
+304
+00:27:16,922 --> 00:27:21,093
+Valami baj van a világgal.
+Nem tudod, mi, csak hogy van.
+
+305
+00:27:21,593 --> 00:27:23,804
+Mint egy szilánk
+az agyadban...
+
+306
+00:27:24,054 --> 00:27:25,931
+...ami megőrjít.
+
+307
+00:27:26,849 --> 00:27:29,601
+Ez hozott el hozzám.
+
+308
+00:27:32,146 --> 00:27:33,981
+Tudod, miről beszélek?
+
+309
+00:27:35,816 --> 00:27:37,151
+A Mátrixról?
+
+310
+00:27:39,653 --> 00:27:41,321
+Akarod tudni...
+
+311
+00:27:41,780 --> 00:27:43,782
+...mi is az?
+
+312
+00:27:46,160 --> 00:27:48,037
+A Mátrix
+mindenütt jelen van.
+
+313
+00:27:48,287 --> 00:27:49,997
+Körülvesz minket.
+
+314
+00:27:50,247 --> 00:27:52,207
+Még most,
+ebben a szobában is.
+
+315
+00:27:53,042 --> 00:27:55,252
+Azt látod, ha kinézel
+az ablakon...
+
+316
+00:27:55,502 --> 00:27:57,838
+...vagy bekapcsolod a tévét.
+
+317
+00:27:58,255 --> 00:28:00,799
+Mindig érzed.
+Amikor munkába mész...
+
+318
+00:28:02,342 --> 00:28:04,011
+...vagy épp templomba.
+
+319
+00:28:04,428 --> 00:28:06,513
+Amikor befizeted az adót.
+
+320
+00:28:07,639 --> 00:28:10,559
+Ez a világ, amellyel eltakarják
+előled...
+
+321
+00:28:10,809 --> 00:28:12,394
+...az igazságot.
+
+322
+00:28:14,605 --> 00:28:15,856
+Az igazságot?
+
+323
+00:28:20,110 --> 00:28:21,653
+Hogy rabszolga vagy.
+
+324
+00:28:23,155 --> 00:28:25,449
+Megkötözve születtél,
+mint mindenki.
+
+325
+00:28:25,699 --> 00:28:30,371
+Egy börtönben, amely érzékeiddel
+fel nem fogható.
+
+326
+00:28:30,662 --> 00:28:31,955
+Börtön...
+
+327
+00:28:32,206 --> 00:28:33,374
+...az elméd
+számára.
+
+328
+00:28:40,339 --> 00:28:42,674
+Sajnos, nem lehet elmondani...
+
+329
+00:28:43,008 --> 00:28:45,386
+...valójában mi a Mátrix.
+
+330
+00:28:48,847 --> 00:28:50,724
+Látnod kell
+a saját szemeddel.
+
+331
+00:29:00,234 --> 00:29:02,528
+Ez az utolsó esélyed.
+
+332
+00:29:02,778 --> 00:29:05,114
+Aztán már
+nem fordulhatsz vissza.
+
+333
+00:29:05,572 --> 00:29:07,074
+Ha a kéket
+választod...
+
+334
+00:29:07,366 --> 00:29:10,411
+...a játéknak vége. Felébredsz
+az ágyadban, hiszed...
+
+335
+00:29:10,661 --> 00:29:12,454
+...amit hinni akarsz.
+
+336
+00:29:12,705 --> 00:29:14,039
+De ha a pirosat:
+
+337
+00:29:14,289 --> 00:29:16,250
+Maradsz Csodaországban.
+
+338
+00:29:16,750 --> 00:29:19,461
+És én megmutatom,
+milyen mély a nyúl ürege.
+
+339
+00:29:29,346 --> 00:29:30,556
+Ne feledd:
+
+340
+00:29:31,390 --> 00:29:34,435
+Amit kínálok, csak az igazság,
+semmi több.
+
+341
+00:29:48,741 --> 00:29:50,075
+Gyere velem!
+
+342
+00:29:52,619 --> 00:29:54,288
+Apoc, van kapcsolat?
+
+343
+00:29:54,538 --> 00:29:55,914
+Mindjárt!
+
+344
+00:29:59,251 --> 00:30:01,295
+Az idő ellenünk dolgozik.
+
+345
+00:30:01,670 --> 00:30:03,172
+Foglalj helyet!
+
+346
+00:30:21,357 --> 00:30:23,067
+Te végigcsináltad?
+
+347
+00:30:27,196 --> 00:30:29,198
+A kapszula
+egy követőprogram része.
+
+348
+00:30:29,948 --> 00:30:34,578
+A kimenő-bejövő jelek alapján
+be tudjuk mérni, hol vagy.
+
+349
+00:30:35,120 --> 00:30:36,163
+Az mit jelent?
+
+350
+00:30:36,747 --> 00:30:38,916
+Kapcsold be az övet,
+Dorothy!
+
+351
+00:30:39,249 --> 00:30:40,584
+Mert Kansas...
+
+352
+00:30:40,834 --> 00:30:41,877
+...nincs
+többé.
+
+353
+00:31:19,790 --> 00:31:21,166
+Ti voltatok?
+
+354
+00:31:32,177 --> 00:31:36,265
+Volt olyan álmod, amelyről
+biztosan érezted, hogy valóság?
+
+355
+00:31:37,725 --> 00:31:40,310
+Mi lett volna,
+ha nem ébredsz fel?
+
+356
+00:31:40,561 --> 00:31:43,063
+Hogy különböztetnéd meg
+az álomvilágot...
+
+357
+00:31:43,689 --> 00:31:45,107
+...a valóditól?
+
+358
+00:31:46,734 --> 00:31:47,943
+Ez nem lehet?
+
+359
+00:31:48,193 --> 00:31:49,111
+Mi?
+
+360
+00:31:49,820 --> 00:31:51,321
+A valóság?
+
+361
+00:31:55,284 --> 00:31:56,577
+Elkezdte
+másolni!
+
+362
+00:31:57,036 --> 00:31:57,911
+Még semmi!
+
+363
+00:31:58,495 --> 00:31:59,705
+Hideg.
+
+364
+00:31:59,955 --> 00:32:01,331
+Hideg!
+
+365
+00:32:05,210 --> 00:32:06,879
+Tank,
+kérnénk a jelet!
+
+366
+00:32:08,422 --> 00:32:09,256
+Fibrillál!
+
+367
+00:32:09,506 --> 00:32:11,050
+Apoc, a helyzetét!
+
+368
+00:32:11,300 --> 00:32:12,760
+Majdnem bemérve!
+
+369
+00:32:16,055 --> 00:32:17,473
+Leáll a szíve!
+
+370
+00:32:17,723 --> 00:32:18,557
+Kész!
+Megvan!
+
+371
+00:32:18,766 --> 00:32:20,059
+Gyerünk, Tank!
+Most!
+
+372
+00:35:17,421 --> 00:35:18,505
+Köszöntelek...
+
+373
+00:35:18,839 --> 00:35:20,757
+...a való világban!
+
+374
+00:35:22,175 --> 00:35:24,011
+Sikerült, Trinity!
+
+375
+00:35:24,261 --> 00:35:25,804
+Megtaláltuk!
+
+376
+00:35:26,054 --> 00:35:28,849
+- Remélem!
+- Már nem csak remény.
+
+377
+00:35:29,433 --> 00:35:31,018
+Tudom!
+
+378
+00:35:36,189 --> 00:35:37,232
+Meghaltam?
+
+379
+00:35:37,733 --> 00:35:39,901
+Ellenkezőleg!
+
+380
+00:35:53,874 --> 00:35:55,292
+Sok munka lesz
+vele!
+
+381
+00:35:56,835 --> 00:35:57,919
+Mit csinálsz?
+
+382
+00:35:58,170 --> 00:36:00,380
+Helyrehozzuk
+az elsorvadt izmokat.
+
+383
+00:36:00,964 --> 00:36:02,507
+Fáj a szemem!
+
+384
+00:36:03,216 --> 00:36:05,093
+Még sosem használtad.
+
+385
+00:36:09,056 --> 00:36:09,890
+Nyugalom!
+
+386
+00:36:10,140 --> 00:36:11,808
+Választ kapsz
+mindenre.
+
+387
+00:37:26,383 --> 00:37:27,968
+Morpheus,
+mi történt velem?
+
+388
+00:37:28,719 --> 00:37:29,678
+Hol vagyok?
+
+389
+00:37:29,928 --> 00:37:32,597
+Sokkal fontosabb, hogy mikor.
+
+390
+00:37:33,307 --> 00:37:34,141
+Mikor.
+
+391
+00:37:34,349 --> 00:37:36,393
+Azt hiszed, 1999-ben.
+
+392
+00:37:36,643 --> 00:37:38,895
+Valójában 2199 körül.
+
+393
+00:37:40,022 --> 00:37:42,774
+Nem tudom pontosan megmondani.
+
+394
+00:37:43,025 --> 00:37:44,651
+Mert sajnos,
+mi sem tudjuk.
+
+395
+00:37:45,152 --> 00:37:47,988
+Ezt szavakkal nem lehet
+elmagyarázni.
+
+396
+00:37:48,238 --> 00:37:49,406
+Gyere velem.
+
+397
+00:37:49,698 --> 00:37:50,991
+Nézd meg magad!
+
+398
+00:37:51,533 --> 00:37:53,285
+Ez a hajóm.
+
+399
+00:37:53,577 --> 00:37:56,496
+A <i>Nabukodonozor.</i>
+Légpárnás.
+
+400
+00:37:59,750 --> 00:38:01,084
+Ez a főfedélzet.
+
+401
+00:38:07,090 --> 00:38:08,091
+Ez a mag.
+
+402
+00:38:08,342 --> 00:38:10,344
+ÉPÜLT 2069-BEN
+
+403
+00:38:10,594 --> 00:38:14,348
+lnnen adjuk le a kalózjeleket,
+és csatlakozunk a Mátrixra.
+
+404
+00:38:17,726 --> 00:38:20,896
+A legénység nagy részét már ismered.
+
+405
+00:38:25,901 --> 00:38:27,319
+Apoc...
+
+406
+00:38:28,111 --> 00:38:29,446
+...Switch...
+
+407
+00:38:31,031 --> 00:38:32,199
+...és Cypher.
+
+408
+00:38:32,449 --> 00:38:36,161
+Akiket még nem:
+Tank és a bátyja, Dozer.
+
+409
+00:38:37,037 --> 00:38:39,456
+A kicsi mögötted Mouse.
+
+410
+00:38:43,794 --> 00:38:47,047
+Tudni akartad, mi a Mátrix.
+
+411
+00:38:48,090 --> 00:38:49,299
+Trinity!
+
+412
+00:39:10,320 --> 00:39:11,905
+Próbálj lazítani!
+
+413
+00:39:16,785 --> 00:39:18,620
+Kissé furcsa lesz.
+
+414
+00:39:22,457 --> 00:39:23,375
+PÓTMEGHAJTÁS
+
+415
+00:39:30,590 --> 00:39:31,758
+Íme...
+
+416
+00:39:32,134 --> 00:39:33,844
+...a Construct.
+
+417
+00:39:34,261 --> 00:39:36,388
+Ez a letöltőprogramunk.
+
+418
+00:39:36,638 --> 00:39:39,099
+Bármit letölthetünk: ruhát...
+
+419
+00:39:39,349 --> 00:39:40,726
+...felszerelést...
+
+420
+00:39:41,018 --> 00:39:42,352
+...fegyvert...
+
+421
+00:39:42,978 --> 00:39:44,813
+...kiképzőszimulátort.
+
+422
+00:39:45,188 --> 00:39:47,733
+Akármit, ami kell.
+
+423
+00:39:50,527 --> 00:39:52,946
+Egy komputerprogramban
+vagyunk?
+
+424
+00:39:53,238 --> 00:39:55,157
+Olyan nehéz elhinni?
+
+425
+00:39:55,657 --> 00:39:58,285
+Más a ruhád,
+eltűntek rólad a csatlakozók...
+
+426
+00:39:59,494 --> 00:40:01,580
+...más a hajad is.
+
+427
+00:40:01,955 --> 00:40:05,292
+A jelenlegi külsőd neve:
+''maradandó önkép''.
+
+428
+00:40:06,001 --> 00:40:08,629
+Szellemi kivetülése
+a digitális valódnak.
+
+429
+00:40:14,509 --> 00:40:15,636
+Ez nem
+valóság?
+
+430
+00:40:15,886 --> 00:40:17,429
+Mi a valóság?
+
+431
+00:40:17,804 --> 00:40:20,057
+Hogyan határoznád meg?
+
+432
+00:40:20,349 --> 00:40:22,267
+Ha arról beszélsz,
+amit érzel...
+
+433
+00:40:22,517 --> 00:40:24,936
+...szagolsz, ízlelsz, látsz...
+
+434
+00:40:25,187 --> 00:40:28,106
+...a valóság csupán az agyad által
+megfejtett elektromos jelhalmaz.
+
+435
+00:40:33,236 --> 00:40:35,656
+Ez az általad ismert világ.
+
+436
+00:40:37,074 --> 00:40:40,118
+Ahogy a XX. század végén létezett.
+
+437
+00:40:42,496 --> 00:40:46,833
+Most már csak része
+egy neuro-interaktív szimulációnak.
+
+438
+00:40:47,084 --> 00:40:48,335
+Ezt hívjuk
+Mátrixnak.
+
+439
+00:40:52,881 --> 00:40:55,717
+Eddig álomvilágban éltél.
+
+440
+00:40:56,677 --> 00:40:57,803
+Ez a világ...
+
+441
+00:40:58,095 --> 00:40:59,888
+...ahogyan ma létezik.
+
+442
+00:41:12,901 --> 00:41:15,862
+lsten hozott ''a valóság...
+
+443
+00:41:16,738 --> 00:41:18,323
+...sivatagában''!
+
+444
+00:41:21,702 --> 00:41:24,079
+Töredék-információink vannak.
+
+445
+00:41:24,329 --> 00:41:28,125
+Amit biztosan tudunk,
+hogy a XXl. század elején...
+
+446
+00:41:28,375 --> 00:41:31,628
+...az emberiség együtt ünnepelt.
+
+447
+00:41:31,878 --> 00:41:36,633
+Csodáltuk nagyszerűségünket,
+hogy megalkottuk az Ml-t.
+
+448
+00:41:37,426 --> 00:41:38,552
+Ml?
+
+449
+00:41:39,594 --> 00:41:41,220
+Mesterséges
+intelligencia?
+
+450
+00:41:41,221 --> 00:41:45,642
+Egyedülálló tudat, amely
+létrehozta a gépek egész faját.
+
+451
+00:41:46,476 --> 00:41:49,938
+Nem tudjuk, ki mérte
+az első csapást: mi vagy ők.
+
+452
+00:41:50,355 --> 00:41:53,567
+De tudjuk, hogy
+mi perzseltük fel az eget.
+
+453
+00:41:55,235 --> 00:41:57,404
+Az emberek úgy vélték, hogy...
+
+454
+00:41:57,654 --> 00:42:00,991
+...a napenergiát használó gépek
+nem lennének képesek fennmaradni...
+
+455
+00:42:01,325 --> 00:42:04,828
+...olyan gazdag energiaforrás nélkül,
+mint a Nap.
+
+456
+00:42:05,078 --> 00:42:09,958
+A történelem során csak gépek
+segítségével maradtunk fenn.
+
+457
+00:42:11,418 --> 00:42:14,713
+A sorsnak van némi humorérzéke.
+
+458
+00:42:18,842 --> 00:42:23,263
+Az emberi test több bioáramot termel,
+mint egy 120 voltos akku...
+
+459
+00:42:23,513 --> 00:42:27,643
+...és 25 000 egységnyi hőenergiát.
+
+460
+00:42:29,561 --> 00:42:31,730
+Egyfajta fúzió
+segítségével...
+
+461
+00:42:32,064 --> 00:42:36,902
+...a gépek több energiát nyernek,
+mint amennyire szükségük van.
+
+462
+00:42:40,947 --> 00:42:44,701
+Vannak mezők, végtelen mezők...
+
+463
+00:42:44,952 --> 00:42:48,205
+...ahol az emberi lények többé
+nem születnek...
+
+464
+00:42:48,914 --> 00:42:50,749
+...termesztik őket.
+
+465
+00:42:56,797 --> 00:42:59,383
+Jó ideig el sem akartam hinni.
+
+466
+00:42:59,633 --> 00:43:02,302
+Aztán a saját szememmel láttam.
+
+467
+00:43:03,637 --> 00:43:05,263
+Cseppfolyósítják
+a holtakat...
+
+468
+00:43:05,514 --> 00:43:08,850
+...hogy intravénásan
+táplálják az élőket.
+
+469
+00:43:09,393 --> 00:43:13,647
+Bámultam a borzalmas precizitást.
+
+470
+00:43:13,897 --> 00:43:16,817
+Rájöttem, mennyire nyilvánvaló
+az igazság.
+
+471
+00:43:19,444 --> 00:43:21,238
+Hogy mi a Mátrix?
+
+472
+00:43:22,447 --> 00:43:23,490
+Uralom.
+
+473
+00:43:24,866 --> 00:43:28,245
+A Mátrix számítógéppel generált
+álomvilág.
+
+474
+00:43:29,037 --> 00:43:32,124
+Feladata: ellenőrzés alatt
+tartani minket...
+
+475
+00:43:33,292 --> 00:43:36,461
+...hogy az emberből végül...
+
+476
+00:43:37,087 --> 00:43:38,255
+...ez legyen.
+
+477
+00:43:39,631 --> 00:43:40,757
+Nem!
+
+478
+00:43:42,384 --> 00:43:43,969
+Nem hiszem el!
+
+479
+00:43:44,344 --> 00:43:45,554
+Ez lehetetlen!
+
+480
+00:43:46,138 --> 00:43:50,726
+Nem mondtam, hogy könnyű lesz.
+Csak azt mondtam: igaz.
+
+481
+00:43:50,976 --> 00:43:51,810
+Elég!
+
+482
+00:43:52,811 --> 00:43:54,021
+Engedj ki!
+
+483
+00:43:54,730 --> 00:43:56,648
+Ki akarok menni!
+
+484
+00:43:58,608 --> 00:44:01,278
+- Nyugi, Neo!
+- Szedjétek ki belőlem!
+
+485
+00:44:01,528 --> 00:44:03,196
+Szedjétek ki belőlem!
+
+486
+00:44:04,990 --> 00:44:06,491
+Ne érjetek hozzám!
+
+487
+00:44:06,742 --> 00:44:08,368
+Eresszetek!
+
+488
+00:44:08,785 --> 00:44:10,287
+Nem hiszek nektek!
+
+489
+00:44:10,996 --> 00:44:12,205
+Nem hiszem el!
+
+490
+00:44:12,456 --> 00:44:13,457
+Nem hiszem el!
+
+491
+00:44:14,207 --> 00:44:16,251
+- Hányni fog!
+- Lélegezz!
+
+492
+00:44:16,835 --> 00:44:17,711
+Lélegezz!
+
+493
+00:44:36,104 --> 00:44:37,898
+Nem mehetek
+vissza, ugye?
+
+494
+00:44:38,857 --> 00:44:39,816
+Nem.
+
+495
+00:44:40,984 --> 00:44:42,194
+De ha lehetne...
+
+496
+00:44:43,028 --> 00:44:44,529
+...valóban akarnál?
+
+497
+00:44:47,032 --> 00:44:48,450
+Bocsánatot
+kell kérnem.
+
+498
+00:44:48,992 --> 00:44:50,369
+Van egy szabályunk.
+
+499
+00:44:50,827 --> 00:44:54,206
+Nem csinálunk ilyet
+egy bizonyos kor után.
+
+500
+00:44:54,456 --> 00:44:55,332
+Veszélyes.
+
+501
+00:44:56,041 --> 00:44:57,751
+A tudat nehezen áll át.
+
+502
+00:44:58,001 --> 00:45:00,295
+Láttam már ilyet. Sajnálom.
+
+503
+00:45:01,338 --> 00:45:03,423
+Azért tettem, mert...
+
+504
+00:45:04,132 --> 00:45:05,592
+...muszáj volt.
+
+505
+00:45:14,017 --> 00:45:18,105
+Amikor a Mátrix megépült,
+született egy ember a belsejében...
+
+506
+00:45:18,605 --> 00:45:22,401
+...aki képes volt megváltoztatni
+bármit, amit akart...
+
+507
+00:45:22,776 --> 00:45:25,696
+...kedve szerint formálni
+a Mátrixot.
+
+508
+00:45:27,447 --> 00:45:30,909
+Ő volt, aki felszabadított minket...
+
+509
+00:45:31,785 --> 00:45:33,412
+...és elmondta
+az igazat:
+
+510
+00:45:34,871 --> 00:45:37,958
+''Amíg a Mátrix létezik...
+
+511
+00:45:38,292 --> 00:45:40,377
+...az emberiség
+nem lehet szabad.''
+
+512
+00:45:44,589 --> 00:45:46,133
+Miután meghalt...
+
+513
+00:45:46,883 --> 00:45:49,594
+...az Orákulum megjövendölte
+visszatérését.
+
+514
+00:45:50,137 --> 00:45:53,348
+Eljön majd, elpusztítja a Mátrixot...
+
+515
+00:45:53,598 --> 00:45:55,267
+...véget vet
+a harcnak...
+
+516
+00:45:55,600 --> 00:45:56,810
+...és felszabadít
+minket.
+
+517
+00:45:58,186 --> 00:46:02,816
+Ezért néhányunk szüntelenül
+keresi őt a Mátrixban.
+
+518
+00:46:03,150 --> 00:46:04,735
+Egy életen át.
+
+519
+00:46:07,154 --> 00:46:09,239
+Azért tettem,
+mert hiszem...
+
+520
+00:46:10,866 --> 00:46:12,993
+...hogy a keresésnek vége.
+
+521
+00:46:18,081 --> 00:46:19,499
+Pihenj.
+
+522
+00:46:20,125 --> 00:46:21,918
+Nem lesz könnyű.
+
+523
+00:46:24,838 --> 00:46:25,672
+Mi?
+
+524
+00:46:28,925 --> 00:46:29,926
+A kiképzés.
+
+525
+00:46:48,236 --> 00:46:49,946
+Jó reggelt!
+Tudtál aludni?
+
+526
+00:46:50,822 --> 00:46:52,032
+Ma este
+fogsz tudni.
+
+527
+00:46:52,407 --> 00:46:53,951
+Garantálom!
+
+528
+00:46:55,452 --> 00:46:57,371
+Tank vagyok,
+az operátorod.
+
+529
+00:46:57,829 --> 00:47:00,248
+- Rajtad nincsenek...
+- Lyukak? Nincsenek.
+
+530
+00:47:01,166 --> 00:47:05,879
+Én és Dozer bátyám száz százalékig
+ódivatú módon...
+
+531
+00:47:06,129 --> 00:47:07,339
+...születtünk...
+
+532
+00:47:07,881 --> 00:47:09,216
+...a valódi
+világban.
+
+533
+00:47:09,466 --> 00:47:11,134
+Eredeti
+zioni gyerekek.
+
+534
+00:47:11,969 --> 00:47:14,429
+- Zion?
+- Ha véget érne a háború...
+
+535
+00:47:14,680 --> 00:47:16,098
+...Zionban
+ünnepelnénk meg.
+
+536
+00:47:16,598 --> 00:47:17,891
+Az egy város?
+
+537
+00:47:18,141 --> 00:47:21,311
+Az utolsó.
+Már csak ez maradt.
+
+538
+00:47:22,896 --> 00:47:24,147
+Merre van?
+
+539
+00:47:25,899 --> 00:47:26,900
+A föld alatt.
+
+540
+00:47:27,150 --> 00:47:29,319
+Közel a maghoz,
+ahol még meleg van.
+
+541
+00:47:30,946 --> 00:47:32,823
+Ha sokáig élsz,
+megláthatod.
+
+542
+00:47:35,075 --> 00:47:39,913
+Nagyon izgat, mire lehetsz képes...
+
+543
+00:47:40,163 --> 00:47:41,915
+...ha Morpheus
+jól gondolja.
+
+544
+00:47:42,416 --> 00:47:45,168
+Tilos beszélnünk róla, de...
+
+545
+00:47:45,419 --> 00:47:46,837
+...ha te vagy...
+
+546
+00:47:47,921 --> 00:47:49,923
+...állati izgalmas lesz!
+
+547
+00:47:50,966 --> 00:47:53,677
+Sok a dolgunk. Lássunk hozzá!
+
+548
+00:47:57,597 --> 00:48:00,517
+Ezekkel az operációs programokkal
+kéne kezdenünk.
+
+549
+00:48:01,518 --> 00:48:04,980
+De dögunalmasak.
+Jöjjön szórakoztatóbb...
+
+550
+00:48:05,314 --> 00:48:06,815
+...egy kis...
+
+551
+00:48:08,358 --> 00:48:10,110
+...küzdősport!
+
+552
+00:48:16,158 --> 00:48:17,618
+Dzsiudzsicu?
+
+553
+00:48:18,493 --> 00:48:20,162
+Megtanulom?
+
+554
+00:48:31,506 --> 00:48:32,716
+Szent isten!
+
+555
+00:48:32,966 --> 00:48:35,302
+Azt hiszem, ráharapott!
+
+556
+00:48:35,636 --> 00:48:36,928
+Jöhet még?
+
+557
+00:48:37,179 --> 00:48:38,472
+Ne kímélj!
+
+558
+00:48:40,766 --> 00:48:41,600
+Persze!
+
+559
+00:48:53,987 --> 00:48:54,863
+Hogy bírja?
+
+560
+00:48:55,164 --> 00:48:57,564
+Már tíz órája nyomja.
+Akár egy gép.
+
+561
+00:49:08,502 --> 00:49:09,878
+Tudok kungfuzni.
+
+562
+00:49:11,755 --> 00:49:12,589
+Mutasd!
+
+563
+00:49:14,341 --> 00:49:16,093
+Ez egy edzőprogram.
+
+564
+00:49:16,343 --> 00:49:19,137
+Hasonló a Mátrix
+programozott valóságához.
+
+565
+00:49:19,388 --> 00:49:21,723
+Ugyanazok az alapszabályok.
+Mint például a gravitáció.
+
+566
+00:49:21,974 --> 00:49:25,435
+Mint egy számítógéprendszerben.
+
+567
+00:49:25,978 --> 00:49:27,479
+Némelyik
+megkerülhető...
+
+568
+00:49:27,688 --> 00:49:28,522
+...a többit...
+
+569
+00:49:28,772 --> 00:49:30,148
+...megszegheted.
+
+570
+00:49:30,816 --> 00:49:31,775
+Világos?
+
+571
+00:49:33,068 --> 00:49:33,944
+Akkor üss meg...
+
+572
+00:49:34,486 --> 00:49:35,612
+Ha tudsz!
+
+573
+00:50:14,848 --> 00:50:15,848
+Jó!
+
+574
+00:50:16,479 --> 00:50:17,647
+Alkalmazkodás...
+
+575
+00:50:17,939 --> 00:50:19,148
+Rögtönzés!
+
+576
+00:50:19,440 --> 00:50:20,775
+A gyenge pont...
+
+577
+00:50:21,025 --> 00:50:22,401
+...nem a technikád.
+
+578
+00:50:29,367 --> 00:50:31,452
+Morpheus harcol Neóval!
+
+579
+00:51:43,733 --> 00:51:44,901
+Hogy győztelek le?
+
+580
+00:51:51,491 --> 00:51:52,575
+Nagyon
+gyors vagy!
+
+581
+00:51:53,117 --> 00:51:54,452
+Azt hiszed...
+
+582
+00:51:54,827 --> 00:51:57,330
+...ha erősebb és
+gyorsabb vagyok...
+
+583
+00:51:57,580 --> 00:52:01,250
+...annak bármi köze van az izmokhoz
+ezen a helyen?
+
+584
+00:52:05,296 --> 00:52:07,089
+Azt hiszed,
+levegőt lélegzel be?
+
+585
+00:52:20,690 --> 00:52:21,690
+Újra!
+
+586
+00:52:33,282 --> 00:52:35,701
+Jézus Mária, milyen gyors!
+
+587
+00:52:35,952 --> 00:52:38,162
+Micsoda neurokinetikai számok!
+
+588
+00:52:43,626 --> 00:52:45,086
+Mire vársz?
+
+589
+00:52:45,336 --> 00:52:47,296
+Gyorsabb vagy!
+
+590
+00:52:49,507 --> 00:52:51,717
+Ne csak hidd...
+
+591
+00:52:51,968 --> 00:52:53,636
+...tudd is!
+
+592
+00:53:04,021 --> 00:53:06,858
+Ne csak próbálj, üss is meg!
+
+593
+00:53:16,742 --> 00:53:18,494
+Ez nem lehet igaz!
+
+594
+00:53:20,037 --> 00:53:22,165
+Tudom, mit akarsz elérni!
+
+595
+00:53:23,833 --> 00:53:26,002
+Próbálom felszabadítani
+a tudatod.
+
+596
+00:53:26,335 --> 00:53:28,421
+De csak az ajtót mutatom meg.
+
+597
+00:53:29,005 --> 00:53:30,882
+Neked kell
+belépned rajta.
+
+598
+00:53:33,217 --> 00:53:35,344
+Tank! Töltsd be
+az ugróprogramot!
+
+599
+00:53:46,939 --> 00:53:49,650
+Üríts ki magadból mindent:
+félelmet...
+
+600
+00:53:50,193 --> 00:53:52,361
+...kétséget, hitetlenséget.
+
+601
+00:53:53,529 --> 00:53:56,240
+Szabadítsd fel a tudatod!
+
+602
+00:54:12,423 --> 00:54:14,133
+Oké-zsoké!
+
+603
+00:54:16,219 --> 00:54:17,386
+Szabad tudat!
+
+604
+00:54:17,970 --> 00:54:18,971
+És ha sikerül?
+
+605
+00:54:19,222 --> 00:54:21,933
+- Elsőre senkinek sem megy!
+- Tudom!
+
+606
+00:54:23,267 --> 00:54:25,728
+- De ha neki igen?
+- Nem fog.
+
+607
+00:54:26,562 --> 00:54:27,396
+Gyerünk!
+
+608
+00:54:27,647 --> 00:54:28,815
+Jól van.
+
+609
+00:54:29,273 --> 00:54:31,317
+Semmi gond. Felszabadítom.
+
+610
+00:54:32,109 --> 00:54:34,904
+Felszabadítom a tudatomat!
+
+611
+00:54:54,298 --> 00:54:55,967
+Ez most mit jelent?
+
+612
+00:54:56,342 --> 00:54:58,177
+Nem jelent semmit sem.
+
+613
+00:54:58,761 --> 00:55:01,347
+Elsőre mindenki lezuhan.
+
+614
+00:55:01,806 --> 00:55:03,099
+lgaz, Trin?
+
+615
+00:55:23,786 --> 00:55:26,414
+- Mégis valóság volt?
+- A tudatod teszi azzá.
+
+616
+00:55:29,667 --> 00:55:31,919
+Ha megölnek a Mátrixban...
+
+617
+00:55:32,295 --> 00:55:33,129
+...itt is
+meghalsz?
+
+618
+00:55:33,754 --> 00:55:36,215
+A test nem élhet tudat nélkül.
+
+619
+00:56:06,704 --> 00:56:10,082
+Nem emlékszem, hogy nekem
+vacsorát hoztál volna!
+
+620
+00:56:13,169 --> 00:56:16,005
+Ő más, mint a többi, ugye?
+
+621
+00:56:16,631 --> 00:56:18,257
+Ne mondd,
+hogy hívő lettél!
+
+622
+00:56:19,258 --> 00:56:20,468
+Ha Morpheus...
+
+623
+00:56:20,718 --> 00:56:24,388
+...olyan biztos benne,
+miért nem viszi el az Orákulumhoz?
+
+624
+00:56:25,306 --> 00:56:28,226
+Majd elviszi, ha felkészült.
+
+625
+00:56:38,027 --> 00:56:39,570
+A Mátrix
+egy rendszer.
+
+626
+00:56:41,322 --> 00:56:42,615
+Az ellenségünk.
+
+627
+00:56:43,241 --> 00:56:45,576
+De ha benne vagy,
+és körbenézel...
+
+628
+00:56:45,827 --> 00:56:49,622
+...üzletembereket, tanárokat,
+ügyvédeket, ácsokat látsz.
+
+629
+00:56:50,081 --> 00:56:52,667
+Akiknek meg akarjuk
+menteni a tudatát.
+
+630
+00:56:52,917 --> 00:56:55,878
+De amíg a Mátrixban élnek,
+részei a rendszernek...
+
+631
+00:56:56,128 --> 00:56:58,047
+...ezért az ellenségeink.
+
+632
+00:56:58,422 --> 00:56:59,423
+Legtöbbjük...
+
+633
+00:56:59,674 --> 00:57:03,010
+...nem érett meg a valóságra.
+
+634
+00:57:03,261 --> 00:57:05,179
+Sokuk olyan...
+
+635
+00:57:05,180 --> 00:57:07,280
+...reménytelenül
+függ a rendszertől...
+
+636
+00:57:07,348 --> 00:57:10,476
+...hogy foggal-körömmel
+védeni fogja.
+
+637
+00:57:11,978 --> 00:57:15,731
+Figyeltél?
+Vagy a piros ruhás nőt nézted?
+
+638
+00:57:16,732 --> 00:57:17,650
+Figyelj!
+
+639
+00:57:18,901 --> 00:57:19,986
+Állítsd meg!
+
+640
+00:57:26,617 --> 00:57:28,244
+- Ez nem a Mátrix?
+- Nem.
+
+641
+00:57:30,037 --> 00:57:33,875
+Újabb kiképzőprogram,
+amelyből sokat tanulhatsz.
+
+642
+00:57:34,500 --> 00:57:36,919
+Ha nem közénk tartozol,
+akkor közéjük.
+
+643
+00:57:37,461 --> 00:57:40,256
+- Mik ők?
+- Érző programok.
+
+644
+00:57:41,007 --> 00:57:45,303
+Átjárhatnak a szoftverek közt,
+mégis a rendszer részei.
+
+645
+00:57:45,678 --> 00:57:49,056
+Akit nem választottunk le...
+
+646
+00:57:49,390 --> 00:57:50,725
+...potenciális
+ügynök.
+
+647
+00:57:51,684 --> 00:57:53,519
+A Mátrixon belül...
+
+648
+00:57:54,103 --> 00:57:55,813
+...mindenki az.
+
+649
+00:57:56,147 --> 00:57:57,857
+És senki sem.
+
+650
+00:57:58,107 --> 00:58:01,235
+Úgy maradunk fenn, hogy elbújunk.
+Menekülünk.
+
+651
+00:58:01,486 --> 00:58:03,112
+De ők őrzik
+a kapukat.
+
+652
+00:58:03,362 --> 00:58:06,324
+Ők őriznek minden ajtót, kulcsot...
+
+653
+00:58:06,574 --> 00:58:09,410
+...vagyis előbb-utóbb valakinek
+meg kell küzdenie velük.
+
+654
+00:58:09,785 --> 00:58:10,786
+Valakinek?
+
+655
+00:58:11,120 --> 00:58:12,538
+Nem hazudok neked.
+
+656
+00:58:12,997 --> 00:58:17,835
+Bárki, aki harcba szállt velük,
+meghalt.
+
+657
+00:58:18,085 --> 00:58:20,463
+Ők elbuktak,
+de neked sikerül.
+
+658
+00:58:20,880 --> 00:58:21,714
+Miért?
+
+659
+00:58:21,964 --> 00:58:24,258
+Ököllel átütnek egy betonfalat.
+
+660
+00:58:24,509 --> 00:58:28,095
+Egész tárakat lőhetünk ki rájuk,
+mégsem találjuk el őket.
+
+661
+00:58:28,346 --> 00:58:32,975
+Csakhogy erejük és gyorsaságuk
+egy szabályokra épülő világból való...
+
+662
+00:58:33,226 --> 00:58:34,352
+...ezért...
+
+663
+00:58:34,602 --> 00:58:37,980
+...sosem lehetnek olyan erősek
+és gyorsak, mint te.
+
+664
+00:58:42,276 --> 00:58:44,153
+Mit akarsz?
+
+665
+00:58:44,862 --> 00:58:46,322
+Kerüljem ki
+a golyókat?
+
+666
+00:58:48,324 --> 00:58:49,700
+Nem, Neo.
+
+667
+00:58:50,201 --> 00:58:53,120
+Amikor kész leszel...
+
+668
+00:58:53,996 --> 00:58:55,373
+...még az sem kell.
+
+669
+00:58:59,877 --> 00:59:00,711
+<i>Baj van!</i>
+
+670
+00:59:19,605 --> 00:59:20,982
+Zionból
+riasztottak?
+
+671
+00:59:21,232 --> 00:59:22,066
+Egy másik
+hajó.
+
+672
+00:59:25,319 --> 00:59:26,612
+A francba.
+
+673
+00:59:26,863 --> 00:59:28,614
+Gyorsan repeszt a Polip!
+
+674
+00:59:28,906 --> 00:59:29,740
+Polip?
+
+675
+00:59:29,949 --> 00:59:33,161
+Őrszem.
+Gyilkológép. Egy feladata van.
+
+676
+00:59:33,411 --> 00:59:34,620
+Megkeres és
+elpusztít.
+
+677
+00:59:35,955 --> 00:59:37,123
+Szálljunk le.
+
+678
+00:59:58,936 --> 00:59:59,896
+Mi a helyzet?
+
+679
+01:00:08,613 --> 01:00:09,780
+Minden
+kikapcsolva.
+
+680
+01:00:10,281 --> 01:00:12,283
+EMl élesítve.
+
+681
+01:00:12,783 --> 01:00:14,327
+Készen állok!
+
+682
+01:00:14,619 --> 01:00:16,496
+Elektromágneses
+impulzus.
+
+683
+01:00:16,746 --> 01:00:19,624
+Hatástalanít minden
+elektromos rendszert.
+
+684
+01:00:19,874 --> 01:00:22,084
+Egyetlen fegyverünk
+a gépek ellen.
+
+685
+01:00:27,882 --> 01:00:28,716
+Hol vagyunk?
+
+686
+01:00:28,966 --> 01:00:31,010
+A régi közműhálózatban.
+
+687
+01:00:32,553 --> 01:00:33,387
+Csatorna?
+
+688
+01:00:33,596 --> 01:00:36,307
+Hatalmas városok voltak.
+
+689
+01:00:36,807 --> 01:00:38,726
+Csak a csatornák
+maradtak meg.
+
+690
+01:00:38,976 --> 01:00:40,311
+Csönd!
+
+691
+01:01:24,188 --> 01:01:26,357
+A szívbajt hozod rám!
+
+692
+01:01:27,441 --> 01:01:29,360
+- Bocs!
+- Semmi baj.
+
+693
+01:01:32,280 --> 01:01:33,114
+Ez itt...
+
+694
+01:01:33,364 --> 01:01:34,949
+A Mátrix?
+
+695
+01:01:38,119 --> 01:01:41,289
+- Mindig csak kódolva látod?
+- Muszáj.
+
+696
+01:01:41,539 --> 01:01:44,625
+A képátalakítók a Construct
+programnál működnek.
+
+697
+01:01:44,876 --> 01:01:48,296
+A Mátrixnál túl sok az adat ahhoz,
+hogy dekódolhassuk.
+
+698
+01:01:48,546 --> 01:01:51,507
+Megszokod.
+Már nem is látom a kódot.
+
+699
+01:01:51,757 --> 01:01:55,178
+Csak szőkéket, barnákat, vörösöket.
+
+700
+01:01:56,345 --> 01:01:57,722
+Akarsz inni...
+
+701
+01:01:58,014 --> 01:01:59,098
+...valamit?
+
+702
+01:01:59,348 --> 01:02:00,391
+lgen.
+
+703
+01:02:03,936 --> 01:02:05,396
+Tudom...
+
+704
+01:02:06,314 --> 01:02:07,857
+...mire gondolsz...
+
+705
+01:02:08,107 --> 01:02:10,234
+...mert én is
+ugyanarra gondolok.
+
+706
+01:02:10,526 --> 01:02:13,863
+Tulajdonképpen, amióta idekerültem.
+
+707
+01:02:15,781 --> 01:02:18,784
+Én hülye, miért nem
+a kék pirulát vettem be?
+
+708
+01:02:31,172 --> 01:02:33,090
+Erős, mi?
+
+709
+01:02:33,424 --> 01:02:34,634
+Dozer
+csinálja.
+
+710
+01:02:35,092 --> 01:02:36,260
+Két dologra jó:
+
+711
+01:02:36,511 --> 01:02:39,597
+Motorolajtalanításra
+és agysejtirtásra.
+
+712
+01:02:40,598 --> 01:02:42,809
+Kérdezhetek valamit?
+
+713
+01:02:45,812 --> 01:02:47,438
+Elmondta,
+miért csinálta?
+
+714
+01:02:50,066 --> 01:02:51,901
+Hogy miért vagy itt?
+
+715
+01:02:55,571 --> 01:02:57,323
+Jézus Mária!
+
+716
+01:02:58,533 --> 01:03:00,451
+Jól megdumált!
+
+717
+01:03:01,869 --> 01:03:04,664
+Te fogod megmenteni a világot?!
+
+718
+01:03:06,165 --> 01:03:08,251
+Mit lehet erre mondani?
+
+719
+01:03:13,422 --> 01:03:14,799
+Adok egy jó
+tanácsot.
+
+720
+01:03:16,592 --> 01:03:18,010
+Ha ügynököt látsz...
+
+721
+01:03:18,344 --> 01:03:20,638
+...tedd, amit mi.
+
+722
+01:03:20,972 --> 01:03:22,515
+Rohanj!
+
+723
+01:03:22,849 --> 01:03:24,600
+Fuss, ahogy bírsz!
+
+724
+01:03:31,858 --> 01:03:33,568
+Kösz az italt.
+
+725
+01:03:38,281 --> 01:03:39,448
+Szép álmokat!
+
+726
+01:03:43,452 --> 01:03:46,873
+Megegyeztünk, Mr. Reagan?
+
+727
+01:03:47,540 --> 01:03:48,666
+Tudja...
+
+728
+01:03:50,084 --> 01:03:52,545
+Tudom, hogy ez valójában nincs.
+
+729
+01:03:53,546 --> 01:03:56,299
+Akkor is, amikor a számba veszem.
+
+730
+01:03:56,549 --> 01:03:59,635
+A Mátrix hiteti el az agyammal,
+hogy...
+
+731
+01:03:59,927 --> 01:04:01,053
+...ez szaftos...
+
+732
+01:04:01,345 --> 01:04:03,055
+...és ízletes.
+
+733
+01:04:05,975 --> 01:04:07,226
+Kilenc év után...
+
+734
+01:04:08,269 --> 01:04:09,812
+...jöttem rá:
+
+735
+01:04:17,653 --> 01:04:18,863
+A tudatlanság
+áldásos.
+
+736
+01:04:23,910 --> 01:04:25,745
+Akkor megegyeztünk.
+
+737
+01:04:28,247 --> 01:04:30,166
+Ne emlékezzek semmire!
+
+738
+01:04:30,416 --> 01:04:31,250
+Semmire...
+
+739
+01:04:31,792 --> 01:04:32,960
+Értette?
+
+740
+01:04:37,006 --> 01:04:38,799
+Gazdag akarok lenni.
+
+741
+01:04:40,134 --> 01:04:42,845
+Valami fontos ember.
+
+742
+01:04:44,347 --> 01:04:45,473
+Mondjuk,
+színész.
+
+743
+01:04:46,682 --> 01:04:49,811
+Amit csak óhajt, Mr. Reagan.
+
+744
+01:04:53,898 --> 01:04:56,317
+Ha visszahelyez az erőműbe...
+
+745
+01:04:56,692 --> 01:04:58,444
+...visszajuttat
+a Mátrixba...
+
+746
+01:04:58,778 --> 01:05:00,196
+...megszerzem,
+amit kér.
+
+747
+01:05:00,446 --> 01:05:02,448
+Zion központi
+belépőkódjait.
+
+748
+01:05:02,698 --> 01:05:04,867
+Mondtam,
+azokat nem ismerem.
+
+749
+01:05:07,829 --> 01:05:09,831
+Azt hozom, aki tudja.
+
+750
+01:05:10,581 --> 01:05:12,375
+Morpheust.
+
+751
+01:05:22,468 --> 01:05:25,930
+Tessék. A bajnokok reggelije.
+
+752
+01:05:27,265 --> 01:05:30,059
+Csukott szemmel majdnem olyan,
+mint a lágy tojás.
+
+753
+01:05:30,309 --> 01:05:32,044
+Vagy egy tányér
+takony.
+
+754
+01:05:32,520 --> 01:05:34,105
+Tudod,
+mire emlékeztet?
+
+755
+01:05:35,940 --> 01:05:38,276
+A Tastee Wheatre. Ettél már?
+
+756
+01:05:38,901 --> 01:05:40,611
+Nem, de te sem.
+
+757
+01:05:40,862 --> 01:05:42,905
+Pontosan erről beszélek.
+
+758
+01:05:43,156 --> 01:05:44,532
+Vajon...
+
+759
+01:05:44,782 --> 01:05:48,035
+...honnan tudják a gépek,
+milyen volt az íze?
+
+760
+01:05:48,286 --> 01:05:49,704
+Lehet, hogy
+tévednek.
+
+761
+01:05:49,954 --> 01:05:53,166
+És az igazi Tastee Wheatnek
+olyan íze volt, mint...
+
+762
+01:05:53,457 --> 01:05:55,459
+...a zabkásának vagy
+a tonhalnak.
+
+763
+01:05:55,835 --> 01:05:58,671
+Vegyük a csirkét például!
+
+764
+01:05:58,921 --> 01:06:00,923
+Talán nem tudták,
+milyen íze van...
+
+765
+01:06:01,174 --> 01:06:03,217
+...ezért van mindennek
+csirkeíze.
+
+766
+01:06:03,467 --> 01:06:05,261
+- Lehet, hogy...
+- Fogd be, Mouse!
+
+767
+01:06:06,888 --> 01:06:08,347
+Egysejtű fehérje...
+
+768
+01:06:08,598 --> 01:06:11,642
+...szintetikus aminosavval,
+vitaminokkal és ásványi anyagokkal.
+
+769
+01:06:11,893 --> 01:06:13,144
+Ami a szervezetnek kell.
+
+770
+01:06:13,394 --> 01:06:16,272
+Azért nekem más is kellene.
+
+771
+01:06:19,025 --> 01:06:22,111
+Hallom, végigcsináltad
+az ügynökképző programot.
+
+772
+01:06:23,154 --> 01:06:25,198
+Én írtam!
+
+773
+01:06:25,490 --> 01:06:26,782
+Megint kezdi!
+
+774
+01:06:27,033 --> 01:06:28,993
+- Hogy tetszett a csaj?
+- Ki?
+
+775
+01:06:29,368 --> 01:06:32,413
+A piros ruhás nő. Én terveztem.
+
+776
+01:06:32,747 --> 01:06:35,500
+Nem egy észlény, de...
+
+777
+01:06:35,750 --> 01:06:39,712
+...ha intimebb környezetben
+hoználak össze vele...
+
+778
+01:06:39,962 --> 01:06:41,339
+Nyomul a
+digitális strici!
+
+779
+01:06:41,589 --> 01:06:43,841
+Ne hallgass a képmutatókra!
+
+780
+01:06:45,134 --> 01:06:46,969
+Ha lemondunk...
+
+781
+01:06:47,220 --> 01:06:50,348
+...a vágyainkról, azt tagadjuk meg,
+ami emberré tesz.
+
+782
+01:06:52,266 --> 01:06:53,643
+Dozer,
+ha végeztél...
+
+783
+01:06:53,893 --> 01:06:55,311
+...menj fel
+adásszintre.
+
+784
+01:06:56,020 --> 01:06:57,355
+Bemegyünk.
+
+785
+01:06:58,064 --> 01:06:59,482
+Elviszem hozzá
+Neót.
+
+786
+01:07:03,820 --> 01:07:04,654
+Kihez?
+
+787
+01:07:04,987 --> 01:07:06,030
+Az Orákulumhoz.
+
+788
+01:07:12,411 --> 01:07:13,955
+Mindenki figyeljen!
+
+789
+01:07:14,288 --> 01:07:16,999
+Biztonsági öveket becsatolni,
+a gépen tilos a dohányzás.
+
+790
+01:07:17,500 --> 01:07:20,878
+Dőljenek hátra, jó utazást!
+
+791
+01:07:45,403 --> 01:07:46,237
+Bent vagyunk!
+
+792
+01:08:01,961 --> 01:08:03,087
+Egy óra múlva
+jövünk!
+
+793
+01:08:17,894 --> 01:08:19,312
+Hihetetlen...
+
+794
+01:08:20,146 --> 01:08:21,481
+...igaz?
+
+795
+01:08:25,067 --> 01:08:26,903
+- Úristen!
+- Mi az?
+
+796
+01:08:27,570 --> 01:08:28,946
+Az volt
+a törzshelyem!
+
+797
+01:08:31,199 --> 01:08:32,825
+Remek a főzelékük.
+
+798
+01:08:37,622 --> 01:08:40,124
+Emlékek az életemről.
+
+799
+01:08:42,585 --> 01:08:44,253
+Meg sem történtek!
+
+800
+01:08:45,296 --> 01:08:46,214
+Mit jelent ez?
+
+801
+01:08:46,464 --> 01:08:48,674
+A Mátrix nem mondja meg,
+ki vagy.
+
+802
+01:08:49,592 --> 01:08:50,801
+Az Orákulum
+igen?
+
+803
+01:08:51,260 --> 01:08:52,470
+Az egészen más.
+
+804
+01:08:57,558 --> 01:08:58,434
+Te jártál nála?
+
+805
+01:08:59,977 --> 01:09:01,145
+lgen.
+
+806
+01:09:01,646 --> 01:09:03,022
+Neked
+mit mondott?
+
+807
+01:09:06,275 --> 01:09:07,777
+Azt mondta...
+
+808
+01:09:08,820 --> 01:09:09,987
+Mit?
+
+809
+01:09:13,783 --> 01:09:15,117
+Megjöttünk.
+
+810
+01:09:16,369 --> 01:09:17,787
+Gyere velem!
+
+811
+01:09:37,765 --> 01:09:40,434
+Az Orákulumtól ered...
+
+812
+01:09:40,768 --> 01:09:41,602
+...a prófécia?
+
+813
+01:09:41,853 --> 01:09:46,190
+lgen. Már nagyon öreg.
+Kezdettől fogva velünk van.
+
+814
+01:09:46,649 --> 01:09:47,483
+Kezdettől?
+
+815
+01:09:47,692 --> 01:09:48,651
+Mióta
+ellenállunk.
+
+816
+01:09:50,903 --> 01:09:53,281
+Mit tud? Mindent?
+
+817
+01:09:55,324 --> 01:09:57,243
+Ő úgy mondaná: eleget.
+
+818
+01:09:58,369 --> 01:10:00,163
+És sosem téved.
+
+819
+01:10:02,373 --> 01:10:05,543
+Hagyd az ilyen fogalmakat:
+igaz vagy téves.
+
+820
+01:10:05,877 --> 01:10:07,461
+Eligazít.
+
+821
+01:10:07,837 --> 01:10:09,714
+Segít megtalálni
+az ösvényt.
+
+822
+01:10:10,506 --> 01:10:11,465
+Neked
+segített?
+
+823
+01:10:13,968 --> 01:10:15,303
+Mit mondott?
+
+824
+01:10:17,763 --> 01:10:19,974
+Hogy megtalálom
+a kiválasztottat.
+
+825
+01:10:33,112 --> 01:10:35,239
+Én csak az ajtót
+mutatom meg.
+
+826
+01:10:35,948 --> 01:10:37,575
+Neked kell belépned rajta.
+
+827
+01:10:41,829 --> 01:10:42,914
+Szervusz, Neo!
+
+828
+01:10:43,164 --> 01:10:44,832
+Pont időben.
+
+829
+01:10:52,757 --> 01:10:56,552
+Érezd magad otthon, Morpheus!
+Gyere velem.
+
+830
+01:11:02,225 --> 01:11:03,810
+Ők a többi jelöltek.
+
+831
+01:11:04,060 --> 01:11:05,603
+ltt várj.
+
+832
+01:11:46,435 --> 01:11:48,980
+Ne próbáld elhajlítani!
+
+833
+01:11:49,355 --> 01:11:51,482
+Az lehetetlen.
+
+834
+01:11:52,316 --> 01:11:56,320
+Helyette próbáld felismerni
+az igazságot.
+
+835
+01:11:56,863 --> 01:11:58,239
+Melyiket?
+
+836
+01:11:58,489 --> 01:12:00,158
+Hogy nincs kanál.
+
+837
+01:12:02,743 --> 01:12:04,078
+Nincs kanál?
+
+838
+01:12:04,328 --> 01:12:08,833
+Akkor látni fogod: nem a kanál
+hajlik, hanem te magad.
+
+839
+01:12:24,849 --> 01:12:26,350
+Bemehetsz
+az Orákulumhoz!
+
+840
+01:12:37,028 --> 01:12:38,571
+Tudom, te vagy Neo.
+
+841
+01:12:39,197 --> 01:12:40,364
+Egy pillanat!
+
+842
+01:12:41,407 --> 01:12:42,408
+Maga az
+Orákulum?
+
+843
+01:12:42,783 --> 01:12:43,784
+Bingó!
+
+844
+01:12:46,496 --> 01:12:49,373
+Nem erre számítottál!
+
+845
+01:12:50,416 --> 01:12:52,585
+Mindjárt kész.
+
+846
+01:12:55,087 --> 01:12:56,714
+Remek az illata, igaz?
+
+847
+01:12:59,467 --> 01:13:01,302
+Mondanám,
+hogy ülj le...
+
+848
+01:13:01,552 --> 01:13:03,930
+...de úgyis visszautasítanád.
+
+849
+01:13:04,430 --> 01:13:06,265
+A váza miatt
+ne fájjon a fejed.
+
+850
+01:13:06,474 --> 01:13:07,308
+Milyen
+váza?
+
+851
+01:13:10,436 --> 01:13:11,604
+Hát az!
+
+852
+01:13:12,563 --> 01:13:13,606
+Bocsánat!
+
+853
+01:13:13,856 --> 01:13:15,733
+Mondtam,
+ne fájjon miatta a fejed!
+
+854
+01:13:16,901 --> 01:13:18,861
+A gyerekeim összerakják.
+
+855
+01:13:19,487 --> 01:13:20,696
+Honnan tudta?
+
+856
+01:13:22,740 --> 01:13:26,536
+Később azon töröd majd a kobakod:
+
+857
+01:13:26,869 --> 01:13:29,831
+Akkor is eltöröd,
+ha nem szólok?
+
+858
+01:13:34,627 --> 01:13:36,546
+Csinosabb vagy,
+mint hittem.
+
+859
+01:13:39,590 --> 01:13:41,843
+Értem, miért tetszel neki.
+
+860
+01:13:42,718 --> 01:13:43,803
+Kinek?
+
+861
+01:13:44,053 --> 01:13:45,888
+Bár nem vagy lángész.
+
+862
+01:13:49,183 --> 01:13:52,270
+Tudod, miért hozott ide Morpheus?
+
+863
+01:13:54,397 --> 01:13:55,565
+És...
+
+864
+01:13:56,524 --> 01:13:57,900
+Mit gondolsz?
+
+865
+01:13:59,735 --> 01:14:01,487
+Szerinted te vagy az?
+
+866
+01:14:03,447 --> 01:14:04,490
+Komolyan
+nem tudom.
+
+867
+01:14:07,910 --> 01:14:09,328
+Az ott tudod,
+mit jelent?
+
+868
+01:14:10,163 --> 01:14:11,330
+Latin.
+
+869
+01:14:11,706 --> 01:14:13,916
+''lsmerd meg önmagad!''
+
+870
+01:14:15,376 --> 01:14:17,336
+Elárulok egy titkot.
+
+871
+01:14:19,589 --> 01:14:23,426
+Kiválasztottnak lenni olyan,
+mintha szerelmes lennél.
+
+872
+01:14:24,135 --> 01:14:27,013
+Senki sem tudja rólad,
+csak te magad.
+
+873
+01:14:27,263 --> 01:14:28,389
+Az egész
+lényed.
+
+874
+01:14:28,723 --> 01:14:30,766
+Tetőtől talpig.
+
+875
+01:14:33,311 --> 01:14:34,145
+Nos...
+
+876
+01:14:36,105 --> 01:14:38,191
+Hadd nézzelek meg jobban!
+
+877
+01:14:39,525 --> 01:14:41,027
+Nyisd ki a szád!
+Mondd: ''Á!''
+
+878
+01:14:57,710 --> 01:15:02,673
+Most azt kéne mondanom:
+''Ez nagyon érdekes, de...''
+
+879
+01:15:03,174 --> 01:15:04,300
+Azt mondanád...
+
+880
+01:15:05,176 --> 01:15:06,177
+De mi?
+
+881
+01:15:06,427 --> 01:15:10,389
+Jól tudod, mit fogok mondani.
+
+882
+01:15:11,808 --> 01:15:12,809
+Nem én vagyok az.
+
+883
+01:15:13,059 --> 01:15:14,769
+Sajnálom, fiam.
+
+884
+01:15:16,395 --> 01:15:18,397
+Megvan a képességed...
+
+885
+01:15:19,398 --> 01:15:21,609
+...de mintha még várnál
+valamire.
+
+886
+01:15:26,489 --> 01:15:27,323
+Mire?
+
+887
+01:15:27,532 --> 01:15:30,451
+A következő életedre, ki tudja?
+
+888
+01:15:31,035 --> 01:15:33,287
+Így megy ez.
+
+889
+01:15:34,163 --> 01:15:35,039
+Mit nevetsz?
+
+890
+01:15:35,414 --> 01:15:36,749
+Morpheus.
+
+891
+01:15:40,211 --> 01:15:41,921
+Majdnem
+meggyőzött róla.
+
+892
+01:15:42,171 --> 01:15:43,297
+Tudom.
+
+893
+01:15:44,841 --> 01:15:46,968
+Szegény Morpheus!
+
+894
+01:15:49,345 --> 01:15:52,473
+Nélküle elveszünk.
+
+895
+01:15:54,016 --> 01:15:56,185
+Hogy érti, hogy ''nélküle''?
+
+896
+01:16:00,189 --> 01:16:02,108
+Biztosan akarod hallani?
+
+897
+01:16:04,318 --> 01:16:07,071
+Morpheus hiszi, hogy te vagy
+a kiválasztott.
+
+898
+01:16:08,781 --> 01:16:10,950
+És senki sem tudja...
+
+899
+01:16:11,200 --> 01:16:13,452
+...meggyőzni.
+
+900
+01:16:13,828 --> 01:16:16,205
+Annyira vakon hisz benne...
+
+901
+01:16:16,497 --> 01:16:20,835
+...hogy az életét is feláldozná,
+csak hogy te élj.
+
+902
+01:16:21,085 --> 01:16:21,919
+Mi?
+
+903
+01:16:22,128 --> 01:16:25,047
+Neked kell majd döntened.
+
+904
+01:16:25,673 --> 01:16:29,260
+Az egyik oldalon ott lesz
+Morpheus élete.
+
+905
+01:16:29,760 --> 01:16:32,638
+A másikon pedig a sajátod.
+
+906
+01:16:34,056 --> 01:16:36,350
+Egyikőtök meg fog halni.
+
+907
+01:16:38,436 --> 01:16:41,731
+Hogy melyikőtök, az rajtad múlik.
+
+908
+01:16:43,107 --> 01:16:45,026
+Sajnálom, fiam.
+
+909
+01:16:45,276 --> 01:16:46,944
+lgazán jólelkű vagy.
+
+910
+01:16:48,029 --> 01:16:50,740
+Utálok jó emberekkel
+rossz hírt közölni.
+
+911
+01:16:53,868 --> 01:16:55,328
+Ne aggódj!
+
+912
+01:16:55,578 --> 01:16:57,997
+Mihelyt kilépsz azon
+az ajtón...
+
+913
+01:16:58,247 --> 01:17:00,374
+...mindjárt jobb kedved lesz.
+
+914
+01:17:01,083 --> 01:17:04,879
+Eszedbe jut, hogy te nem hiszel
+az ilyen sorsrizsákban.
+
+915
+01:17:05,713 --> 01:17:08,466
+Te magad irányítod az életedet.
+
+916
+01:17:09,300 --> 01:17:10,593
+Emlékszel?
+
+917
+01:17:12,470 --> 01:17:13,471
+Tessék!
+
+918
+01:17:15,348 --> 01:17:16,891
+Vegyél sütit!
+
+919
+01:17:17,433 --> 01:17:20,770
+Ígérem, mire megeszed...
+
+920
+01:17:21,729 --> 01:17:24,106
+...kutyabajod se lesz!
+
+921
+01:17:33,324 --> 01:17:34,659
+Amit hallottál...
+
+922
+01:17:35,284 --> 01:17:36,744
+...rád tartozik...
+
+923
+01:17:37,286 --> 01:17:39,121
+...és senki másra.
+
+924
+01:17:51,843 --> 01:17:53,553
+A PlROS RUHÁS NŐ
+
+925
+01:18:02,061 --> 01:18:03,187
+Elindultak!
+
+926
+01:18:33,342 --> 01:18:34,177
+Mi ez?
+
+927
+01:18:48,941 --> 01:18:50,359
+Déja vu!
+
+928
+01:18:53,863 --> 01:18:54,947
+Mit mondtál?
+
+929
+01:18:55,198 --> 01:18:56,699
+Semmit.
+Egy kis déja vu.
+
+930
+01:18:56,949 --> 01:18:58,576
+Mit láttál?
+
+931
+01:18:59,994 --> 01:19:02,163
+Egy fekete macska ment ott.
+
+932
+01:19:02,413 --> 01:19:04,040
+Aztán egy
+ugyanolyan.
+
+933
+01:19:04,290 --> 01:19:05,833
+Ugyanolyan
+vagy ugyanaz?
+
+934
+01:19:07,001 --> 01:19:08,002
+Nem tudom.
+
+935
+01:19:08,794 --> 01:19:09,629
+Switch, Apoc!
+
+936
+01:19:14,091 --> 01:19:14,926
+Mi baj van?
+
+937
+01:19:15,176 --> 01:19:19,597
+A déja vu hiba a Mátrixban.
+Ha változtatnak valamit.
+
+938
+01:19:22,975 --> 01:19:23,810
+Uramisten!
+
+939
+01:19:25,645 --> 01:19:26,604
+Gyerünk!
+
+940
+01:19:31,859 --> 01:19:33,611
+Elvágták a vezetéket!
+Tűnés!
+
+941
+01:19:39,534 --> 01:19:40,368
+Jaj, ne!
+
+942
+01:20:20,468 --> 01:20:22,928
+Ez a változtatás! Csapda!
+
+943
+01:20:23,179 --> 01:20:25,055
+Nyugi! Add a telefonod!
+
+944
+01:20:25,306 --> 01:20:26,849
+Be tudják mérni!
+
+945
+01:20:27,099 --> 01:20:28,517
+Nem tehetünk mást!
+
+946
+01:20:29,935 --> 01:20:31,145
+Operátor!
+
+947
+01:20:31,479 --> 01:20:34,315
+<i>Az épület tervrajzát! Gyorsan!</i>
+
+948
+01:20:42,156 --> 01:20:44,742
+- Megvan!
+<i>- A vizesblokk főfala kell!</i>
+
+949
+01:20:47,995 --> 01:20:48,829
+A nyolcadikon!
+
+950
+01:20:49,038 --> 01:20:50,623
+<i>A nyolcadikon</i>
+<i>vannak.</i>
+
+951
+01:20:50,915 --> 01:20:52,374
+Switch, egyenesen!
+
+952
+01:21:00,375 --> 01:21:02,775
+Remélem az Orákulum,
+jó hírt közölt.
+
+953
+01:21:10,851 --> 01:21:12,353
+<i>Most balra!</i>
+<i>Ott van!</i>
+
+954
+01:21:12,645 --> 01:21:13,687
+Jó!
+
+955
+01:21:23,406 --> 01:21:24,698
+Hová lettek?
+
+956
+01:22:25,134 --> 01:22:26,302
+A fal mögött!
+
+957
+01:22:27,762 --> 01:22:28,929
+A fal mögött!
+
+958
+01:22:50,326 --> 01:22:51,160
+Egy ügynök!
+
+959
+01:23:00,961 --> 01:23:01,962
+Ki kell vinnetek
+Neót!
+
+960
+01:23:02,296 --> 01:23:04,131
+Csak ő számít!
+
+961
+01:23:04,423 --> 01:23:05,633
+Morpheus, nem!
+
+962
+01:23:05,883 --> 01:23:06,717
+Rajta,
+Trinity!
+
+963
+01:23:07,593 --> 01:23:08,969
+Menj!
+
+964
+01:23:15,184 --> 01:23:17,103
+- Nem hagyhatjuk itt!
+- De muszáj!
+
+965
+01:23:42,378 --> 01:23:43,212
+Gyere már!
+
+966
+01:23:48,313 --> 01:23:50,713
+A nagy Morpheus!
+
+967
+01:23:50,741 --> 01:23:52,441
+Végre találkoztunk.
+
+968
+01:23:52,514 --> 01:23:53,640
+És maga ki?
+
+969
+01:23:53,890 --> 01:23:55,642
+Smith.
+
+970
+01:23:55,892 --> 01:23:57,185
+Smith ügynök.
+
+971
+01:23:57,769 --> 01:23:59,813
+Nekem mind egyformák
+vagytok.
+
+972
+01:24:55,410 --> 01:24:56,661
+Vigyétek!
+
+973
+01:25:09,925 --> 01:25:11,760
+<i>Gyorsan!</i>
+<i>Egy kijáratot!</i>
+
+974
+01:25:13,845 --> 01:25:16,765
+Egy istenverte baleset történt!
+
+975
+01:25:17,099 --> 01:25:18,892
+<i>Hirtelen</i>
+<i>egy csattanás!</i>
+
+976
+01:25:19,142 --> 01:25:20,519
+Valaki vigyáz rám
+odafönt!
+
+977
+01:25:20,769 --> 01:25:22,020
+Megvan!
+
+978
+01:25:22,521 --> 01:25:24,398
+<i>Juttass ki innen!</i>
+<i>Gyorsan!</i>
+
+979
+01:25:24,689 --> 01:25:27,359
+A Franklin és Erie sarka.
+Tévészerviz.
+
+980
+01:25:27,609 --> 01:25:28,610
+Jó.
+
+981
+01:25:31,780 --> 01:25:33,365
+<i>Tank, én vagyok!</i>
+
+982
+01:25:33,615 --> 01:25:34,783
+Morpheus él?
+
+983
+01:25:35,158 --> 01:25:36,410
+Életben van?
+
+984
+01:25:36,868 --> 01:25:38,745
+<i>Él. Nem tudom,</i>
+<i>hová viszik.</i>
+
+985
+01:25:38,995 --> 01:25:41,289
+lgen, él.
+Kell egy kijárat.
+
+986
+01:25:41,540 --> 01:25:42,457
+Cypher
+nincs messze.
+
+987
+01:25:42,707 --> 01:25:44,042
+<i>- De Cypher...</i>
+- Tudom!
+
+988
+01:25:44,292 --> 01:25:46,378
+<i>- Az Erie sarkán van.</i>
+- Megvan!
+
+989
+01:25:55,470 --> 01:25:56,638
+Megvan!
+
+990
+01:26:07,607 --> 01:26:08,608
+Hol vannak?
+
+991
+01:26:08,900 --> 01:26:10,152
+Hívom őket!
+
+992
+01:26:10,819 --> 01:26:11,820
+Helyes!
+
+993
+01:26:25,542 --> 01:26:26,376
+Előbb te!
+
+994
+01:26:29,546 --> 01:26:30,380
+Francba!
+
+995
+01:26:39,473 --> 01:26:41,600
+Elnémult!
+
+996
+01:27:08,460 --> 01:27:09,628
+<i>Trinity!</i>
+
+997
+01:27:10,087 --> 01:27:11,421
+Cypher?
+Hol van Tank?
+
+998
+01:27:17,010 --> 01:27:18,011
+Tudod...
+
+999
+01:27:19,763 --> 01:27:21,890
+Sokáig...
+
+1000
+01:27:23,100 --> 01:27:26,019
+...azt hittem, hogy
+szerelmes vagyok beléd.
+
+1001
+01:27:26,770 --> 01:27:28,814
+<i>Gyakran álmodtam veled.</i>
+
+1002
+01:27:29,898 --> 01:27:32,609
+Gyönyörű nő vagy, Trinity.
+
+1003
+01:27:32,859 --> 01:27:35,237
+<i>Kár, hogy így alakult.</i>
+
+1004
+01:27:35,987 --> 01:27:36,822
+Megölted őket!
+
+1005
+01:27:37,322 --> 01:27:38,824
+Úristen!
+
+1006
+01:27:39,074 --> 01:27:40,492
+Elegem van,
+Trinity.
+
+1007
+01:27:41,910 --> 01:27:43,787
+Elegem van a háborúból.
+
+1008
+01:27:44,079 --> 01:27:46,915
+Elegem van a harcból és a hajóból.
+
+1009
+01:27:47,249 --> 01:27:51,878
+Elegem van a hidegből, és hogy
+mindennap moslékot kell ennem.
+
+1010
+01:27:54,297 --> 01:27:55,215
+De főleg...
+
+1011
+01:27:55,799 --> 01:27:59,136
+<i>...ebből a faszkalapból</i>
+<i>és a baromságaiból.</i>
+
+1012
+01:28:00,303 --> 01:28:01,555
+Meglepetés,
+seggfej!
+
+1013
+01:28:02,139 --> 01:28:04,349
+Erre nem számítottál!
+
+1014
+01:28:04,599 --> 01:28:05,600
+Ugye?
+
+1015
+01:28:07,936 --> 01:28:10,313
+Bár ott lennék...
+
+1016
+01:28:10,897 --> 01:28:12,399
+...amikor
+kicsinálnak!
+
+1017
+01:28:13,442 --> 01:28:16,611
+Bárcsak besétálhatnék épp akkor!
+
+1018
+01:28:17,320 --> 01:28:19,030
+Rögtön tudnád...
+
+1019
+01:28:19,281 --> 01:28:20,615
+...hogy én voltam.
+
+1020
+01:28:21,324 --> 01:28:22,542
+Te adtad fel
+Morpheust?!
+
+1021
+01:28:22,544 --> 01:28:23,994
+<i>Hazudott nekünk!</i>
+
+1022
+01:28:24,578 --> 01:28:26,079
+Átvert bennünket!
+
+1023
+01:28:26,621 --> 01:28:28,582
+Ha megmondod az igazat...
+
+1024
+01:28:28,874 --> 01:28:31,752
+...földughattad volna magadnak
+a piros kapszulát!
+
+1025
+01:28:32,002 --> 01:28:34,129
+Nem igaz!
+Felszabadított minket!
+
+1026
+01:28:34,379 --> 01:28:35,297
+<i>Igen?</i>
+
+1027
+01:28:35,547 --> 01:28:37,257
+Szerinted ez szabadság?
+
+1028
+01:28:39,676 --> 01:28:42,137
+Azt teszem, amit ő parancsol.
+
+1029
+01:28:43,764 --> 01:28:46,683
+Ha választhatok közte
+és a Mátrix közt...
+
+1030
+01:28:47,851 --> 01:28:49,019
+...én a Mátrixot
+választom.
+
+1031
+01:28:49,311 --> 01:28:50,979
+A Mátrix
+nem valóság!
+
+1032
+01:28:51,229 --> 01:28:52,647
+<i>Nem értünk egyet!</i>
+
+1033
+01:28:52,898 --> 01:28:55,108
+A Mátrix...
+
+1034
+01:28:55,484 --> 01:28:58,028
+...valóságosabb lehet ennél!
+
+1035
+01:29:00,238 --> 01:29:02,699
+ltt csak kihúzom ezt a dugót...
+
+1036
+01:29:03,325 --> 01:29:04,326
+...és...
+
+1037
+01:29:04,868 --> 01:29:07,162
+<i>...ott végignézed</i>
+<i>Apoc halálát.</i>
+
+1038
+01:29:14,920 --> 01:29:16,630
+<i>Köszöntelek</i>
+<i>a való világban!</i>
+
+1039
+01:29:16,963 --> 01:29:18,081
+Kívül vagy!
+
+1040
+01:29:18,131 --> 01:29:20,509
+<i>- Nem mehetsz vissza!</i>
+- Csak képzeled.
+
+1041
+01:29:20,801 --> 01:29:22,302
+<i>Visszahelyezik</i>
+<i>a testem.</i>
+
+1042
+01:29:22,552 --> 01:29:26,139
+<i>Megyek aludni. És ha fölébredek,</i>
+<i>nem emlékszem semmire.</i>
+
+1043
+01:29:26,431 --> 01:29:27,432
+Apropó!
+
+1044
+01:29:27,682 --> 01:29:30,644
+Ha valami fontosat
+mondanál Switchnek...
+
+1045
+01:29:31,144 --> 01:29:33,355
+<i>- ...mondd gyorsan!</i>
+- Kérlek, ne!
+
+1046
+01:29:33,897 --> 01:29:35,524
+Nem akarok így!
+
+1047
+01:29:37,234 --> 01:29:38,860
+Nem akarok így!
+
+1048
+01:29:43,323 --> 01:29:44,324
+Elkéstél.
+
+1049
+01:29:44,825 --> 01:29:46,410
+Rohadj meg, Cypher!
+
+1050
+01:29:46,660 --> 01:29:48,537
+Ne gyűlölj, Trinity.
+
+1051
+01:29:48,912 --> 01:29:50,789
+Csak a dolgomat végzem.
+
+1052
+01:29:51,206 --> 01:29:54,376
+És be is bizonyítom.
+
+1053
+01:29:55,460 --> 01:29:57,129
+Ha Morpheusnak
+igaza volt...
+
+1054
+01:29:57,671 --> 01:29:59,548
+...ezt nem fogom tudni
+kihúzni.
+
+1055
+01:30:00,132 --> 01:30:01,633
+<i>Vagyis, ha tényleg</i>
+<i>Neo az...</i>
+
+1056
+01:30:02,134 --> 01:30:03,969
+<i>...történnie kell</i>
+<i>valamiféle...</i>
+
+1057
+01:30:04,219 --> 01:30:06,763
+...csodának.
+Ami meggátol.
+
+1058
+01:30:07,305 --> 01:30:08,140
+lgaz?
+
+1059
+01:30:08,807 --> 01:30:10,934
+Ha ő a kiválasztott, nem...
+
+1060
+01:30:11,268 --> 01:30:12,102
+...halhat meg!
+
+1061
+01:30:13,520 --> 01:30:15,731
+<i>Nem válaszoltál:</i>
+
+1062
+01:30:16,064 --> 01:30:18,358
+<i>Bevetted Morpheus dumáját?</i>
+
+1063
+01:30:18,775 --> 01:30:21,987
+Csak egy kis igent vagy nemet kérek!
+
+1064
+01:30:23,363 --> 01:30:25,657
+Nézz Neo szemébe!
+
+1065
+01:30:26,450 --> 01:30:28,351
+<i>Abba a szép</i>
+<i>szemébe!</i>
+
+1066
+01:30:30,704 --> 01:30:32,038
+Felelj!
+
+1067
+01:30:32,748 --> 01:30:33,999
+<i>Igen...</i>
+
+1068
+01:30:34,332 --> 01:30:35,709
+<i>...vagy nem?</i>
+
+1069
+01:30:37,002 --> 01:30:38,086
+lgen!
+
+1070
+01:30:38,962 --> 01:30:39,880
+Ez hihetetlen!
+
+1071
+01:30:41,298 --> 01:30:46,052
+Hiszed vagy sem, szénné égsz,
+te mocsadék!
+
+1072
+01:31:04,738 --> 01:31:05,655
+Előbb te!
+
+1073
+01:31:13,914 --> 01:31:14,748
+Súlyos?
+
+1074
+01:31:15,123 --> 01:31:16,208
+Rendbe jön.
+
+1075
+01:31:19,002 --> 01:31:20,170
+Dozer?
+
+1076
+01:31:38,438 --> 01:31:40,816
+Megállt-e valaha
+megbámulni...
+
+1077
+01:31:41,691 --> 01:31:44,820
+...megcsodálni...
+
+1078
+01:31:45,195 --> 01:31:47,406
+...zseniális szépségét?
+
+1079
+01:31:48,615 --> 01:31:50,492
+Emberek milliárdjai...
+
+1080
+01:31:50,742 --> 01:31:53,495
+...élik le az életüket...
+
+1081
+01:31:54,538 --> 01:31:56,206
+...öntudatlanul.
+
+1082
+01:32:00,794 --> 01:32:03,672
+Tudta, hogy az első Mátrixot...
+
+1083
+01:32:03,922 --> 01:32:08,635
+...tökéletes világnak tervezték,
+ahol nincs szenvedés...
+
+1084
+01:32:09,094 --> 01:32:12,013
+...ahol minden ember boldog?
+
+1085
+01:32:12,556 --> 01:32:14,057
+Katasztrófa volt.
+
+1086
+01:32:14,307 --> 01:32:18,645
+Senki sem fogadta el a programot.
+Generációk haltak meg.
+
+1087
+01:32:19,521 --> 01:32:21,273
+Néhányan úgy vélték...
+
+1088
+01:32:21,523 --> 01:32:26,702
+...nincs programnyelv, amely
+leírhatná a tökéletes világukat. De...
+
+1089
+01:32:26,903 --> 01:32:29,280
+...szerintem az emberfajta...
+...az emberi lények...
+
+1090
+01:32:29,281 --> 01:32:33,118
+...a valóságot a nyomoron
+és szenvedésen keresztül...
+
+1091
+01:32:33,368 --> 01:32:34,745
+...határozza meg.
+
+1092
+01:32:34,995 --> 01:32:37,706
+A tökéletes világ álom...
+
+1093
+01:32:37,956 --> 01:32:42,753
+...amelyből primitív agyuk
+fel akart ébredni.
+
+1094
+01:32:44,129 --> 01:32:47,799
+A Mátrixot ezért terveztük át így.
+
+1095
+01:32:48,258 --> 01:32:49,760
+Ez az önök...
+
+1096
+01:32:50,010 --> 01:32:51,428
+...civilizációjának
+csúcsa.
+
+1097
+01:32:51,678 --> 01:32:53,889
+Azért mondom, hogy
+az önöké...
+
+1098
+01:32:54,181 --> 01:32:58,310
+...mert amint elkezdtünk önök helyett
+gondolkodni...
+
+1099
+01:32:58,560 --> 01:33:01,646
+...a mi civilizációnkká vált.
+És ez a lényeg.
+
+1100
+01:33:02,981 --> 01:33:05,525
+Evolúció, Morpheus!
+
+1101
+01:33:05,859 --> 01:33:07,194
+Evolúció.
+
+1102
+01:33:09,488 --> 01:33:11,364
+Mint az őslényeké.
+
+1103
+01:33:13,533 --> 01:33:15,160
+Nézzen ki az ablakon!
+
+1104
+01:33:15,869 --> 01:33:17,996
+Az önök ideje is lejárt.
+
+1105
+01:33:18,705 --> 01:33:22,626
+A jövő a mi világunk, Morpheus.
+
+1106
+01:33:22,959 --> 01:33:25,337
+A jövő már a mi időnk!
+
+1107
+01:33:29,438 --> 01:33:30,938
+Lehet, problémánk akadt.
+
+1108
+01:33:31,968 --> 01:33:35,055
+- Mit csinálnak vele?
+- Betörnek a tudatába!
+
+1109
+01:33:35,305 --> 01:33:37,432
+Mint egy programfeltörés.
+ldő kérdése.
+
+1110
+01:33:37,724 --> 01:33:38,892
+Mennyi
+ideje van?
+
+1111
+01:33:39,184 --> 01:33:42,312
+A tudatán múlik.
+De végül feltörik.
+
+1112
+01:33:42,562 --> 01:33:46,983
+Az alfahulláma átalakul ilyenről...
+ilyenre.
+
+1113
+01:33:47,234 --> 01:33:50,195
+És el fog mondani nekik mindent.
+
+1114
+01:33:50,445 --> 01:33:51,446
+Mit akarnak?
+
+1115
+01:33:51,738 --> 01:33:55,784
+Minden hajó vezetője megkapja
+a zioni központi terminál kódját.
+
+1116
+01:33:56,034 --> 01:33:58,954
+Ha egy ügynök megszerzi,
+és bejut a terminálba...
+
+1117
+01:33:59,204 --> 01:34:02,290
+...elpusztítanak.
+Ezt nem hagyhatjuk!
+
+1118
+01:34:03,125 --> 01:34:04,709
+Zion fontosabb
+nálam...
+
+1119
+01:34:04,960 --> 01:34:05,877
+...nálad...
+
+1120
+01:34:06,211 --> 01:34:07,462
+...Morpheusnál is!
+
+1121
+01:34:11,299 --> 01:34:12,968
+Csak tehetünk valamit!
+
+1122
+01:34:13,385 --> 01:34:15,345
+Kihúzzuk a dugót.
+
+1123
+01:34:18,473 --> 01:34:20,225
+Azzal megölöd!
+
+1124
+01:34:20,475 --> 01:34:21,643
+Megölöd
+Morpheust!
+
+1125
+01:34:22,269 --> 01:34:23,895
+Nincs más
+választásunk!
+
+1126
+01:34:30,694 --> 01:34:33,613
+Ne bízd emberre
+a komputer munkáját!
+
+1127
+01:34:33,864 --> 01:34:35,615
+Ha leleplezték
+az emberünket...
+
+1128
+01:34:35,866 --> 01:34:39,077
+...megszakítják a kapcsolatot,
+kivéve...
+
+1129
+01:34:39,327 --> 01:34:41,037
+Ha meghaltak.
+Akárhogy is...
+
+1130
+01:34:41,288 --> 01:34:44,791
+A terv szerint kell eljárni.
+Küldd ki az őrszemeket!
+
+1131
+01:34:45,083 --> 01:34:46,168
+Azonnal!
+
+1132
+01:34:51,423 --> 01:34:54,092
+Több voltál, mint vezetőnk.
+
+1133
+01:34:55,051 --> 01:34:57,262
+Te voltál az apánk.
+
+1134
+01:34:58,805 --> 01:35:00,766
+Hiányozni fogsz!
+
+1135
+01:35:07,856 --> 01:35:08,857
+Állj!
+
+1136
+01:35:10,067 --> 01:35:11,234
+Nem tudom
+elhinni!
+
+1137
+01:35:11,526 --> 01:35:13,570
+- Meg kell tennünk!
+- lgen...
+
+1138
+01:35:14,362 --> 01:35:15,739
+Én nem tudom!
+
+1139
+01:35:16,073 --> 01:35:17,616
+Nem lehet véletlen!
+
+1140
+01:35:17,824 --> 01:35:18,658
+Miről
+beszélsz?
+
+1141
+01:35:19,159 --> 01:35:19,993
+Az Orákulum!
+
+1142
+01:35:20,243 --> 01:35:22,037
+Megjövendölte!
+
+1143
+01:35:22,454 --> 01:35:26,625
+Azt mondta,
+nekem kell választanom.
+
+1144
+01:35:27,084 --> 01:35:28,335
+Mi közül?
+
+1145
+01:35:31,296 --> 01:35:32,130
+Mit csinálsz?!
+
+1146
+01:35:32,589 --> 01:35:33,757
+Bemegyek!
+
+1147
+01:35:34,132 --> 01:35:35,383
+Nem mehetsz!
+
+1148
+01:35:35,634 --> 01:35:36,468
+Muszáj!
+
+1149
+01:35:36,676 --> 01:35:40,263
+Morpheus feláldozta magát,
+hogy megmenekülj!
+
+1150
+01:35:40,555 --> 01:35:42,432
+Semmiképp sem
+mehetsz vissza!
+
+1151
+01:35:43,058 --> 01:35:46,311
+Azért tette, mert másnak hisz,
+mint aki vagyok!
+
+1152
+01:35:49,564 --> 01:35:51,191
+Nem én vagyok
+a kiválasztott!
+
+1153
+01:35:51,566 --> 01:35:54,528
+- Az Orákulum ezt is megmondta!
+- Neked kell lenned!
+
+1154
+01:35:54,778 --> 01:35:57,447
+Sajnálom, nem.
+Morpheus tévedett!
+
+1155
+01:35:58,115 --> 01:35:59,366
+Ez nem igaz!
+
+1156
+01:35:59,950 --> 01:36:01,284
+Nem lehet igaz!
+
+1157
+01:36:01,618 --> 01:36:02,536
+Miért?
+
+1158
+01:36:06,998 --> 01:36:10,335
+Őrültség! Katonákkal őrzött
+épületben tartják fogva!
+
+1159
+01:36:10,585 --> 01:36:14,965
+Ha bejutnál, ott vannak
+az ügynökök! Hárman!
+
+1160
+01:36:16,258 --> 01:36:20,178
+Én is visszahoznám,
+de ez kész öngyilkosság!
+
+1161
+01:36:20,429 --> 01:36:22,055
+Tudom, annak tűnik.
+
+1162
+01:36:22,305 --> 01:36:23,223
+De nem az!
+
+1163
+01:36:23,473 --> 01:36:25,851
+Nem tudom elmagyarázni,
+miért.
+
+1164
+01:36:26,935 --> 01:36:30,605
+Morpheus hitt valamiben.
+És kész volt feláldozni az életét.
+
+1165
+01:36:30,897 --> 01:36:33,900
+Végre megértettem!
+Ezért kell visszamennem.
+
+1166
+01:36:34,151 --> 01:36:34,985
+Miért?
+
+1167
+01:36:35,235 --> 01:36:36,695
+Mert hiszek
+valamiben.
+
+1168
+01:36:36,903 --> 01:36:37,738
+Miben?
+
+1169
+01:36:39,197 --> 01:36:40,907
+Hogy vissza tudom hozni.
+
+1170
+01:36:57,883 --> 01:36:59,760
+- Mit csinálsz?
+- Veled megyek.
+
+1171
+01:37:00,093 --> 01:37:02,095
+- Nem jöhetsz!
+- Nem?
+
+1172
+01:37:03,263 --> 01:37:05,390
+Elmondom, én miben hiszek!
+
+1173
+01:37:05,891 --> 01:37:08,268
+Morpheus többet jelent nekem,
+mint neked.
+
+1174
+01:37:08,602 --> 01:37:12,898
+Ha meg akarod menteni,
+szükséged lesz a segítségemre.
+
+1175
+01:37:13,148 --> 01:37:15,192
+És mivel én vagyok
+a rangidős tiszt...
+
+1176
+01:37:15,442 --> 01:37:18,320
+...ha nem tetszik,
+elmehetsz a fenébe!
+
+1177
+01:37:19,071 --> 01:37:21,448
+Máshová úgyse tudsz.
+
+1178
+01:37:21,907 --> 01:37:22,741
+Tank!
+
+1179
+01:37:23,617 --> 01:37:24,701
+Tölts fel
+minket!
+
+1180
+01:37:34,377 --> 01:37:37,631
+Szeretném megosztani önnel,
+mire jöttem rá...
+
+1181
+01:37:38,090 --> 01:37:39,633
+...az ittlétem során.
+
+1182
+01:37:39,883 --> 01:37:43,887
+Amikor osztályozni próbáltam
+a faját...
+
+1183
+01:37:44,137 --> 01:37:46,348
+...ráébredtem, hogy...
+
+1184
+01:37:46,640 --> 01:37:48,934
+...önök valójában
+nem emlősök.
+
+1185
+01:37:51,144 --> 01:37:53,605
+Minden emlős ezen a bolygón...
+
+1186
+01:37:53,939 --> 01:37:58,819
+...ösztönösen természetes egyensúlyra
+törekszik a környezetével.
+
+1187
+01:37:59,111 --> 01:38:00,946
+Kivéve magukat,
+embereket.
+
+1188
+01:38:01,488 --> 01:38:04,991
+Letelepednek valahová,
+és addig szaporodnak...
+
+1189
+01:38:05,283 --> 01:38:09,788
+...amíg fel nem élik
+a természeti erőforrásokat.
+
+1190
+01:38:10,122 --> 01:38:12,165
+Csak úgy képesek
+fennmaradni...
+
+1191
+01:38:12,499 --> 01:38:15,460
+...ha új területeket foglalnak el.
+
+1192
+01:38:20,882 --> 01:38:23,760
+Van egy másik organizmus...
+
+1193
+01:38:24,010 --> 01:38:25,971
+...amely ugyanígy
+viselkedik.
+
+1194
+01:38:26,596 --> 01:38:28,265
+Tudja, melyik?
+
+1195
+01:38:28,640 --> 01:38:30,475
+A vírus.
+
+1196
+01:38:31,810 --> 01:38:34,855
+Az emberi faj egy betegség.
+
+1197
+01:38:35,230 --> 01:38:36,773
+A bolygó
+rákosodása.
+
+1198
+01:38:37,023 --> 01:38:39,151
+Az ember egy ragály.
+
+1199
+01:38:39,693 --> 01:38:40,694
+És mi
+vagyunk...
+
+1200
+01:38:41,278 --> 01:38:42,654
+...a gyógyszer.
+
+1201
+01:38:43,655 --> 01:38:45,073
+Mire van
+szükségetek?
+
+1202
+01:38:45,699 --> 01:38:46,783
+A csodán
+kívül.
+
+1203
+01:38:47,409 --> 01:38:48,577
+Fegyverre.
+
+1204
+01:38:49,661 --> 01:38:50,662
+Sok fegyverre.
+
+1205
+01:39:03,508 --> 01:39:06,052
+llyet még soha senki nem tett.
+
+1206
+01:39:07,262 --> 01:39:09,139
+Azért fog sikerülni.
+
+1207
+01:39:13,268 --> 01:39:15,228
+Mért nem hat a szérum?
+
+1208
+01:39:15,812 --> 01:39:18,106
+Talán rosszak a kérdések.
+
+1209
+01:39:20,192 --> 01:39:21,443
+Menjetek ki!
+
+1210
+01:39:24,029 --> 01:39:25,113
+Gyerünk!
+
+1211
+01:39:36,374 --> 01:39:37,959
+Tarts ki, Morpheus!
+
+1212
+01:39:38,210 --> 01:39:40,921
+Mennek érted! Mennek!
+
+1213
+01:39:43,298 --> 01:39:45,425
+Hall engem, Morpheus?
+
+1214
+01:39:45,675 --> 01:39:48,345
+Őszinte leszek...
+
+1215
+01:39:48,720 --> 01:39:49,888
+...önhöz.
+
+1216
+01:39:54,309 --> 01:39:55,727
+Én...
+
+1217
+01:39:56,812 --> 01:39:57,729
+...gyűlölöm...
+
+1218
+01:39:57,979 --> 01:39:59,940
+...ezt a helyet!
+
+1219
+01:40:00,273 --> 01:40:02,567
+Ezt az állatkertet...
+
+1220
+01:40:02,818 --> 01:40:03,902
+...ezt a börtönt...
+
+1221
+01:40:04,194 --> 01:40:07,364
+...ezt a...valóságot,
+nevezze, aminek akarja!
+
+1222
+01:40:07,614 --> 01:40:09,908
+Nem bírom elviselni tovább!
+
+1223
+01:40:10,659 --> 01:40:12,536
+Ez a szag!
+
+1224
+01:40:13,912 --> 01:40:15,789
+Ha létezik!
+
+1225
+01:40:16,123 --> 01:40:19,376
+Úgy érzem, teljesen átitatott!
+
+1226
+01:40:20,919 --> 01:40:22,170
+Most is...
+
+1227
+01:40:22,462 --> 01:40:23,296
+...érzem...
+
+1228
+01:40:24,172 --> 01:40:26,216
+...a maga bűzét!
+
+1229
+01:40:26,466 --> 01:40:30,220
+És valahányszor megérzem, félek,
+hogy engem is megfertőz!
+
+1230
+01:40:30,470 --> 01:40:31,304
+Undorító!
+
+1231
+01:40:32,264 --> 01:40:33,640
+Nem igaz?
+
+1232
+01:40:35,809 --> 01:40:38,103
+Ki kell jutnom innen!
+
+1233
+01:40:38,520 --> 01:40:40,731
+Szabad akarok lenni!
+
+1234
+01:40:40,981 --> 01:40:43,859
+S a maga agyában van
+a szabadulásom...
+
+1235
+01:40:44,109 --> 01:40:45,777
+...kulcsa!
+
+1236
+01:40:46,027 --> 01:40:48,905
+Ha Zion elpusztul,
+nem kell tovább maradnom!
+
+1237
+01:40:49,156 --> 01:40:50,782
+Érti?
+
+1238
+01:40:51,074 --> 01:40:52,451
+Adja meg
+a kódokat!
+
+1239
+01:40:52,701 --> 01:40:54,995
+Be kell jutnom Zionba...
+
+1240
+01:40:55,370 --> 01:40:57,831
+...és ön fogja megmondani,
+hogyan!
+
+1241
+01:40:58,290 --> 01:41:00,167
+Vagy megmondja...
+
+1242
+01:41:00,417 --> 01:41:02,544
+...vagy megdöglik!
+
+1243
+01:41:23,045 --> 01:41:26,745
+Rakjon ki minden fémtárgyat, kérem.
+Kulcsok, aprópénz...
+
+1244
+01:41:29,873 --> 01:41:30,874
+Úristen!
+
+1245
+01:41:42,969 --> 01:41:43,803
+Gyorsan!
+
+1246
+01:41:44,095 --> 01:41:45,638
+Erősítést!
+
+1247
+01:42:09,704 --> 01:42:10,622
+Állj!
+
+1248
+01:44:25,673 --> 01:44:26,674
+Mit csináltál?
+
+1249
+01:44:28,509 --> 01:44:29,761
+Még nem tudja.
+
+1250
+01:44:30,053 --> 01:44:31,512
+Mit?
+
+1251
+01:44:45,652 --> 01:44:47,195
+VÉSZLEÁLLÍTÓ
+
+1252
+01:44:53,201 --> 01:44:54,202
+ÉLESÍT
+
+1253
+01:44:59,624 --> 01:45:02,085
+Megpróbálják kiszabadítani!
+
+1254
+01:45:16,975 --> 01:45:18,685
+Nincs kanál.
+
+1255
+01:45:48,339 --> 01:45:50,466
+Végezzetek velük!
+
+1256
+01:45:52,267 --> 01:45:54,167
+Ismétlem, megtámadtak minket!
+
+1257
+01:46:28,068 --> 01:46:28,868
+Segíts!
+
+1258
+01:46:50,811 --> 01:46:52,020
+Csak ember!
+
+1259
+01:46:53,105 --> 01:46:54,064
+Ezt védd ki!
+
+1260
+01:47:07,286 --> 01:47:08,829
+Ezt hogy csináltad?
+
+1261
+01:47:09,204 --> 01:47:13,125
+Úgy mozogsz, mint ők!
+llyen gyorsaságot még nem láttam!
+
+1262
+01:47:14,251 --> 01:47:15,627
+Nem volt
+elég gyors!
+
+1263
+01:47:18,589 --> 01:47:19,673
+Tudod vezetni?
+
+1264
+01:47:21,008 --> 01:47:21,842
+Még nem.
+
+1265
+01:47:25,304 --> 01:47:26,138
+Operátor.
+
+1266
+01:47:26,346 --> 01:47:29,516
+<i>Egy B-212-es helikopter</i>
+<i>pilótaprogramja kéne!</i>
+
+1267
+01:47:29,975 --> 01:47:31,268
+<i>Siess!</i>
+
+1268
+01:47:39,193 --> 01:47:40,819
+Menjünk!
+
+1269
+01:47:55,918 --> 01:47:57,002
+Nem.
+
+1270
+01:48:48,595 --> 01:48:50,139
+Morpheus, állj fel!
+
+1271
+01:48:50,389 --> 01:48:51,223
+Állj fel!
+
+1272
+01:49:29,261 --> 01:49:30,304
+Nem tud
+átugrani!
+
+1273
+01:49:40,105 --> 01:49:41,148
+Foglak!
+
+1274
+01:51:30,058 --> 01:51:31,476
+Tudtam!
+
+1275
+01:51:32,310 --> 01:51:33,311
+Mégis ő az!
+
+1276
+01:51:49,286 --> 01:51:51,496
+Most már elhiszed?
+
+1277
+01:51:57,419 --> 01:51:58,295
+Az Orákulum...
+
+1278
+01:51:59,546 --> 01:52:01,923
+- ...azt mondta...
+- Azt mondta...
+
+1279
+01:52:02,299 --> 01:52:03,884
+...amit akkor
+hallanod kellett!
+
+1280
+01:52:04,175 --> 01:52:05,510
+Ennyi!
+
+1281
+01:52:06,553 --> 01:52:09,514
+Előbb-utóbb rájössz te is, amire én:
+
+1282
+01:52:09,848 --> 01:52:12,142
+Más dolog ismerni az utat...
+
+1283
+01:52:12,893 --> 01:52:14,185
+...és más
+járni rajta.
+
+1284
+01:52:17,230 --> 01:52:18,440
+Operátor!
+
+1285
+01:52:19,357 --> 01:52:21,902
+- De jó újra hallani a hangod!
+<i>- Kijárat kéne.</i>
+
+1286
+01:52:22,152 --> 01:52:24,946
+Metróállomás.
+State és Balboa sarok.
+
+1287
+01:52:38,001 --> 01:52:38,960
+Az istenit!
+
+1288
+01:52:39,211 --> 01:52:40,420
+Bemértük őket.
+
+1289
+01:52:40,670 --> 01:52:41,588
+Megvan
+a helyzetük.
+
+1290
+01:52:42,005 --> 01:52:44,257
+Az őrszemek készen állnak.
+
+1291
+01:52:45,967 --> 01:52:47,469
+Add ki a parancsot!
+
+1292
+01:52:54,017 --> 01:52:56,019
+Még nem jutottak ki!
+
+1293
+01:53:07,197 --> 01:53:08,532
+Te menj először!
+
+1294
+01:53:29,219 --> 01:53:31,513
+Szeretnék
+elmondani valamit...
+
+1295
+01:53:34,766 --> 01:53:38,728
+...de félek attól, amit okozhat.
+
+1296
+01:53:42,315 --> 01:53:45,610
+Minden, amit az Orákulum mondott,
+valóra vált.
+
+1297
+01:53:48,363 --> 01:53:49,906
+Kivéve egyet.
+
+1298
+01:53:51,616 --> 01:53:52,450
+Mi az?
+
+1299
+01:54:18,768 --> 01:54:20,395
+- Mi történt?
+- Egy ügynök!
+
+1300
+01:54:20,645 --> 01:54:21,479
+Vissza kell
+küldened!
+
+1301
+01:54:21,730 --> 01:54:22,606
+Nem tudlak!
+
+1302
+01:54:24,608 --> 01:54:26,610
+Mr. Anderson!
+
+1303
+01:54:28,778 --> 01:54:30,155
+Rohanj!
+
+1304
+01:54:35,452 --> 01:54:37,078
+Mit csinál?
+
+1305
+01:54:37,329 --> 01:54:38,780
+Kezd hinni
+végre!
+
+1306
+01:55:05,512 --> 01:55:07,112
+Kifogyott!
+
+1307
+01:55:07,318 --> 01:55:08,611
+Az öné is!
+
+1308
+01:55:41,969 --> 01:55:44,972
+Élvezettel nézem végig a halálát...
+
+1309
+01:55:46,098 --> 01:55:47,141
+...Mr. Anderson!
+
+1310
+01:56:28,099 --> 01:56:30,184
+Jézusom, meg fogja ölni!
+
+1311
+01:57:56,353 --> 01:57:58,481
+Hallja, Mr. Anderson?
+
+1312
+01:57:59,231 --> 01:58:02,234
+Az elkerülhetetlen vég hangja!
+
+1313
+01:58:04,820 --> 01:58:08,157
+A halálának a hangja!
+
+1314
+01:58:09,075 --> 01:58:11,410
+Minden jót, Mr. Anderson!
+
+1315
+01:58:11,660 --> 01:58:13,287
+A nevem...
+
+1316
+01:58:16,290 --> 01:58:18,334
+...Neo!
+
+1317
+01:58:50,574 --> 01:58:52,701
+- Mi történt?
+- Eltűnt!
+
+1318
+01:58:52,952 --> 01:58:54,495
+RlADÓ
+
+1319
+01:58:55,287 --> 01:58:56,330
+Uramisten!
+
+1320
+01:59:08,718 --> 01:59:10,177
+Őrszemek!
+
+1321
+01:59:10,928 --> 01:59:13,180
+- Van még időnk?
+- Öt-hat perc!
+
+1322
+01:59:15,224 --> 01:59:17,393
+Tank, készítsd elő az EMl-t!
+
+1323
+01:59:17,643 --> 01:59:20,688
+- Meg kell várnunk!
+- Tudom, ne aggódj!
+
+1324
+01:59:22,064 --> 01:59:22,940
+Visszaér.
+
+1325
+01:59:23,190 --> 01:59:25,067
+Nyuszikám, magasat...
+
+1326
+01:59:25,317 --> 01:59:28,195
+Mit képzel?! A telefonom!
+
+1327
+01:59:28,612 --> 01:59:30,197
+Ellopták
+a telefonom!
+
+1328
+01:59:32,575 --> 01:59:33,409
+Megvan!
+
+1329
+01:59:33,659 --> 01:59:34,869
+Menekül!
+
+1330
+01:59:35,119 --> 01:59:35,953
+<i>Varázsló.</i>
+
+1331
+01:59:36,412 --> 01:59:37,788
+Juttass ki innen!
+
+1332
+01:59:38,038 --> 01:59:39,915
+<i>Régi kijárat,</i>
+<i>Wabash és Lake sarok.</i>
+
+1333
+01:59:43,961 --> 01:59:44,795
+A fenébe!
+
+1334
+02:00:06,442 --> 02:00:08,444
+Segíts egy kicsit!
+
+1335
+02:00:10,071 --> 02:00:11,280
+<i>Az ajtó!</i>
+
+1336
+02:00:27,254 --> 02:00:28,756
+<i>Ajtó balra!</i>
+
+1337
+02:00:29,673 --> 02:00:30,925
+<i>A másik bal!</i>
+
+1338
+02:00:37,640 --> 02:00:38,891
+<i>Hátsó ajtó!</i>
+
+1339
+02:00:58,119 --> 02:00:59,203
+VÉSZRlADÓ
+
+1340
+02:00:59,662 --> 02:01:00,788
+Jaj, ne!
+
+1341
+02:01:02,539 --> 02:01:03,840
+ltt vannak!
+
+1342
+02:01:32,735 --> 02:01:34,135
+Vissza fog érni!
+
+1343
+02:01:44,206 --> 02:01:47,334
+<i>Tűzlépcső a sikátor végén.</i>
+<i>303-as szoba.</i>
+
+1344
+02:02:19,825 --> 02:02:21,160
+HAJÓTEST SÉRÜLT
+
+1345
+02:02:22,661 --> 02:02:23,537
+Bejutottak!
+
+1346
+02:02:26,082 --> 02:02:26,874
+Siess!
+
+1347
+02:03:23,264 --> 02:03:24,265
+Nem lehet!
+
+1348
+02:03:32,064 --> 02:03:33,441
+Meghalt?
+
+1349
+02:03:37,445 --> 02:03:38,988
+lgen.
+
+1350
+02:03:45,703 --> 02:03:47,204
+Minden jót, Mr. Anderson.
+
+1351
+02:03:58,215 --> 02:04:00,176
+Már nem félek!
+
+1352
+02:04:01,802 --> 02:04:03,954
+Az Orákulum
+elmondta...
+
+1353
+02:04:04,122 --> 02:04:08,726
+...hogy szerelmes leszek valakibe.
+És ő lesz a kiválasztott.
+
+1354
+02:04:11,854 --> 02:04:13,814
+Érted?
+
+1355
+02:04:14,523 --> 02:04:16,525
+Te nem halhatsz meg!
+
+1356
+02:04:18,110 --> 02:04:19,945
+Lehetetlen!
+
+1357
+02:04:21,489 --> 02:04:23,657
+Mert téged szeretlek!
+
+1358
+02:04:25,493 --> 02:04:27,203
+Hallasz?
+
+1359
+02:04:28,329 --> 02:04:29,997
+Szeretlek!
+
+1360
+02:04:53,938 --> 02:04:55,022
+Kelj fel!
+
+1361
+02:05:04,031 --> 02:05:04,865
+Nem!
+
+1362
+02:05:31,809 --> 02:05:32,643
+Hogy csinálta?
+
+1363
+02:05:33,519 --> 02:05:34,562
+Mégis ő az.
+
+1364
+02:07:59,039 --> 02:08:00,750
+<i>Tudom, ott vagytok</i>
+<i>valahol.</i>
+
+1365
+02:08:01,000 --> 02:08:02,835
+<i>Most már érzem.</i>
+
+1366
+02:08:03,252 --> 02:08:05,045
+<i>Tudom, féltek.</i>
+
+1367
+02:08:05,296 --> 02:08:06,881
+<i>Féltek tőlünk.</i>
+
+1368
+02:08:07,214 --> 02:08:09,050
+<i>A változástól.</i>
+
+1369
+02:08:09,300 --> 02:08:11,761
+<i>Nem ismerem a jövőt.</i>
+
+1370
+02:08:12,011 --> 02:08:14,597
+<i>Nem azért jöttem, hogy elmondjam,</i>
+<i>hogyan végződik a háború.</i>
+
+1371
+02:08:14,847 --> 02:08:17,808
+<i>Azért, hogy elmondjam:</i>
+<i>hogyan kezdődik.</i>
+
+1372
+02:08:18,768 --> 02:08:20,352
+<i>Leteszem</i>
+<i>a telefont...</i>
+
+1373
+02:08:20,603 --> 02:08:23,689
+<i>...és megmutatom az embereknek,</i>
+<i>amit eltitkoltok.</i>
+
+1374
+02:08:23,939 --> 02:08:25,816
+<i>Megmutatom nekik,</i>
+<i>milyen a világ...</i>
+
+1375
+02:08:26,067 --> 02:08:27,818
+<i>...nélkületek.</i>
+
+1376
+02:08:28,110 --> 02:08:31,739
+<i>A szabályok, ellenőrzés, határok</i>
+<i>és korlátok nélküli világot.</i>
+
+1377
+02:08:31,989 --> 02:08:35,701
+<i>Egy világot, ahol minden lehetséges.</i>
+
+1378
+02:08:38,329 --> 02:08:39,663
+<i>Hogy utána hogyan</i>
+<i>folytatjuk...</i>
+
+1379
+02:08:39,914 --> 02:08:41,874
+<i>...az csak rajtatok múlik.</i>
+
+1380
+02:16:10,614 --> 02:16:11,657
+<i>Fordító</i>:
+Tóth Béla
+
+1381
+02:16:11,824 --> 02:16:12,867
+<i>Felirat</i>:
+Mafilm Audio Ltd.
+
+1382
+02:16:13,033 --> 02:16:14,076
+<i>Átdolgozás</i>:
+SDl Media Group
+
+1383
+02:16:14,243 --> 02:16:15,286
+[HUNGARlAN]

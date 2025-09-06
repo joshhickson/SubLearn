@@ -1,0 +1,36 @@
+[API_KEYS]
+OPENSUBTITLES_API_KEY = YOUR_API_KEY_HERE
+DEEPL_API_KEY = YOUR_API_KEY_HERE
+
+[STYLES]
+# Customize the appearance of the subtitle tracks.
+# Colors are in R,G,B format (0-255).
+
+# Hungarian (Dub) Track - The language you are learning
+dub_fontsize = 24
+dub_color_r = 255
+dub_color_g = 255
+dub_color_b = 0
+dub_alignment = TOP_CENTER
+dub_marginv = 10
+
+# English (Translation) Track - Your native language
+trans_fontsize = 22
+trans_color_r = 0
+trans_color_g = 255
+trans_color_b = 255
+trans_alignment = TOP_CENTER
+trans_marginv = 40
+
+# English (Original Dialogue) Track
+orig_fontsize = 14
+orig_color_r = 255
+orig_color_g = 255
+orig_color_b = 255
+orig_alignment = BOTTOM_CENTER
+orig_marginv = 10
+
+# Alignment options correspond to the Numpad layout:
+# TOP_LEFT (7), TOP_CENTER (8), TOP_RIGHT (9)
+# MIDDLE_LEFT (4), MIDDLE_CENTER (5), MIDDLE_RIGHT (6)
+# BOTTOM_LEFT (1), BOTTOM_CENTER (2), BOTTOM_RIGHT (3)
