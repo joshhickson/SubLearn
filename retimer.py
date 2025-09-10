@@ -64,7 +64,7 @@ def retime_ass_track(ass_path, reference_timings, target_track, output_path):
                 start_ass = srt_to_ass_time(start)
                 end_ass = srt_to_ass_time(end)
                 # Replace timing in line
-                line = re.sub(r"(Dialogue: \d+,)[\d:.]+,[\d:.]+,", f"\\1{start_ass},{end_ass},", line)
+                line = re.sub(r"(Dialogue: \d+,)[\d:.]+,[\d:.]+,", f"\\g<1>{start_ass},{end_ass},", line)
             event_idx += 1
         new_lines.append(line)
     with open(output_path, 'w', encoding='utf-8') as f:
