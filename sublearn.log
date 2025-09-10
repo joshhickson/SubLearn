@@ -1,50 +1,17 @@
-2025-09-10 05:32:40,636 - INFO -
---- Starting Analysis Mode for query: 'The Matrix' ---
-2025-09-10 05:32:40,636 - INFO - Output will be saved to: /app/output
-2025-09-10 05:32:40,637 - INFO - Searching for 'en' subtitles online with query: 'The Matrix'
-2025-09-10 05:32:40,811 - INFO - Found 50 results for query.
-2025-09-10 05:32:40,814 - INFO - Auto-selected original sub: 720p.HDDVD.DTS.x264-ESiR (Downloads: 277714)
-2025-09-10 05:32:41,343 - INFO - Subtitle 'tmp9jgz12h1.srt' saved successfully.
-2025-09-10 05:32:41,344 - INFO - Searching for 'hu' subtitles online with query: 'The Matrix'
-2025-09-10 05:32:41,513 - INFO - Found 50 results for query.
-2025-09-10 05:32:41,517 - INFO - Auto-selected dub sub: The_Matrix_HDTV_720p_XviD-CLT-HD (Downloads: 6015)
-2025-09-10 05:32:42,688 - INFO - Subtitle 'tmpj5n6z8yz.srt' saved successfully.
-2025-09-10 05:32:42,689 - INFO - Translating dub file to create alignment bridge: tmpj5n6z8yz.srt
-2025-09-10 05:32:42,733 - INFO - Sending 1385 lines to DeepL API for translation to EN-US...
-2025-09-10 05:32:42,733 - INFO - Request to DeepL API method=POST url=https://api-free.deepl.com/v2/translate
-2025-09-10 05:32:46,207 - INFO - DeepL API response status_code=200 url=https://api-free.deepl.com/v2/translate
-2025-09-10 05:32:46,209 - INFO - Translation successful.
-2025-09-10 05:32:46,252 - INFO - Loading subtitles for content-based alignment...
-2025-09-10 05:32:46,321 - INFO - Aligning subtitle timings by content matching...
-2025-09-10 05:32:48,376 - WARNING - No good match found for line 176: 'Shit.'. Keeping original timing.
-2025-09-10 05:32:50,320 - WARNING - No good match found for line 353: 'Sati, honey.'. Keeping original timing.
-2025-09-10 05:32:50,592 - WARNING - No good match found for line 377: '...deliberately, purposefully...'. Keeping original timing.
-2025-09-10 05:32:50,703 - WARNING - No good match found for line 387: 'Yeah, definitely.'. Keeping original timing.
-2025-09-10 05:32:50,918 - WARNING - No good match found for line 406: 'Careful, sir.'. Keeping original timing.
-2025-09-10 05:32:51,322 - WARNING - No good match found for line 442: 'Perhaps.'. Keeping original timing.
-2025-09-10 05:32:52,707 - WARNING - No good match found for line 571: 'Bye, baby.'. Keeping original timing.
-2025-09-10 05:32:53,356 - WARNING - No good match found for line 634: 'Blind messiah.'. Keeping original timing.
-2025-09-10 05:32:53,375 - WARNING - No good match found for line 636: 'Helpless.'. Keeping original timing.
-2025-09-10 05:32:53,384 - WARNING - No good match found for line 637: 'Pathetic.'. Keeping original timing.
-2025-09-10 05:32:53,599 - WARNING - No good match found for line 659: 'Yeah!'. Keeping original timing.
-2025-09-10 05:32:53,725 - WARNING - No good match found for line 672: 'Shit!'. Keeping original timing.
-2025-09-10 05:32:53,831 - WARNING - No good match found for line 683: 'Shit.'. Keeping original timing.
-2025-09-10 05:32:53,857 - WARNING - No good match found for line 686: 'Reload!'. Keeping original timing.
-2025-09-10 05:32:53,866 - WARNING - No good match found for line 687: 'Reload nine!'. Keeping original timing.
-2025-09-10 05:32:53,905 - WARNING - No good match found for line 691: 'Zuka!'. Keeping original timing.
-2025-09-10 05:32:54,002 - WARNING - No good match found for line 701: 'Yeah.'. Keeping original timing.
-2025-09-10 05:32:54,038 - WARNING - No good match found for line 705: 'Charra!'. Keeping original timing.
-2025-09-10 05:32:54,310 - WARNING - No good match found for line 731: '...ninety degrees.'. Keeping original timing.
-2025-09-10 05:32:54,394 - WARNING - No good match found for line 740: 'Reload!'. Keeping original timing.
-2025-09-10 05:32:54,557 - WARNING - No good match found for line 759: 'Captain...'. Keeping original timing.
-2025-09-10 05:32:54,686 - WARNING - No good match found for line 772: 'Mifune...'. Keeping original timing.
-2025-09-10 05:32:54,857 - WARNING - No good match found for line 790: 'Luckily...'. Keeping original timing.
-2025-09-10 05:32:55,379 - WARNING - No good match found for line 843: 'Power lines.'. Keeping original timing.
-2025-09-10 05:32:55,595 - WARNING - No good match found for line 867: 'Sentinels.'. Keeping original timing.
-2025-09-10 05:32:55,754 - WARNING - No good match found for line 886: 'Light everywhere.'. Keeping original timing.
-2025-09-10 05:32:56,299 - WARNING - No good match found for line 945: 'Peace.'. Keeping original timing.
-2025-09-10 05:32:57,232 - WARNING - No good match found for line 1051: 'Someday.'. Keeping original timing.
-2025-09-10 05:32:57,266 - INFO - Content alignment complete. 1027/1055 events were successfully retimed.
-2025-09-10 05:32:57,288 - INFO - Merging subtitles into /app/output/The_Matrix.en-hu.sublearn.ass...
-2025-09-10 05:32:57,482 - INFO - Successfully created merged subtitle file.
-2025-09-10 05:32:57,483 - INFO - --- Successfully completed analysis for: 'The Matrix' ---
+2025-09-09 21:22:31,332 - INFO -
+--- Starting processing for: The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt ---
+2025-09-09 21:22:31,333 - INFO - Output will be saved to: C:\Users\Josh\Documents\SubLearn\The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA
+2025-09-09 21:22:31,333 - INFO - --- Locating Subtitle Files ---
+2025-09-09 21:22:31,333 - INFO - --- Running local-only alignment workflow. Master: dub ---
+2025-09-09 21:22:31,334 - INFO - Translating dub file: The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt
+2025-09-09 21:22:31,394 - INFO - Sending 1383 lines to DeepL API for translation to EN-US...
+2025-09-09 21:22:31,395 - INFO - Request to DeepL API method=POST url=https://api-free.deepl.com/v2/translate
+2025-09-09 21:22:38,786 - INFO - DeepL API response status_code=200 url=https://api-free.deepl.com/v2/translate
+2025-09-09 21:22:38,788 - INFO - Translation successful.
+2025-09-09 21:22:38,790 - INFO - Aligning original subtitle 'The Matrix (1999)-en.srt' to dub 'The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt'
+2025-09-09 21:22:38,878 - INFO - Aligning subtitle timings by index...
+2025-09-09 21:22:38,901 - WARNING - Subtitle files have different line counts (1383 vs 1340). Alignment will be truncated to the shorter length.
+2025-09-09 21:22:38,901 - INFO - Alignment complete. 1340 subtitle events were aligned.
+2025-09-09 21:22:38,927 - INFO - Merging subtitles into C:\Users\Josh\Documents\SubLearn\The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA\The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.sublearn.ass...
+2025-09-09 21:22:39,106 - INFO - Successfully created merged subtitle file.
+2025-09-09 21:22:39,107 - INFO - --- Successfully completed processing for: The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt ---
