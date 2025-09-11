@@ -9,16 +9,19 @@ This tool helps you to perform deep research on specific scenes in a movie by le
 **Usage:**
 
 ```bash
-python tools/context_extractor.py --srt-file <path_to_srt> --line-number <line_num>
+python tools/context_extractor.py --srt-file <path_to_srt> --line-number <line_num> --movie-title "Movie Title (Year)"
 ```
 
 **Arguments:**
 
 *   `--srt-file`: The path to the `.srt` subtitle file you want to analyze.
 *   `--line-number`: The specific line number in the SRT file that you want to get context for.
+*   `--movie-title`: The full title of the movie, preferably with the year, for more accurate research.
 
 **How it works:**
 
-1.  The script will extract the dialogue from the line you specify, as well as the two lines before and after it, to create a contextual snippet.
-2.  It will then generate a detailed prompt that you can submit to a large language model like Google's Gemini.
-3.  The script will ask you to paste the output from the language model, and it will then format and display the research notes for you.
+1.  The script extracts the dialogue from the line you specify, as well as the two lines before and after it, to create a contextual snippet.
+2.  It generates a detailed research prompt customized with your movie's title.
+3.  The script prints the prompt to your console. You can copy this and submit it to a large language model (like Google Gemini, ChatGPT, etc.).
+4.  After you get the response from the model, you paste it back into the terminal.
+5.  The script then displays the information in a formatted "X-Ray Analysis" view for your scene.

@@ -36,8 +36,12 @@ def setup_test_environment(tmp_path, mocker):
     # Create dummy local subtitle files for auto-detection
     movie_dir = tmp_path / "test_movie"
     movie_dir.mkdir()
-    (movie_dir / "test_movie.en.srt").touch()
-    (movie_dir / "test_movie.hu.srt").touch()
+    VALID_SRT_CONTENT = """1
+00:00:01,000 --> 00:00:02,000
+This is a test subtitle.
+"""
+    (movie_dir / "test_movie.en.srt").write_text(VALID_SRT_CONTENT)
+    (movie_dir / "test_movie.hu.srt").write_text(VALID_SRT_CONTENT)
 
     yield {
         "video_path": str(video_path),
@@ -160,8 +164,12 @@ def test_process_video_file_with_arg(setup_test_environment, mock_dependencies):
 
     # Create a dummy SRT file to be specified by the argument
     user_srt_path = os.path.join(setup_test_environment["movie_dir"], "user_provided.srt")
+    VALID_SRT_CONTENT = """1
+00:00:03,000 --> 00:00:04,000
+This is a user-provided subtitle.
+"""
     with open(user_srt_path, "w") as f:
-        f.write("test subtitle")
+        f.write(VALID_SRT_CONTENT)
 
     args = MagicMock()
     args.lang_orig = "en"

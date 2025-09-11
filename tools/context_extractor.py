@@ -36,6 +36,7 @@ def main():
     )
     parser.add_argument("--srt-file", required=True, help="Path to the .srt subtitle file.")
     parser.add_argument("--line-number", required=True, type=int, help="The line number to analyze.")
+    parser.add_argument("--movie-title", required=True, help="The title of the movie (e.g., 'The Matrix (1999)').")
 
     args = parser.parse_args()
 
@@ -76,7 +77,7 @@ def main():
     # 2. Formulate the research prompt for the user to pass to Gemini
     gemini_prompt = f"""**Film Studies Research Prompt**
 
-**Movie:** The Matrix (1999)
+**Movie:** {args.movie_title}
 **Scene of Interest:** The following dialogue exchange:
 
 ---
@@ -98,13 +99,24 @@ Please provide a detailed analysis of this scene. I am looking for the following
 Please provide a comprehensive but concise summary for each point.
 """
 
-    # 3. Request the user to perform the research
-    # In a real application, this would be an API call. For now, we simulate this
-    # by asking the user to manually perform the query.
-    # 3. Print the prompt for the user. The agent will then handle the user interaction.
-    print("--- Please copy the following prompt and submit it to Google Gemini Pro ---")
+    # 3. Print the prompt for the user to copy.
+    print("--- Please copy the following prompt and submit it to a language model ---")
     print(gemini_prompt)
-    print("--------------------------------------------------------------------------")
+    print("--------------------------------------------------------------------------\n")
+
+    # 4. Wait for the user to paste the research from the LLM.
+    print("After obtaining the research, paste it here, then press")
+    print("Ctrl+D (Linux/macOS) or Ctrl+Z+Enter (Windows) to submit.")
+    research_notes = sys.stdin.read()
+
+    # 5. Format and display the final research notes.
+    print("\n\n===============================================")
+    print("      X-RAY ANALYSIS FOR YOUR SCENE")
+    print("===============================================")
+    print(f"\nBased on the dialogue from '{args.movie_title}', here is the analysis:\n")
+    print(research_notes)
+    print("\n===============================================\n")
+
 
 if __name__ == "__main__":
     main()
