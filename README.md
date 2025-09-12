@@ -2,158 +2,148 @@
 
 *A tool for language learning and film analysis through multi-track subtitles.*
 
-SubLearn is a command-line tool that generates a multi-language subtitle file for two primary use cases: language acquisition and film analysis. It creates a single `.ass` subtitle file containing up to three tracks for direct comparison.
-
-This allows you to see the original script, the dubbed version you are hearing, and a literal translation all at once, providing a powerful tool for understanding vocabulary, sentence structure, and the creative choices made during the film localization process.
+SubLearn is a command-line tool that generates a multi-language subtitle file for three primary use cases: language acquisition, script analysis, and local subtitle alignment. It creates a single, styled `.ass` subtitle file containing up to three tracks for direct comparison.
 
 ## Features
 
--   **Automatic Subtitle Sourcing:** Downloads the required subtitle files from OpenSubtitles.
--   **Local File Detection:** Automatically uses existing local `.srt` files if they are found.
--   **High-Quality Translation:** Uses the DeepL API for accurate translations.
+-   **Multiple Workflows:** Dedicated modes for language learning, film analysis, and offline subtitle alignment.
+-   **Automatic Subtitle Sourcing:** Downloads required subtitle files from OpenSubtitles.
+-   **Local File Support:** Prioritizes local `.srt` files and allows for offline-only workflows.
+-   **High-Quality Translation:** Uses the DeepL API for accurate machine translations.
+-   **AI-Powered Transcription:** Can generate a verbatim transcript from a video file's audio using Faster-Whisper.
+-   **Timing Alignment:** Can re-time one subtitle file to match the cadence of another on a line-by-line basis.
 -   **Interactive Mode:** Allows you to manually select the correct subtitles from a list of search results.
 -   **Batch Processing:** Process an entire directory of video files with a single command.
--   **Organized Output:** Creates a dedicated folder for each video's subtitles.
 
-## Installation
+## Installation & Setup
 
-1.  **Prerequisites:** Make sure you have Python 3.10+ installed on your system.
+### 1. Prerequisites
 
-2.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/your-username/sublearn.git
-    cd sublearn
-    ```
+-   Python 3.10+
+-   **FFmpeg**: (Optional, for AI Transcription) FFmpeg must be installed and accessible in your system's PATH. Download it from [ffmpeg.org](https://ffmpeg.org/download.html).
 
-3.  **Install Dependencies:** Install the required Python packages using pip.
-    ```bash
-    pip install -r requirements.txt
-    ```
+### 2. Install Dependencies
 
-## Configuration
+From the project root, run:
+```bash
+pip install -r requirements.txt
+```
 
-Before running the script, you need to provide your API keys for OpenSubtitles and DeepL.
+### 3. Configure the Application
 
-1.  **Create the Config File:** Copy the example configuration file.
-    ```bash
-    cp config.ini.example config.ini
-    ```
+The tool uses a `config.ini` file for API keys and style settings.
 
-2.  **Edit the Config File:** Open `config.ini` in a text editor and replace the placeholder text with your actual API keys.
-    ```ini
-    [API_KEYS]
-    OPENSUBTITLES_API_KEY = YOUR_API_KEY_HERE
-    DEEPL_API_KEY = YOUR_API_KEY_HERE
-    ```
-    *Your `config.ini` file is ignored by git, so your keys will not be committed.*
+1.  Make a copy of the example file: `cp config.ini.example config.ini`
+2.  Open `config.ini` and add your API keys.
+    -   **OPENSUBTITLES_API_KEY**: Get a key from [OpenSubtitles.org](https://www.opensubtitles.org/).
+    -   **DEEPL_API_KEY**: Get a free key from the [DeepL API](https://www.deepl.com/pro-api).
+3.  (Optional) Customize subtitle colors and fonts in the `[STYLES]` section.
 
 ## Modes of Operation
 
-SubLearn has two distinct modes, set with the `--mode` flag.
+SubLearn has three distinct workflows.
 
 ### 1. Learn Mode (Default)
 
-This mode is designed for **language learning**. It requires a local video file and finds perfectly synchronized subtitles by calculating the file's hash. It can also use its built-in AI transcriber to generate a verbatim transcript from the audio if no matching subtitle is found online. The goal is to ensure the text you read is exactly what you hear.
+Designed for **language learning**. It requires a video file and finds perfectly synchronized subtitles by calculating the file's hash. The goal is to ensure the text you read is exactly what you hear.
 
 **Output Tracks:**
 1.  **Original Language** (from a hash-synced subtitle file)
 2.  **Dub Language** (from a hash-synced or AI-transcribed subtitle file)
 3.  **Native Language** (a literal translation of the dub)
 
-### 2. Analysis Mode (`--mode analyze`)
+### 2. Analysis Mode
 
-This mode is designed for **film analysis**. It allows you to compare the original script to the dubbed script to see what creative choices were made in the translation and localization process. It works by searching for subtitles by title, which may not be perfectly synchronized. It then **re-times** the original language subtitle to match the cadence of the dub language subtitle on a line-by-line basis.
+Designed for **film analysis**. It allows you to compare the original script to the dubbed script. It works by searching for subtitles by title, which may not be perfectly synchronized, and then re-times the original language subtitle to match the cadence of the dub.
 
 **Output Tracks:**
 1.  **Original Language** (from a title search, re-timed to match the dub)
 2.  **Dub Language** (from a title search, acts as the timing master)
 3.  **Native Language** (a literal translation of the dub)
 
+### 3. Local Alignment Mode
+
+Designed for **offline alignment of two local subtitle files**. This mode does not require a video file or an internet connection (unless translation is also desired). It's a powerful utility for syncing subtitles from different sources.
+
+**Output Tracks:**
+1.  **Original Language** (from a local file, re-timed)
+2.  **Dub Language** (from a local file, acts as the timing master)
+3.  **Native Language** (a literal translation of the dub, optional)
+
 ## Usage
 
-The script is run from the command line. The required arguments change based on the selected mode.
+### Command-Line Arguments
 
-### Basic Syntax
+**Main Arguments:**
+-   `path`: (**Required**) Path to a video file/directory (`learn` mode), or an output directory (`analysis` mode). For local alignment, this can be a dummy path (e.g., `./`).
+-   `--lang_dub`: (**Required**) The language of the dubbed audio track (e.g., `hu`, `es`).
+-   `--lang_orig`: The original language of the film (default: `en`).
+-   `--lang_native`: Your native language for translation (default: `EN-US`).
+-   `--mode`: `learn` or `analyze`. Determines the operating mode.
+-   `--no-translation`: Disables the machine translation track.
 
-```bash
-# Learn Mode (default)
-python sublearn.py <path_to_video_or_directory> --lang_dub <dub_lang> [options]
+**Learn Mode Arguments:**
+-   `--interactive`: Manually select subtitles from online search results.
+-   `--no-orig-search`: Do not search online for an original language subtitle.
+-   `--orig-file`: Path to a local `.srt` file for the original language track.
+-   `--dub-file`: Path to a local `.srt` file for the dub track.
+-   `--timing-master`: Specify which local file is the timing master (`orig` or `dub`). **Using this with `--orig-file` and `--dub-file` activates the Local Alignment Mode.**
 
-# Analysis Mode
-python sublearn.py <path_to_output_directory> --mode analyze --query "Movie Title" --lang_dub <dub_lang> [options]
-```
+**AI Transcription Arguments:**
+-   `--force-transcriber`: Skip online search and transcribe the audio directly.
+-   `--fallback-to-transcriber`: Transcribe if a dub subtitle is not found online.
+-   `--audio-track <index>`: The index of the audio track to transcribe (default: 0).
+-   `--whisper-model <size>`: The Whisper model to use (e.g., `tiny`, `base`).
 
-### Arguments
-
--   `path`: (Required) In `learn` mode, the path to your video file or directory. In `analyze` mode, the path to the directory where output files will be saved.
--   `--mode`: `learn` or `analyze`. Sets the operating mode. Defaults to `learn`.
--   `--lang_dub`: (Required) The language code for the dubbed audio track (e.g., `hu` for Hungarian, `es` for Spanish).
--   `--lang_orig`: The original language of the film. Defaults to `en`.
--   `--lang_native`: The language to translate the dubbed track into. Defaults to `EN-US`.
-
-#### Learn Mode Arguments
--   `--interactive`: Manually select subtitles from a list of online search results.
--   `--no-orig-search`: Do not search for the original language subtitle track.
--   `--force-transcriber`: Force the use of the AI audio transcriber instead of searching online.
--   `--fallback-to-transcriber`: Use the AI transcriber if no suitable dub subtitle is found online.
-
-#### Analysis Mode Arguments
--   `--query`: (Required for Analysis Mode) The movie title to search for.
+**Analysis Mode Arguments:**
+-   `--query`: The movie title to search for online. Required for analysis mode.
 
 ### Examples
 
-**1. Learn Mode: Processing a Single File (Interactive)**
+**1. Learn Mode (Standard)**
 
-This will find subtitles for a file, automatically selecting the best match.
-
+Generate subtitles for a movie with a Hungarian dub, searching online for subs that match the video file's hash.
 ```bash
-python sublearn.py "/path/to/movies/The.Matrix.1999.mkv" --lang_dub hu
+python sublearn.py "path/to/your/movie.mkv" --lang_dub hu
 ```
 
-**2. Learn Mode: Using the AI Transcriber**
+**2. Learn Mode (with AI Transcription)**
 
-This will generate the dub subtitle directly from your video file's audio track.
-
+Force the use of the AI transcriber for the most accurate possible transcript of the audio.
 ```bash
-python sublearn.py "/path/to/movies/The.Matrix.1999.mkv" --lang_dub hu --force-transcriber
+python sublearn.py "path/to/movie.mkv" --lang_dub de --force-transcriber
 ```
 
-**3. Analysis Mode: Comparing Scripts**
+**3. Analysis Mode (Online)**
 
-This will search for "The Matrix" subtitles online, let you pick the ones you want, and then align the original English timings to the Hungarian dub timings.
-
+Search for "The Matrix" subtitles online and align the English track to the Hungarian dub's timing.
 ```bash
 python sublearn.py ./output --mode analyze --query "The Matrix" --lang_orig en --lang_dub hu
 ```
 
-## Creating a Standalone Application
+**4. Local Alignment Mode (Offline)**
 
-For users who do not have Python installed, or for easier distribution, you can package SubLearn into a single standalone executable.
-
-### 1. Build the Executable
-
-First, ensure you have followed the Installation steps to install all dependencies, including `pyinstaller`. Then, run the following command from the root of the project directory:
-
+Align a local English SRT to a local Hungarian SRT, using the Hungarian file as the timing master.
 ```bash
-pyinstaller --onefile --name sublearn sublearn.py
+python sublearn.py ./dummy.mkv \
+    --lang_orig en \
+    --lang_dub hu \
+    --orig-file "path/to/english.srt" \
+    --dub-file "path/to/hungarian.srt" \
+    --timing-master dub
 ```
+*(Note: A dummy path is provided as the main argument, but it is not used in this workflow.)*
 
-This command will create a `dist/` directory containing the `sublearn` executable (or `sublearn.exe` on Windows).
+## Tools
 
-### 2. Run the Executable
+This repository includes standalone scripts in the `tools/` directory for specialized tasks.
 
-1.  Move the `sublearn` executable from the `dist/` directory to any folder you like.
-2.  **Important:** Create a `config.ini` file in the **same folder** as the `sublearn` executable. You can do this by copying the `config.ini.example` from the project and filling in your API keys.
-3.  You can now run the application directly from your terminal or command prompt. The usage is the same as the Python script, but you call the executable directly:
+### Style Resizer (`tools/style_resizer.py`)
 
-    ```bash
-    # On macOS or Linux
-    ./sublearn "/path/to/movies/" --lang_dub hu --interactive
+This script allows you to easily change the font size of the three tracks in a SubLearn-generated `.ass` file.
 
-    # On Windows
-    sublearn.exe "C:\path\to\movies\" --lang_dub hu --interactive
-    ```
-
-### 3. Debugging
-
-If you encounter any issues, a detailed log file named `sublearn.log` will be created in the same folder as the executable. Please check this file for error messages and tracebacks.
+**Usage:**
+```bash
+python tools/style_resizer.py --ass-file <path_to_ass> --orig-size 16 --dub-size 28
+```
+Any size argument not provided will be ignored, and the existing size will be kept.

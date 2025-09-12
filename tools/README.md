@@ -1,27 +1,31 @@
 # SubLearn Tools
 
-This directory contains standalone tools that are part of the SubLearn project but are not part of the main subtitle generation workflow. These tools are designed for specific tasks related to film analysis and learning.
+This directory contains standalone scripts that provide supplementary functionality for the SubLearn project.
 
-### Context Extractor (`context_extractor.py`)
+### Style Resizer (`style_resizer.py`)
 
-This tool helps you to perform deep research on specific scenes in a movie by leveraging the power of large language models.
+This script allows you to easily change the font size of the three tracks (Original, Dub, and Translation) in a SubLearn-generated `.ass` file.
 
 **Usage:**
 
+Run the script from the root of the project directory.
+
 ```bash
-python tools/context_extractor.py --srt-file <path_to_srt> --line-number <line_num> --movie-title "Movie Title (Year)"
+python tools/style_resizer.py --ass-file <path_to_ass> [options]
 ```
 
 **Arguments:**
+-   `--ass-file`: (**Required**) The path to the `.ass` subtitle file you want to modify.
+-   `--orig-size`: (Optional) The new font size for the 'Style_Orig' track.
+-   `--dub-size`: (Optional) The new font size for the 'Style_Dub' track.
+-   `--trans-size`: (Optional) The new font size for the 'Style_Trans' track.
 
-*   `--srt-file`: The path to the `.srt` subtitle file you want to analyze.
-*   `--line-number`: The specific line number in the SRT file that you want to get context for.
-*   `--movie-title`: The full title of the movie, preferably with the year, for more accurate research.
+Any size argument that is not provided will be ignored, and the existing size for that track will be kept.
 
-**How it works:**
+**Example:**
 
-1.  The script extracts the dialogue from the line you specify, as well as the two lines before and after it, to create a contextual snippet.
-2.  It generates a detailed research prompt customized with your movie's title.
-3.  The script prints the prompt to your console. You can copy this and submit it to a large language model (like Google Gemini, ChatGPT, etc.).
-4.  After you get the response from the model, you paste it back into the terminal.
-5.  The script then displays the information in a formatted "X-Ray Analysis" view for your scene.
+This command will change the original language font size to 16 and the dub language font size to 28, leaving the translation track unchanged.
+
+```bash
+python tools/style_resizer.py --ass-file "path/to/your/subtitle.ass" --orig-size 16 --dub-size 28
+```

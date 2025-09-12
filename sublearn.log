@@ -1,17 +1,17 @@
-2025-09-09 21:22:31,332 - INFO -
---- Starting processing for: The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt ---
-2025-09-09 21:22:31,333 - INFO - Output will be saved to: C:\Users\Josh\Documents\SubLearn\The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA
-2025-09-09 21:22:31,333 - INFO - --- Locating Subtitle Files ---
-2025-09-09 21:22:31,333 - INFO - --- Running local-only alignment workflow. Master: dub ---
-2025-09-09 21:22:31,334 - INFO - Translating dub file: The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt
-2025-09-09 21:22:31,394 - INFO - Sending 1383 lines to DeepL API for translation to EN-US...
-2025-09-09 21:22:31,395 - INFO - Request to DeepL API method=POST url=https://api-free.deepl.com/v2/translate
-2025-09-09 21:22:38,786 - INFO - DeepL API response status_code=200 url=https://api-free.deepl.com/v2/translate
-2025-09-09 21:22:38,788 - INFO - Translation successful.
-2025-09-09 21:22:38,790 - INFO - Aligning original subtitle 'The Matrix (1999)-en.srt' to dub 'The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt'
-2025-09-09 21:22:38,878 - INFO - Aligning subtitle timings by index...
-2025-09-09 21:22:38,901 - WARNING - Subtitle files have different line counts (1383 vs 1340). Alignment will be truncated to the shorter length.
-2025-09-09 21:22:38,901 - INFO - Alignment complete. 1340 subtitle events were aligned.
-2025-09-09 21:22:38,927 - INFO - Merging subtitles into C:\Users\Josh\Documents\SubLearn\The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA\The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.sublearn.ass...
-2025-09-09 21:22:39,106 - INFO - Successfully created merged subtitle file.
-2025-09-09 21:22:39,107 - INFO - --- Successfully completed processing for: The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt ---
+2025-09-12 07:03:39,920 - INFO -
+--- Starting processing for: dummy.mkv ---
+2025-09-12 07:03:39,921 - INFO - Output will be saved to: /app/dummy
+2025-09-12 07:03:39,921 - INFO - --- Locating Subtitle Files ---
+2025-09-12 07:03:39,921 - INFO - --- Running local-only alignment workflow. Master: dub ---
+2025-09-12 07:03:39,921 - INFO - Translating dub file: The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt
+2025-09-12 07:03:39,988 - INFO - Sending 1383 lines to DeepL API for translation to EN-US...
+2025-09-12 07:03:39,988 - INFO - Request to DeepL API method=POST url=https://api-free.deepl.com/v2/translate
+2025-09-12 07:03:46,738 - INFO - DeepL API response status_code=200 url=https://api-free.deepl.com/v2/translate
+2025-09-12 07:03:46,745 - INFO - Translation successful.
+2025-09-12 07:03:46,747 - INFO - Aligning original subtitle 'The.Matrix.1999.REMASTERED.1080p.BluRay.REMUX.AVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT.English.srt' to dub 'The. Matrix. 1999. HUNGARIAN. HDDVD. 1080p. DTS. VC1. Remux-EuReKA.srt'
+2025-09-12 07:03:46,832 - INFO - Aligning subtitle timings by index...
+2025-09-12 07:03:46,882 - WARNING - Subtitle files have different line counts (1383 vs 1373). Alignment will be truncated to the shorter length.
+2025-09-12 07:03:46,883 - INFO - Alignment complete. 1373 subtitle events were aligned.
+2025-09-12 07:03:46,927 - INFO - Merging subtitles into /app/dummy/dummy.sublearn.ass...
+2025-09-12 07:03:47,161 - INFO - Successfully created merged subtitle file.
+2025-09-12 07:03:47,162 - INFO - --- Successfully completed processing for: dummy.mkv ---
