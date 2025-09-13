@@ -6,7 +6,7 @@ SubLearn is a command-line tool that generates a multi-language subtitle file fo
 
 ## Features
 
--   **Multiple Workflows:** Dedicated modes for language learning, film analysis, and offline subtitle alignment.
+-   **Multiple Workflows:** Dedicated modes for language learning, online analysis, and offline subtitle alignment.
 -   **Automatic Subtitle Sourcing:** Downloads required subtitle files from OpenSubtitles.
 -   **Local File Support:** Prioritizes local `.srt` files and allows for offline-only workflows.
 -   **High-Quality Translation:** Uses the DeepL API for accurate machine translations.
@@ -41,98 +41,79 @@ The tool uses a `config.ini` file for API keys and style settings.
 
 ## Modes of Operation
 
-SubLearn has three distinct workflows.
+SubLearn has three distinct workflows, chosen with the `--mode` flag.
 
-### 1. Learn Mode (Default)
+### 1. Learn Mode (`--mode learn`, Default)
 
-Designed for **language learning**. It requires a video file and finds perfectly synchronized subtitles by calculating the file's hash. The goal is to ensure the text you read is exactly what you hear.
+Designed for **language learning**. It requires a video file and finds perfectly synchronized subtitles by calculating the file's hash.
+- **Input:** Path to a video file or a directory of videos.
+- **Output:** A styled `.ass` file in a sub-directory named after the video.
 
-**Output Tracks:**
-1.  **Original Language** (from a hash-synced subtitle file)
-2.  **Dub Language** (from a hash-synced or AI-transcribed subtitle file)
-3.  **Native Language** (a literal translation of the dub)
+### 2. Query & Align Mode (`--mode query-align`)
 
-### 2. Analysis Mode
+Designed for **film analysis**. It allows you to compare the original script to the dubbed script by searching for both online and then aligning them.
+- **Input:** An output directory and a `--query` string for the movie title.
+- **Output:** A single `.ass` file in the specified output directory.
 
-Designed for **film analysis**. It allows you to compare the original script to the dubbed script. It works by searching for subtitles by title, which may not be perfectly synchronized, and then re-times the original language subtitle to match the cadence of the dub.
+### 3. Local Align Mode (`--mode align`)
 
-**Output Tracks:**
-1.  **Original Language** (from a title search, re-timed to match the dub)
-2.  **Dub Language** (from a title search, acts as the timing master)
-3.  **Native Language** (a literal translation of the dub)
-
-### 3. Local Alignment Mode
-
-Designed for **offline alignment of two local subtitle files**. This mode does not require a video file or an internet connection (unless translation is also desired). It's a powerful utility for syncing subtitles from different sources.
-
-**Output Tracks:**
-1.  **Original Language** (from a local file, re-timed)
-2.  **Dub Language** (from a local file, acts as the timing master)
-3.  **Native Language** (a literal translation of the dub, optional)
+Designed for **offline alignment of two local subtitle files**. This is a powerful utility for syncing subtitles from different sources without a video file.
+- **Input:** An output directory, two local `.srt` files, and a designated timing master.
+- **Output:** A single `.ass` file in the specified output directory.
 
 ## Usage
 
 ### Command-Line Arguments
 
 **Main Arguments:**
--   `path`: (**Required**) Path to a video file/directory (`learn` mode), or an output directory (`analysis` mode). For local alignment, this can be a dummy path (e.g., `./`).
+-   `path`: (**Required**) The meaning of this argument changes based on the mode:
+    -   `learn`: Path to a video file or directory.
+    -   `query-align` or `align`: Path to the desired output directory.
 -   `--lang_dub`: (**Required**) The language of the dubbed audio track (e.g., `hu`, `es`).
 -   `--lang_orig`: The original language of the film (default: `en`).
 -   `--lang_native`: Your native language for translation (default: `EN-US`).
--   `--mode`: `learn` or `analyze`. Determines the operating mode.
+-   `--mode`: `learn`, `query-align`, or `align`. Determines the operating mode.
 -   `--no-translation`: Disables the machine translation track.
 
 **Learn Mode Arguments:**
 -   `--interactive`: Manually select subtitles from online search results.
 -   `--no-orig-search`: Do not search online for an original language subtitle.
+-   `--force-transcriber`, `--fallback-to-transcriber`: Control the use of the AI audio transcriber.
+-   `--audio-track <index>`, `--whisper-model <size>`: Configure the transcriber settings.
+
+**Local File Arguments (for `learn` and `align` modes):**
 -   `--orig-file`: Path to a local `.srt` file for the original language track.
 -   `--dub-file`: Path to a local `.srt` file for the dub track.
--   `--timing-master`: Specify which local file is the timing master (`orig` or `dub`). **Using this with `--orig-file` and `--dub-file` activates the Local Alignment Mode.**
 
-**AI Transcription Arguments:**
--   `--force-transcriber`: Skip online search and transcribe the audio directly.
--   `--fallback-to-transcriber`: Transcribe if a dub subtitle is not found online.
--   `--audio-track <index>`: The index of the audio track to transcribe (default: 0).
--   `--whisper-model <size>`: The Whisper model to use (e.g., `tiny`, `base`).
+**Query & Align Mode Arguments:**
+-   `--query`: (**Required**) The movie title to search for online.
 
-**Analysis Mode Arguments:**
--   `--query`: The movie title to search for online. Required for analysis mode.
+**Local Align Mode Arguments:**
+-   `--timing-master`: (**Required**) Specify which file is the timing master (`orig` or `dub`).
+-   `--orig-file` and `--dub-file` are also required for this mode.
 
 ### Examples
 
 **1. Learn Mode (Standard)**
-
-Generate subtitles for a movie with a Hungarian dub, searching online for subs that match the video file's hash.
+Generate subtitles for a movie, searching online for subs that match the video file's hash.
 ```bash
 python sublearn.py "path/to/your/movie.mkv" --lang_dub hu
 ```
 
-**2. Learn Mode (with AI Transcription)**
-
-Force the use of the AI transcriber for the most accurate possible transcript of the audio.
-```bash
-python sublearn.py "path/to/movie.mkv" --lang_dub de --force-transcriber
-```
-
-**3. Analysis Mode (Online)**
-
+**2. Query & Align Mode (Online Analysis)**
 Search for "The Matrix" subtitles online and align the English track to the Hungarian dub's timing.
 ```bash
-python sublearn.py ./output --mode analyze --query "The Matrix" --lang_orig en --lang_dub hu
+python sublearn.py ./output --mode query-align --query "The Matrix" --lang_orig en --lang_dub hu
 ```
 
-**4. Local Alignment Mode (Offline)**
-
+**3. Local Align Mode (Offline)**
 Align a local English SRT to a local Hungarian SRT, using the Hungarian file as the timing master.
 ```bash
-python sublearn.py ./dummy.mkv \
-    --lang_orig en \
-    --lang_dub hu \
+python sublearn.py ./output --mode align \
     --orig-file "path/to/english.srt" \
     --dub-file "path/to/hungarian.srt" \
     --timing-master dub
 ```
-*(Note: A dummy path is provided as the main argument, but it is not used in this workflow.)*
 
 ## Tools
 
